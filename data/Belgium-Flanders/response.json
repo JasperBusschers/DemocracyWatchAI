@@ -1,0 +1,2314 @@
+{
+  "disclaimer": "",
+  "items": [
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-11-29T14:00:00+0100",
+        "datumbegin": "2023-11-29T14:02:18+0100",
+        "datumeinde": "2023-11-29T17:33:22+0100",
+        "id": 1781978,
+        "laatste-wijziging": "2023-11-27T15:14:59+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1781978/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1781978?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1781978/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over actuele maatschappelijke problemen.</p><p>Deze week vragen over:</p><ul><li>de opmars van online haatspraak;</li><li>de hervorming van de flexi-jobs;</li><li>de toeleiding van kandidaten naar gemeenschapsdiensttrajecten door VDAB;</li><li>‘Queen Nikkolah’ en de Sinterklaastraditie en het verdelende karakter van de dekoloniseringsagenda;</li><li>de uitbreiding van het bloedonderzoek naar PFAS;</li><li>de ondersteuning van een website rond de problematiek van geloofsverlaters;</li><li>de fusie van de gemeenten Beveren, Kruibeke en Zwijndrecht</li><li>de verstrenging van de roetfiltertesten voor dieselwagens bij de autokeuring;</li><li>het verlof voor verminderde prestaties en de pensioenen van leerkrachten;</li><li>de veiligheidsrisico's van Chinese omvormers voor zonnepaneelinstallaties;</li><li>het gebrek aan controles door VLABEL op buitenlandse eigendommen bij de aankoop van een woning.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231129.pdf\">actuele vragen van 29 november 2023</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> </a>(pdf).</p><h3><strong>Diverse wijzigingen Welzijn, Volksgezondheid en Gezin - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in dat een aantal nodige wijzigingen aan decreten in het beleidsdomein WVG tot doel heeft. Enerzijds gaat het om technische wijzigingen, anderzijds om inhoudelijke aanpassingen, onder andere om tegemoet te komen aan de noden van het werkveld en de evoluties in het beleidsdomein. &nbsp;De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3>&nbsp;</h3>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Diverse wijzigingen Welzijn, Volksgezondheid en Gezin - Ontwerp van decreet</strong>",
+          "&nbsp;"
+        ],
+        "opname-start": "2023-11-29T13:51:01+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=2010275"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "10",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "pX4g9Qk37EM",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-11-22T14:00:00+0100",
+        "datumbegin": "2023-11-22T14:02:08+0100",
+        "datumeinde": "2023-11-22T19:14:12+0100",
+        "id": 1780173,
+        "laatste-wijziging": "2023-11-16T11:25:02+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1780173/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1780173?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1780173/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over maatschappelijke problemen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de aanpak van de wateroverlast in West-Vlaanderen en de schadevergoeding van de getroffenen;</li><li>het stijgende aantal fietsdoden in de bebouwde kom;</li><li>de toekomst van de arbeidszorg;</li><li>de voorbereiding van het ouderenbeleid op de komende vergrijzingsgolf en de oproep ter zake van Zorgnet-Icuro;</li><li>het voorkomen van geweld tegen politici;</li><li>het taalgebruik van de uitnodigingsbrieven voor de lokale verkiezingen van 2024 in de faciliteitengemeenten;</li><li>het tekort aan gemeentelijke zwembaden;</li><li>het recordaantal onwettige afwezigheden in de lagere school;</li><li>de banden tussen universiteiten in Vlaanderen en Israël;</li><li>de proefomgeving voor de invoering van digitaal statiegeld.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231122.pdf\">actuele vragen van 22 november 2023</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> </a>(pdf).</p><h3><strong>Jeugd- en kinderrechtenbeleid en ondersteuning jeugdwerk - Ontwerp van Jeugddecreet</strong></h3><p>Het huidig decretale kader omvat vier decreten die verschillende aspecten regelen van het Vlaamse jeugd- en kinderrechtenbeleid en het ondersteuningsbeleid ten aanzien van het Vlaamse en bovenlokale jeugdwerk. De Vlaamse Regering diende een ontwerp van decreet in om deze vier decreten te integreren in één nieuw Jeugddecreet, en zo de procedures voor de ondersteuning van het jeugdwerk te stroomlijnen en te vereenvoudigen. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Opheffing meerdere onderwijsbepalingen - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om een aantal onderwijsbepalingen op te heffen in meerdere bestaande niveau- en themadecreten, met het oog op een vereenvoudiging van de onderwijsregelgeving. Het gaat voornamelijk om opheffingen van bepalingen die eenmalig waren of gebonden aan bepaalde schooljaren, bepalingen die op meerdere plaatsen vermeld staan, wat overbodig is, en bepalingen waarvan de inhoud niet meer opportuun geacht wordt. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Digitalisering werking Vlaamse bestuursrechtscolleges – Ontwerp van decreet</strong></h3><p>De Vlaamse Regering wil de Vlaamse bestuursrechtspraak digitaliseren v<span style=\"color:black;\">ia de introductie van een vol­ledige digitale procesvoering voor de Vlaamse bestuursrechtscolleges die onder de koepel van de Dienst van de Bestuursrechtscolleges (DBRC) vallen.&nbsp;</span>Om die digitale omslag te maken moet het DBRC-decreet aangepast worden. De plenaire vergadering bespreekt het ontwerp van wijzigingsdecreet en&nbsp; houdt de eindstemming.</p><h3><strong>Vlaamse erfgoednetwerken – Ontwerp van decreet</strong></h3><p>Met dit ontwerp van decreet wil de Vlaamse Regering een solide rechtsbasis bieden voor het samenwerken met en het ondersteunen van organisaties die instaan voor het beheer, de exploitatie en de ontsluiting van een netwerk van iconische Vlaamse erfgoedlocaties. Op basis van het decreet kunnen organisaties als Herita vzw bevestigd worden als Vlaams Erfgoednetwerk.</p><h3><strong>Introductie Vlaamse uitgavennorm - Voorstel van resolutie</strong></h3><p>De Vlaamse uitgavennorm is een budgettair kompas om de evolutie van de Vlaamse overheidsfinanciën te sturen en op koers te houden of te brengen. De uitgavennorm moet het maximale groeipad van de overheidsuitgaven afbakenen in functie van de gemiddelde inkomstenevolutie. Daarbij wordt ook rekening gehouden met de vooropgestelde begrotingsdoelstellingen en met de economische realiteit.</p><p>Leden van verschillende fracties van meerderheid en oppositie dienden een voorstel van resolutie in waarin ze de Vlaamse Regering onder meer vragen om een Vlaamse uitgavennorm uit te werken en toe te passen vanaf het begrotingsjaar 2025. De uitgavennorm moet een legislatuuroverschrijdend karakter krijgen. De plenaire vergadering bespreekt het voorstel van resolutie en houdt de eindstemming.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Jeugd- en kinderrechtenbeleid en ondersteuning jeugdwerk - Ontwerp van Jeugddecreet</strong>",
+          "<strong>Opheffing meerdere onderwijsbepalingen - Ontwerp van decreet</strong>",
+          "<strong>Digitalisering werking Vlaamse bestuursrechtscolleges – Ontwerp van decreet</strong>",
+          "<strong>Vlaamse erfgoednetwerken – Ontwerp van decreet</strong>",
+          "<strong>Introductie Vlaamse uitgavennorm - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-11-22T13:51:01+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=2008118"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "9",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "NKWNvQ-xdQo",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-11-15T14:00:00+0100",
+        "datumbegin": "2023-11-15T14:01:53+0100",
+        "datumeinde": "2023-11-15T20:21:29+0100",
+        "id": 1778410,
+        "laatste-wijziging": "2023-11-14T14:02:21+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1778410/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1778410?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1778410/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Onderzoek geloofsbrieven en eedaflegging nieuw parlementslid</strong></h3><p>Na de goedkeuring van zijn geloofsbrieven legt Bob Savenberg de eed af als Vlaams parlementslid. Hij volgt Gwendolyn Rutten op, die minister werd in de Vlaamse Regering.</p><h3><strong>Actualiteitsdebat over stikstofakkoord</strong></h3><p>Tijdens de &nbsp;nacht van 13 op 14 november ll. bereikte de Vlaamse Regering een nieuw akkoord over de aanpak van de stikstofproblematiek. &nbsp;Wat is de inhoud van dit langverwachte akkoord en wat voor concrete gevolgen heeft het voor landbouwers en bedrijven? &nbsp;Wat met de natuurdoelstellingen? In de plenaire vergadering debatteren de fracties hierover met de betrokken ministers van de Vlaamse Regering.</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering ondervragen over haar beleid ten aanzien van maatschappelijke problemen uit de actualiteit. Wegens de toevoeging van het actualiteitsdebat aan de agenda wordt het aantal vragen beperkt.</p><p>Deze week vragen over:</p><ul><li>de melding van Vlaanderen aan andere regio's over PFAS in drinkwater;</li><li>het beleid ter voorkoming van femicide.</li><li>de schrapping van haltes door De Lijn in het kader van de uitrol van de basisbereikbaarheid;</li><li>de aanhoudende wateroverlast in het IJzerbekken;</li><li>het gevaar van extreemrechts en moslimextremisme onder leerlingen;</li><li>eindtermen in het kleuteronderwijs;</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231115.pdf\">actuele vragen van 15 november 2023</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> </a>(pdf).</p><h3><strong>Open scholen - Ontwerp van decreet</strong></h3><p>Door bevolkingstoename en de beperkte ruimte in Vlaanderen en Brussel is er een groeiende vraag naar beschikbare ruimte voor verenigingen, initiatieven van lokale besturen, organisaties en inwoners. Daarom wil de Vlaamse Regering scholen principieel verplichten om hun infrastructuur open te stellen buiten de schooluren. Ze diende daartoe het ontwerp van decreet Open Scholen in. De instellingen voor gewoon en buitengewoon basis- en secundair onderwijs, voor deeltijds kunstonderwijs en voor het volwassenenonderwijs zullen alleen nog een beroep kunnen doen op subsidies voor de aankoop, nieuwbouw en renovatie van schoolinfrastructuur als die ook wordt opengesteld voor derden, volgens de decretale bepalingen. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Aanpak grensoverschrijdend gedrag aan Universiteit Gent - Ontwerp van bijzonder decreet</strong></h3><p>De UGent wil na een aantal recente maatschappelijke discussies haar beleid inzake de aanpak van grensoverschrijdend gedrag verbeteren. In dat kader wil de universiteit externe experten toelaten tot de tuchtorganen voor het personeel en de studenten, om op die manier respectvol gedrag aan de UGent aan te moedigen en grensoverschrijdend gedrag kordater aan te pakken. Dit vereist een aanpassing van het <a href=\"https://www.vlaamsparlement.be/nl/over-ons/extra/begrippenlijst/bijzonder-decreet\">bijzonder decreet</a>. De plenaire vergadering bespreekt het ontwerp van bijzonder decreet en houdt de eindstemming.</p>",
+        "omschrijving-kort": [
+          "<strong>Onderzoek geloofsbrieven en eedaflegging nieuw parlementslid</strong>",
+          "<strong>Actualiteitsdebat over stikstofakkoord</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<strong>Open scholen - Ontwerp van decreet</strong>",
+          "<strong>Aanpak grensoverschrijdend gedrag aan Universiteit Gent - Ontwerp van bijzonder decreet</strong>"
+        ],
+        "opname-start": "2023-11-15T13:51:01+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=2005828"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "8",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "kPz9gteHpwY",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-11-08T14:00:00+0100",
+        "datumbegin": "2023-11-08T14:00:42+0100",
+        "datumeinde": "2023-11-08T17:48:09+0100",
+        "id": 1775796,
+        "laatste-wijziging": "2023-10-26T11:54:51+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1775796/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1775796?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1775796/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over maatschappelijke problemen uit de actualiteit.</p><p>Deze week vragen over:&nbsp;</p><ul><li>het geblokkeerde Belgische klimaatplan en het pleidooi voor een eerlijk klimaatbeleid van het Hoog Comité voor een Rechtvaardige Transitie;</li><li>de verbranding van in beslag genomen drugs;</li><li>de verplichte inschrijving van werkloze sociale huurders bij VDAB;</li><li>de erfbelasting (problematiek verwerving blote eigendom zonder inkomsten vruchtgebruik);</li><li>de introductie van zelfrijdende voertuigen op onze wegen;</li><li>de wateroverlast in de Westhoek en het onderhoud van het IJzerbekken;</li><li>de sluiting van het distributiecentrum van Bose in Tongeren;</li><li>het plotse ontslag van Bart Somers als minister en viceminister-president van de Vlaamse Regering;</li><li>humanitaire steun aan de burgers van Gaza.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231108.pdf\">actuele vragen van 8 november </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Eedaflegging Vlaams minister Gwendolyn Rutten</strong></h3><p>Na het ontslag van Bart Somers als lid van de Vlaamse Regering moet in zijn vervanging worden voorzien. &nbsp;Gwendolyn Rutten wordt de nieuwe Vlaamse minister en viceminister-president en legt de eed af in de handen van de parlementsvoorzitter.&nbsp;</p><h3><strong>Wijziging Energiedecreet - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om het Energiedecreet uit 2009 op enkele punten te wijzigen. Zo wordt onder andere het verbod op de plaatsing van een stookolieketel verduidelijkt, wordt de inspectiebevoegdheid van de Vlaamse Regulator van de Elektriciteits- en Gasmarkt (VREG) op het vlak van toegang tot gebouwen uitgebreid, en wordt een decretale basis gecreëerd voor de uitwisseling van gegevens afkomstig uit de digitale meter tussen de netbeheerder of zijn werkmaatschappij en de Openbare Centra voor Maatschappelijk Welzijn (OCMW’s). De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Parkeerbelastingen en -retributies gebruikers leasingwagens en uitreiking parkeerkaarten – Voorstel van decreet</strong></h3><p>Wanneer gebruikers van leasingwagens – de zogenaamde ‘gebruikelijke bestuurders’ – een inbreuk maken op de gemeentelijke of gewestelijke parkeerregels, komt de boete momenteel terecht bij de leasingmaatschappij en niet bij de gebruiker. Om dit te verhelpen dienden leden van de meerderheidsfracties een voorstel van decreet in. Met dit voorstel van decreet willen ze ervoor zorgen dat de bevoegde instanties rechtstreeks de gebruikelijke bestuurder kunnen aanspreken. Dat kan alleen door de geregistreerde identificatiegegevens van de gebruikelijke bestuurder van het motorvoertuig te koppelen met de Kruispuntbank van de voertuigen (zoals nu al gebeurt voor overtredingen van de federale Wegverkeerswet). Ook voor de uitreiking van parkeerkaarten is de toegang tot de persoonsgegevens in de Kruispuntbank nodig. De plenaire vergadering bespreekt het voorstel van decreet en houdt de eindstemming.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Eedaflegging Vlaams minister Gwendolyn Rutten</strong>",
+          "<strong>Wijziging Energiedecreet - Ontwerp van decreet</strong>",
+          "<strong>Parkeerbelastingen en -retributies gebruikers leasingwagens en uitreiking parkeerkaarten – Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-11-08T13:51:01+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=2003618"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "7",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "JRH-mVqmz-g",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-10-25T14:00:00+0200",
+        "datumbegin": "2023-10-25T14:01:39+0200",
+        "datumeinde": "2023-10-25T19:30:23+0200",
+        "id": 1773440,
+        "laatste-wijziging": "2023-10-23T14:36:32+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1773440/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1773440?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1773440/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over maatschappelijke problemen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de overname van amateurvoetbalclubs door buitenlandse investeerders;</li><li>de impact van de onderwijsinspectie op de onderwijskwaliteit;</li><li>het dalende aantal toegekende woonkredieten;</li><li>de kritiek op het energieprestatiecertificaat (EPC);</li><li>de verdeling van de middelen uit het nieuwe Europese klimaatbeleid;</li><li>de beleidskritiek van de topvrouw van De Lijn;</li><li>de plaats van speedpedelecs in het verkeer;</li><li>de samenwerking tussen VDAB en Forem om Waalse werkzoekenden in Vlaanderen te doen werken;</li><li>de dreigende sluiting van kinderopvanginitiatieven gesubsidieerd in trap 1 en trap2 (IKT-mix);</li><li>de impact van het federale anti-tabaksplan op de lokale besturen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231025.pdf\">actuele vragen van 25 oktober </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Wijziging lokale en provinciale kiesregelgeving - Ontwerp van decreet</strong></h3><p>De plenaire vergadering bespreekt en stemt over een ontwerp van decreet tot wijziging van de lokale en provinciale kiesregelgeving (wijziging van het Lokaal en Provinciaal Kiesdecreet van 8 juli 2011, het Digitaal Kiesdecreet van 25 mei 2012 en het decreet van 22 december 2017 over het lokaal bestuur). De Vlaamse Regering &nbsp;wil hiermee de juridische basis leggen voor de organisatie van de &nbsp;lokale en provinciale verkiezingen van oktober 2024 en &nbsp;enkele bepalingen wijzigen voor de installatie van de lokale bestuursorganen na die verkiezingen.&nbsp;</p><h3><strong>Ketenaansprakelijkheid bij tewerkstelling buitenlandse werkkrachten - Ontwerp van decreet</strong></h3><p>Tijdens de zomer van 2022 kwam aan het licht dat op een grote bouwwerf van het chemiebedrijf Borealis in de Antwerpse haven slachtoffers van mensenhandel illegaal werden tewerkgesteld. Naar aanleiding van parlementaire vragen over het dossier-Borealis diende de Vlaamse Regering een ontwerp van decreet in. Bedoeling is een einde te &nbsp;maken aan illegale tewerkstelling en malafide constructies. Het ontwerp van decreet lanceert daarvoor de 'zorgvuldigheidsplicht', die hoofdaannemers verplicht bepaalde gegevens op te vragen bij onderaannemers. Zo wil het de ketenaansprakelijkheid bij illegale tewerkstelling via onderaanneming verbeteren. Het ontwerp voert ook een aantal bepalingen in met betrekking tot de verwerking van persoonsgegevens in het decreet uit 2017, en de Europese en buitenlandse au-pairjongeren worden opgenomen in het decreet Private Arbeidsbemiddeling uit 2010 door een uitbreiding van de definitie van werknemer. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Nieuw handhavingskader Werk en Sociale Economie - Ontwerp van decreet</strong></h3><p>Met een nieuwe handhavingskader Werk en Sociale Economie wil de Vlaamse Regering de strijd tegen sociale fraude verbeteren. Om het bestaande sanctioneringskader efficiënter en effectiever te maken, wordt in een ontwerp van decreet een actualisering voorgesteld. Daarnaast bevat het ontwerp een aantal wijzigingen om de strijd tegen de sociale fraude te optimaliseren. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Derde Vlaams Actieplan Suïcidepreventie - Gezondheidsdoelstelling</strong></h3><p>Zelfdoding is een complex probleem en er is nooit één oorzaak of verklaring. Evenmin zijn er<br>eenvoudige manieren om zelfdoding te voorkomen. Jarenlang wetenschappelijk onderzoek en<br>decennialange ervaringen in de preventie en hulpverlening hebben veel kennis opgeleverd over het<br>ontstaan, het proces van zelfdoding en effectieve preventiestrategieën. Het is deze kennis die de basis<br>vormt voor het uitwerken van een wetenschappelijk onderbouwd preventiebeleid.<br>Het tweede Vlaams Actieplan en de bijhorende Gezondheidsdoelstelling voor Suïcidepreventie liepen<br>tot eind 2020. De Vlaamse Regering diende een nieuw actieplan annex gezondheidsdoelstelling in voor de periode 2022-2030. Conform de bepalingen uit het Preventiedecreet moet de plenaire vergadering zich hierover uitspreken.&nbsp;</p><h3><strong>Wijziging Vlaamse Codex Wonen en decreten mbt wonen - Voorstel van decreet</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure een voorstel van decreet tot wijziging van de Vlaamse Codex Wonen en diverse decreten met betrekking tot wonen. &nbsp;De wijziging is nodig wegens de vernietiging door het Grondwettelijk Hof van diverse bepalingen die betrekking hebben op de verwerking van persoonsgegevens uit bewuste decreten, omdat de bepalingen in kwestie niet vooraf voor advies werden voorgelegd aan de federale Gegevensbeschermingsautoriteit</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Wijziging lokale en provinciale kiesregelgeving - Ontwerp van decreet</strong>",
+          "<strong>Ketenaansprakelijkheid bij tewerkstelling buitenlandse werkkrachten - Ontwerp van decreet</strong>",
+          "<strong>Nieuw handhavingskader Werk en Sociale Economie - Ontwerp van decreet</strong>",
+          "<strong>Derde Vlaams Actieplan Suïcidepreventie - Gezondheidsdoelstelling</strong>",
+          "<strong>Wijziging Vlaamse Codex Wonen en decreten mbt wonen - Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-10-25T13:51:35+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=2000513"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "6",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "3rwsAr5F-pQ",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-10-18T14:00:00+0200",
+        "datumbegin": "2023-10-18T14:04:28+0200",
+        "datumeinde": "2023-10-18T17:59:41+0200",
+        "id": 1770726,
+        "laatste-wijziging": "2023-10-16T15:27:18+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1770726/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1770726?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1770726/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over maatschappelijke problemen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de impact van de terreuraanslag in Brussel van 16 oktober en de aanpak van gewelddadige radicalisering;</li><li>het onveiligheidsgevoel op school bij lgbti+-leerlingen</li><li>het belangenconflict van de Vlaamse Regering tegen de federale beslissing om de vliegroutes van en naar de luchthaven van Zaventem te wijzigen;</li><li>de geplande uitbreiding van het netwerk van verkeerscamera's met nummerplaatherkenning (ANPR);</li><li>de uitspraken van de VRT-CEO over het uitzenden van katholieke erediensten op de openbare omroep;</li><li>de materiële deprivatie bij kinderen in armoede;</li><li>de doelgroepvermindering voor langdurig werklozen;</li><li>het Vlaams Impulsprogramma Waterstof.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231018.pdf\">actuele vragen van 18 oktober </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Oprichting bijzondere commissie evaluatie aanpak seksueel misbruik in de kerk</strong></h3><p>De VRT-reeks ‘Godvergeten’ bracht de dossiers van kindermisbruik in de katholieke kerk weer in het centrum van de aandacht. De plenaire vergadering beslist over het voorstel om een bijzondere commissie op te richten. Die moet zich buigen over de evaluatie van de aanpak van seksueel misbruik in de kerk en in andere gezagsrelaties in het algemeen en van de rol van instellingen en voorzieningen op het terrein van jeugd, welzijn en onderwijs in het bijzonder.</p><h3><strong>Verhoging jobbonus - Voorstel van decreet</strong></h3><p>De plenaire vergadering bespreekt via een aanvulling van de agenda een voorstel van decreet van de meerderheidsfracties dat ertoe strekt de jobbonus (een jaarlijkse premie van de Vlaamse overheid voor mensen die werken tegen een laag loon) te verhogen. &nbsp;Daarmee willen de indieners werken meer lonend maken en het verschil tussen werken en niet werken verhogen. De verhoging van de jobbonus was al aangekondigd in de Septemberverklaring van de Vlaamse Regering.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Oprichting bijzondere commissie evaluatie aanpak seksueel misbruik in de kerk</strong>",
+          "<strong>Verhoging jobbonus - Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-10-18T13:51:00+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1998337"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "5",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "VkJVp_U0oVk",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-10-11T14:00:00+0200",
+        "datumbegin": "2023-10-11T14:01:05+0200",
+        "datumeinde": "2023-10-11T19:22:49+0200",
+        "id": 1767579,
+        "laatste-wijziging": "2023-10-05T11:22:00+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1767579/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1767579?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1767579/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de Vlaamse Regering vragen stellen over maatschappelijke problemen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de recente rechterlijke uitspraak over het experiment met deelbudgetten voor personen met een handicap;</li><li>flexi-jobs in de kinderopvang;</li><li>de gevolgen van de federale beslissing mbt het btw-tarief voor sloop en heropbouw;</li><li>het gebruik van PFAS-houdende grond door Lantis bij de Oosterweelwerken;</li><li>flexi-jobs bij het busvervoer;</li><li>de aanpak van frauderende rijscholen;</li><li>de online promotie van eetstoornissen via sociale media;</li><li>de uitbreiding van de flexi-jobs door het federale begrotingsakkoord;</li><li>de aangekondigde sluiting van papierfabriek Sappi in Lanaken en de begeleiding van de getroffen werknemers;</li><li>het conflict tussen Israël en Gaza na de inval van Hamas;</li><li>Hamas-propaganda op scholen;</li><li>masters in het basisonderwijs.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231110.pdf\">actuele vragen van 11 oktober </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Voorstellen van resolutie over conflict in Israël en Gazastrook</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure twee voorstellen van resolutie over het gewapend conflict in Israël en de Gazastrook na de gewapende &nbsp;inval van Hamas in Israël die begon op 7 oktober 2023</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Voorstellen van resolutie over conflict in Israël en Gazastrook</strong>"
+        ],
+        "opname-start": "2023-10-11T13:50:59+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1995414"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "4",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "NVDzawwLhJ8",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-10-04T14:00:00+0200",
+        "datumbegin": "2023-10-04T14:02:40+0200",
+        "datumeinde": "2023-10-04T20:55:05+0200",
+        "id": 1764147,
+        "laatste-wijziging": "2023-10-03T13:48:56+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1764147/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1764147?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1764147/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Advies Raad van State over voorstel van stikstofdecreet - Actualiteitsdebat</strong></h3><p>Op 3 oktober bracht de Raad van State zijn advies uit over het <a href=\"https://www.vlaamsparlement.be/nl/parlementaire-documenten/parlementaire-initiatieven/1760269\">voorstel van decreet betreffende de programmatische aanpak stikstof</a> ingediend door de meerderheidsfracties N-VA en Open Vld. &nbsp;De Raad van State maakt in haar advies verschillende kritische opmerkingen over de voorliggende tekst. Naar aanleiding van dit belangrijke advies debatteren de fracties met de ministers Jambon, Crevits, Demir, Brouns, Somers en Weyts over de gevolgen ervan. &nbsp;Hoe moet het nu verder met het stikstofdossier?&nbsp;</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit. Wegens de toevoeging van het actualiteitsdebat aan de agenda wordt het aantal actuele vragen beperkt.</p><p>Deze week vragen over:</p><ul><li>de betaalbaarheid en personeelsbezetting van woonzorgcentra;</li><li>de informatieverstrekking en sensibilisering rond de perimenopauze;</li><li>de stijgende huurprijzen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20231004.pdf\">actuele vragen van 4 oktober </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Nieuwe regelgeving inzake pacht van landbouwgrond - Voorstel van decreet</strong></h3><p>In Vlaanderen wordt meer dan 60 percent van het landbouwareaal gepacht. De pacht is een soort langdurige huurovereenkomst tussen de grondeigenaar-verpachter en de gebruiker-pachter. &nbsp;Door de zesde staatshervorming is Vlaanderen bevoegd geworden voor de regelgeving inzake de pacht in het Vlaams Gewest. Het Vlaams regeerakkoord bevat de ambitie om de toegang tot landbouwgrond voor landbouwers te bevorderen door een hervorming van de pachtwetgeving. De voorbije jaren werden verschillende pistes onderzocht om de bestaande Pachtwet om te vormen tot een nieuw Pachtdecreet. Leden van de meerderheidsfracties dienden een voorstel van decreet in waarbij onder andere een schriftelijke pachtovereenkomst de norm wordt, het recht van voorkoop door de pachter wordt behouden en de mogelijkheid om de pachtprijs te betalen in natura of in diensten geschrapt wordt. De plenaire vergadering bespreekt het voorstel van decreet en houdt de eindstemming.</p><h3><strong>Vluchtelingen uit Nagorno-Karabach - Voorstel van resolutie</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure een voorstel van resolutie van de meerderheidsfracties over het openen van de politieke dialoog met de Europese Commissie over de vluchtelingenstroom uit Nagorno-Karabach en de vrees voor een etnische zuivering in de regio na de verovering van de Armeense enclave door Azerbeidzjan.</p><h3><strong>Voorstel tot wijziging deontologische code van de Vlaamse volksvertegenwoordigers</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure een voorstel tot wijziging van de deontologische code van de Vlaamse volksvertegenwoordigers.</p>",
+        "omschrijving-kort": [
+          "<strong>Advies Raad van State over voorstel van stikstofdecreet - Actualiteitsdebat</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<strong>Nieuwe regelgeving inzake pacht van landbouwgrond - Voorstel van decreet</strong>",
+          "<strong>Vluchtelingen uit Nagorno-Karabach - Voorstel van resolutie</strong>",
+          "<strong>Voorstel tot wijziging deontologische code van de Vlaamse volksvertegenwoordigers</strong>"
+        ],
+        "opname-start": "2023-10-04T13:50:59+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilesizestring": "1,09 MB",
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1992670"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "3",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "0n7W2EQWGf8",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-09-27T14:00:00+0200",
+        "datumbegin": "2023-09-27T14:00:48+0200",
+        "datumeinde": "2023-09-27T20:54:38+0200",
+        "id": 1763108,
+        "laatste-wijziging": "2023-09-26T10:31:08+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763108/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763108?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763108/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Plenaire bespreking Septemberverklaring Vlaamse Regering</strong></h3><p>De Vlaamse volksvertegenwoordigers debatteren in de plenaire vergadering over de <a href=\"https://www.vlaamsparlement.be/nl/parlementair-werk/plenaire-vergaderingen/1763102/verslag/1763586\">Septemberverklaring van de Vlaamse Regering</a>, waarin de algemeen maatschappelijke situatie en de krachtlijnen van de begroting voor 2024 worden geschetst. Na het debat stemt het parlement over de Septemberverklaring.</p><h3><strong>Motie onderzoekscommissie seksueel misbruik in de kerk</strong></h3><p>Naar aanleiding van de VRT-docureeks ‘Godvergeten’ vroeg de Groen-fractie om de agenda aan te vullen met een motie tot uitoefening van het recht van onderzoek naar de rol van instellingen en voorzieningen die ondersteund worden binnen onderwijs en welzijn in de wijze waarop slachtoffers van seksueel misbruik binnen de katholieke kerk en in andere gezagsrelaties in het verleden werden behandeld.&nbsp;</p><p>De plenaire vergadering besliste na overleg om de motie niet toe te voegen aan de agenda maar eerstdaags overleg tussen de meerderheids- en oppositiefracties op te starten om na te gaan hoe deze problematiek optimaal kan worden behandeld in het Vlaams Parlement.</p>",
+        "omschrijving-kort": [
+          "<strong>Plenaire bespreking Septemberverklaring Vlaamse Regering</strong>",
+          "<strong>Motie onderzoekscommissie seksueel misbruik in de kerk</strong>"
+        ],
+        "opname-start": "2023-09-27T13:50:47+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilesizestring": "1,02 MB",
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1992556"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "2",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "GxyZAfeDpMg",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-09-25T14:00:00+0200",
+        "datumbegin": "2023-09-25T14:01:09+0200",
+        "datumeinde": "2023-09-25T14:43:04+0200",
+        "id": 1763102,
+        "laatste-wijziging": "2023-09-26T10:20:02+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763102/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763102?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1763102/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Opening parlementaire zitting 2023-2024</strong></h3><h3><strong>Verkiezing van het Bureau en toespraak voorzitter</strong></h3><h3><strong>Septemberverklaring Vlaamse Regering</strong></h3><p>Het Vlaams Parlement komt krachtens het Bijzonder Decreet over de Vlaamse Instellingen bijeen op de vierde maandag van september voor de opening van het nieuwe parlementaire jaar.</p><p>Het Parlement verkiest tijdens de openingsvergadering het Bureau, dat is het dagelijkse bestuur van het parlement dat bestaat uit de voorzitter, de ondervoorzitters en de secretarissen. De parlementsvoorzitter houdt volgens de traditie een toespraak naar aanleiding van de opening van het nieuwe zittingsjaar.</p><p>Nadien legt minister-president Jan Jambon de <a href=\"https://www.vlaamsparlement.be/nl/parlementair-werk/plenaire-vergaderingen/1763102/verslag/1763586\">Septemberverklaring van de Vlaamse Regering</a> af, waarin de algemeen maatschappelijke situatie en de krachtlijnen van de Vlaamse begroting voor 2024 worden geschetst. Het debat en de stemming over de Septemberverklaring volgen op woensdagnamiddag.</p>",
+        "omschrijving-kort": [
+          "<strong>Opening parlementaire zitting 2023-2024</strong>",
+          "<strong>Verkiezing van het Bureau en toespraak voorzitter</strong>",
+          "<strong>Septemberverklaring Vlaamse Regering</strong>"
+        ],
+        "opname-start": "2023-09-25T13:51:06+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1987594"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "1",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "gkvSS0sEI78",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "De heer",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482452",
+          "id": 1803,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/1803?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Dewinter",
+          "voornaam": "Filip"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-07-12T14:00:00+0200",
+        "datumbegin": "2023-07-12T14:00:31+0200",
+        "datumeinde": "2023-07-12T23:28:23+0200",
+        "id": 1756765,
+        "laatste-wijziging": "2023-07-06T11:22:11+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1756765/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1756765?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1756765/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de zichtbaarheid van Vlaamse instellingen in Brussel (gebruik N-logo);</li><li>de open brief van scenaristen, regisseurs en producenten betreffende de financiering van audiovisuele producties;</li><li>het dreigende tekort aan maatwerkcoaches;</li><li>de suïcidecijfers voor 2021 en de stijging bij jonge vrouwen tussen 15 en 29;</li><li>het plaatsgebrek in de kinderopvang;</li><li>de nood aan een versterking van de gemeenteraad;</li><li>de 11 juliboodschap van de minister-president voor een structurele omwenteling van België;</li><li>duaal leren voor kwetsbare jongeren;</li><li>de geringe aandacht van beleid en media voor de zomerspelen van de Special Olympics;</li><li>het advies van de Minaraad over zwemmen in open water;</li><li>irrigatiemogelijkheden met gezuiverd afvalwater;</li><li>de onteigening van NMBS-gronden voor sociale woningbouw.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230712.pdf\">actuele vragen van 12 juli </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Handhaving Vlaamse regelgeving – Ontwerp van kaderdecreet</strong></h3><p>De Belgische deelstaten hebben al sinds de staatshervorming van 1980 het recht om de overtredingen van hun decreten strafbaar te stellen en om te bepalen hoe schade moet worden hersteld. Daarnaast zijn ze ook volledig bevoegd voor het regelen van de procedureregels voor de bestuurlijke handhaving van hun decreten. De Vlaamse overheid heeft gretig gebruik gemaakt van die bevoegdheid, maar elk nieuw decreet kreeg zijn eigen handhavingshoofdstuk, met specifieke regels en een eigen terminologie. Het gevolg hiervan is een kluwen van regelgevende teksten. Met het voorliggende ontwerp van kaderdecreet Vlaamse Handhaving wil de Vlaamse Regering een volledig en geïntegreerd procedurekader vaststellen dat binnen ieder beleidsdomein kan worden gehanteerd voor de bestuurlijke handhaving. Het nieuwe kaderdecreet Vlaamse Handhaving moet de wirwar van handhavingsregels stroomlijnen en een tweede decretale tranche vormen na het Kaderdecreet Bestuurlijke Handhaving van 22 maart 2019.</p><h3><strong>Uitbreiding bevoegdheid Raad voor Vergunningsbetwistingen - Ontwerp van decreet</strong></h3><p>Via een ontwerp van decreet wil de Vlaamse Regering de rechtsmacht van de Raad voor Vergunningsbetwistingen, een Vlaams bestuursrechtscollege, uitbreiden naar een aantal reglementaire en deels reglementaire besluiten in het omgevingscontentieux. Het ontwerp voorziet in een beperkte bevoegdheidsoverdracht van de federale Raad van State naar de Vlaamse Raad voor Vergunningsbetwistingen. Op die manier wil men de problematische doorlooptijd van dossiers bij de Raad van State, maar ook de onduidelijkheid en het gebrek aan coördinatie tussen uitspraken van de Raad van State en de Raad voor Vergunningsbetwistingen, aanpakken. &nbsp;De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Uitvoering maatregelen lerarenambt - Voorstel van decreet&nbsp;</strong></h3><p>De dalende onderwijskwaliteit en het oplopende lerarentekort zijn de twee grote uitdagingen waar het Vlaamse onderwijs al jaren mee geconfronteerd wordt. In een voorstel van decreet van de meerderheid willen de indieners maatregelen goedkeuren die het lerarentekort aanpakken, het huidige lerarenkorps waarderen en de aantrekkelijkheid van het beroep verhogen. Daarnaast wordt ingezet op maatregelen die de drempel naar het beroep verlagen. Ook geeft het scholen bijkomende mogelijkheden om extra krachten te mobiliseren en schoolteams verder te professionaliseren. &nbsp;Het schoolbestuur krijgt de mogelijkheid om in het basis- en secundair onderwijs een mandaat van leraar-specialist toe te kennen aan een of meer personeelsleden die als leraar aangesteld zijn. &nbsp;Het voorstel van decreet dat in werking moet treden op 1 september wordt rechtstreeks behandeld in de plenaire vergadering.</p><h3><strong>Minimumdoelen tweede en derde graad secundair - Voorstel van decreet&nbsp;</strong></h3><p>De onderwijsdoelen of eindtermen omschrijven wat een leerling of student op het einde van een opleiding of cursus minimaal zou moeten kennen en kunnen. Vorig jaar keurde het Vlaams Parlement het decreet goed betreffende de nieuwe eindtermen voor de tweede en derde graad van het secundair onderwijs. Deze eindtermen werden echter vernietigd door het Grondwettelijk Hof. Minister Ben Weyts bereikte enkele maanden geleden een akkoord met de onderwijsverstrekkers over nieuwe onderwijsdoelen voor deze leerlingen: van de oorspronkelijke 995 eindtermen gaat het naar 596 minimumdoelen basisvorming. Leden van de meerderheidsfracties dienden een voorstel van decreet in om deze nieuwe onderwijsdoelen in Vlaamse regelgeving om te zetten. De &nbsp;plenaire vergadering bespreekt het voorstel van decreet en houdt de eindstemming.</p><h3><strong>Spoedbehandelingen - Voorstellen van decreet en voorstel van resolutie</strong></h3><p>De plenaire vergadering voegt via de spoedprocedure de behandeling van een aantal voorstellen van decreet en resolutie toe aan de agenda. Het betreft een voorstel van decreet over de premie kwalificerend werkplekleren, een voorstel van decreet over de basisopleiding (hbo5) verpleegkunde, en een voorstel van resolutie over de GAS-boetes voor beperkte snelheidsovertredingen.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Handhaving Vlaamse regelgeving – Ontwerp van kaderdecreet</strong>",
+          "<strong>Uitbreiding bevoegdheid Raad voor Vergunningsbetwistingen - Ontwerp van decreet</strong>",
+          "<strong>Uitvoering maatregelen lerarenambt - Voorstel van decreet&nbsp;</strong>",
+          "<strong>Minimumdoelen tweede en derde graad secundair - Voorstel van decreet&nbsp;</strong>",
+          "<strong>Spoedbehandelingen - Voorstellen van decreet en voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-07-12T13:51:03+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilesizestring": "1,33 MB",
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1978826"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "42",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "VfaqGtCJV3Y",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-07-05T14:00:00+0200",
+        "datumbegin": "2023-07-05T14:01:11+0200",
+        "datumeinde": "2023-07-05T20:57:30+0200",
+        "id": 1754434,
+        "laatste-wijziging": "2023-07-05T17:24:50+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1754434/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1754434?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1754434/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het verzet van de Brusselse Regering en van milieu- en mobiliteitsorganisaties tegen de Vlaamse plannen voor de uitbreiding van de Brusselse ring (R0);</li><li>de drempels voor huisvrouwen en -mannen om zich op de arbeidsmarkt te begeven;</li><li>de recente cijfers inzake (zwangerschaps)diabetes;</li><li>de organisatie van buitenschoolse opvang tijdens de zomervakantie;</li><li>de communicatie van de Vlaamse overheid naar de lokale besturen bij overschrijding van drempelwaarden inzake pcb's en dioxines;</li><li>de lessen voor het Vlaamse beleid uit het ernstige straatgeweld in Frankrijk;</li><li>de oproepen vanuit het veld om de schoolvakanties beter te spreiden en de zomervakantie in te korten;</li><li>het stijgend aantal kandidaat-artsen en -tandartsen en de gevolgen daarvan voor de organisatie van het onderwijs door de universiteiten;</li><li>het leerrecht van elk kind in het kader van tijdelijk onderwijs aan huis;</li><li>het pleidooi voor aparte klassen voor anderstaligen;</li><li>de hoge prijzen op de geliberaliseerde energiemarkt;</li><li>de wachtlijsten voor sociale woningen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230705.pdf\">actuele vragen van 5 juli </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Proeftuinen basis- en secundair onderwijs in kader van herwaardering lerarenambt – Ontwerp van decreet</strong></h3><p>In het kader van de strijd tegen het lerarentekort wil de Vlaamse Regering tijdelijke projecten ('proeftuinen') toelaten in het basis- en secundair onderwijs zodat scholen op projectbasis bepaalde hervormingen kunnen uittesten zonder belemmeringen van het wetgevende kader. Wat in de praktijk werkt, kan vervolgens vanaf het schooljaar 2025-2026 worden ingezet in de strijd tegen het lerarentekort. De plenaire vergadering bespreekt het ontwerp van decreet dat de decretale basis moet leggen voor deze proeftuinen en houdt de eindstemming.</p><h3><strong>Verzameldecreet Onderwijs XXXIII</strong></h3><p>Jaarlijks bundelt de Vlaamse Regering een aantal aanpassingen aan de regelgeving over Onderwijs in een ontwerp van verzameldecreet met Romeinse nummering. Onderwijsdecreet XXXIII bevat voornamelijk voorstellen tot aanvulling en verbetering van een aantal bestaande decreten, een reeks maatregelen tot vereenvoudiging in de meest ruime zin, en maatregelen die uitvoering geven aan de relanceplannen van de Vlaamse Regering (onder meer de invoering van het LeerID) . De plenaire vergadering bespreekt het ontwerp van verzameldecreet en houdt de eindstemming.</p><h3><strong>Wijziging integraal handelsvestigingsbeleid - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om het decreet Integraal Handelsvestigingsbeleid van 15 juli 2016 op verschillende punten aan te passen, om zodoende de gemeenten meer slagkracht te geven in dit beleid. Zo komt er onder andere een verfijning van de definities van handelsgeheel en kleinhandelsbedrijf, een opsplitsing van de huidige categorie van kleinhandel, en een uitbreiding van de handhavingsbevoegdheid naar de lokale besturen. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Wijziging&nbsp;Natuurdecreet en decreet Omgevingsvergunning - Voorstellen van decreet</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure twee voorstellen van decreet van de meerderheidsfracties. Het betreft een wijziging aan het Natuurdecreet in het kader van het stikstofakkoord en aan het decreet betreffende de omgevingsvergunning.&nbsp;</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Proeftuinen basis- en secundair onderwijs in kader van herwaardering lerarenambt – Ontwerp van decreet</strong>",
+          "<strong>Verzameldecreet Onderwijs XXXIII</strong>",
+          "<strong>Wijziging integraal handelsvestigingsbeleid - Ontwerp van decreet</strong>",
+          "<strong>Wijziging&nbsp;Natuurdecreet en decreet Omgevingsvergunning - Voorstellen van decreet</strong>"
+        ],
+        "opname-start": "2023-07-05T13:50:47+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1976563"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "41",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "4WirBfjsfak",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-06-28T14:00:00+0200",
+        "datumbegin": "2023-06-28T14:00:00+0200",
+        "datumeinde": "2023-06-28T19:59:54+0200",
+        "id": 1751484,
+        "laatste-wijziging": "2023-06-22T11:52:08+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1751484/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1751484?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1751484/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het leerlingenvervoer in het buitengewoon onderwijs</li><li>een nieuw geval van agressie tegen buschauffeurs en de aanpak ter zake;</li><li>de toename van het aantal veelverdienende schermgezichten bij de VRT;</li><li>het nieuwe rapport van Opgroeien over gezinsinkomen en kansarmoede;</li><li>de toename van het aantal gevallen van agressie tegen VDAB-medewerkers;</li><li>het verband tussen hogere dagprijzen en de inzet van personeel bij woonzorgcentra;</li><li>de federale New Deal voor huisartsen en de afstemming met het Vlaamse beleid inzake eerstelijnsgezondheidszorg;</li><li>het opdelen van woningen en woningdelen;</li><li>het vonnis in de nitraatzaak dat de Vlaamse Regering aanvullende maatregelen oplegt inzake het mestbeleid;</li><li>de discussie over het Nationaal Energie- en Klimaatplan en de Vlaamse bijdrage daarin.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230628.pdf\">actuele vragen van 28 juni </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Begrotingscontrole 2023</strong></h3><p>De plenaire vergadering bespreekt de ontwerpen van decreet tot aanpassing van de begroting 2023 (aanpassing middelen- en uitgavenbegroting, programmadecreet) met de Vlaamse Regering. De begrotingsaanpassing heeft als doel de gegevens uit de oorspronkelijke begrotingsopmaak te controleren en actualiseren om budgettaire marges en tekorten preventief op te sporen. Zo kunnen tijdige corrigerende maatregelen worden getroffen.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Begrotingscontrole 2023</strong>"
+        ],
+        "opname-start": "2023-06-28T13:51:02+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1973870"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "40",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "Hlk2lkgMH_U",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-06-21T14:00:00+0200",
+        "datumbegin": "2023-06-21T14:01:33+0200",
+        "datumeinde": "2023-06-21T20:48:30+0200",
+        "id": 1747997,
+        "laatste-wijziging": "2023-06-15T10:51:49+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1747997/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1747997?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1747997/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de federale plannen om de btw op renovatie te verhogen en de impact hiervan op het Vlaamse renovatiebeleid;</li><li>de reactie van de chemische industrie op een eventuele Europese PFAS-ban;</li><li>de recente ontwikkelingen rond de Europese Natuurherstelwet;</li><li>de prijszetting van drinkwater voor burgers en bedrijven;</li><li>de nieuwe bevoegdheid van GAS-ambtenaren om op te treden in fietszones;</li><li>de waarschuwing van de Europese Rekenkamer voor de gevaren van een gedwongen omschakeling naar elektrische wagens;</li><li>de werking van de Vertrouwenscentra Kindermishandeling;</li><li>de lijst van woonzorgcentra onder verhoogd toezicht en de voortgang van de remediëringsplannen;</li><li>de voorbereiding van de vijfde coronaprik;</li><li>het advies van de auditeur Raad van State betreffende de actualisering van budgetten voor personen met een handicap;</li><li>eventueel hogere kosten voor scholen als gevolg van een federale fiscale hervorming;</li><li>het inhouden van getuigschriften door scholen bij onbetaalde schoolfacturen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230621.pdf\">actuele vragen van 21 juni </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Gecoördineerd Vlaams vrijwilligersbeleid - Ontwerp van decreet</strong></h3><p>In veel maatschappelijke domeinen nemen vrijwilligers een cruciale rol op, ze zijn noodzakelijk en leveren een belangrijke bijdrage aan het sociale weefsel en de samenhang in Vlaanderen. De Vlaamse Regering wil het vrijwilligerswerk in al zijn facetten erkennen en waarderen en diende een ontwerp van decreet in om het vrijwilligersbeleid op Vlaams niveau meer gecoördineerd aan te pakken. Het ontwerp van decreet wil voorzien in de coördinatie tussen beleidsdomeinen, in de subsidiëring van het Vlaams Steunpunt&nbsp; Vrijwilligerswerk en in overleg en dialoog met het Europese, federale en lokale beleid.</p><h3><strong>Wonen in eigen streek – Ontwerp van decreet</strong></h3><p>Veel mensen willen graag een woning kopen in de gemeente of streek waar ze zijn opgegroeid, maar door de hoge vastgoedprijzen is dat niet overal vanzelfsprekend. Met het nieuwe ontwerp van het decreet ‘Wonen in eigen streek’ (WIES) wil de Vlaamse Regering sociale verdringing tegengaan en lokale besturen in de duurste Vlaamse gemeenten (onder meer in de Vlaamse Rand) een instrument geven om de minder kapitaalkrachtige, plaatselijke bevolking te helpen bij het verwerven van een eigen woning. Een eerdere decretale regeling werd in 2013 vernietigd door het Grondwettelijk Hof. De Vlaamse Regering diende nu een nieuw ontwerp van decreet in dat moet tegemoetkomen aan de opmerkingen van het Grondwettelijk Hof. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Moties onderzoek Rekenhof naar consultancyopdrachten Vlaamse overheid</strong></h3><p>De plenaire vergadering behandelt via de spoedprocedure moties tot instelling van een onderzoek door het Rekenhof van PVDA en van de meerderheid met Groen en Vooruit naar de uitgaven en gunning van consultancyopdrachten door de Vlaamse overheid.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Gecoördineerd Vlaams vrijwilligersbeleid - Ontwerp van decreet</strong>",
+          "<strong>Wonen in eigen streek – Ontwerp van decreet</strong>",
+          "<strong>Moties onderzoek Rekenhof naar consultancyopdrachten Vlaamse overheid</strong>"
+        ],
+        "opname-start": "2023-06-21T13:51:01+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1970360"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "39",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "SZ51N40_qSc",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "De heer",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482452",
+          "id": 1803,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/1803?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Dewinter",
+          "voornaam": "Filip"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-06-14T14:00:00+0200",
+        "datumbegin": "2023-06-14T14:00:36+0200",
+        "datumeinde": "2023-06-14T20:34:35+0200",
+        "id": 1745165,
+        "laatste-wijziging": "2023-06-12T14:17:36+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1745165/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1745165?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1745165/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het schrappen van &nbsp;examens wegens het lerarentekort;</li><li>de daling van het aantal geboortes in Nederlandstalige gezinnen in de Vlaamse Rand;</li><li>fraude bij een sociaal verhuurkantoor en een sociale woningmaatschappij;</li><li>de aangekondigde maatregelen voor een betere dienstverlening bij het Vlaams Woningfonds;</li><li>nieuwe gevallen van agressie tegen personeel van De Lijn en de aanpak van de problematiek;</li><li>de beslissingen van de IMC Werk van 12 juni 2023, in het bijzonder mbt de activering van Oekraïense vluchtelingen;</li><li>de impact van de aanhoudende droogte op de landbouw in Vlaanderen;</li><li>de Moslimraad als opvolger van de Moslimexecutieve.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230614.pdf\">actuele vragen van 14 juni </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Aanpassing ontslagregeling statutaire ambtenaren van lokale en provinciale besturen - Ontwerp van decreet</strong></h3><p><span style=\"color:black;\">Het Vlaamse Regeerakkoord 2019-2024 wenst de rechtspositieregeling voor het&nbsp;overheidspersoneel in de lokale en provinciale besturen te moderniseren en de verschillen tussen de statutaire en contractuele personeelsleden verder weg te werken. Het specifieert hierbij dat er voor de statutaire ambtenaren bij de lokale en provinciale besturen een ontslagregeling zal worden uitgewerkt die dezelfde is als de ontslagregeling uit de Arbeidsovereenkomstenwet, zodat contractuelen en statutairen op basis van dezelfde gronden en modaliteiten ontslagen kunnen worden. Arbeidsrechtbanken en -hoven worden bevoegd gemaakt om geschillen te behandelen die voortvloeien uit de beëindiging van de statutaire hoedanigheid. Het ontwerp van Ontslagdecreet dat hiervoor de decretale grondslag moet leggen, wordt besproken in de plenaire vergadering; daarna volgt de eindstemming.</span></p><h3><strong>Onderwijsinternaten – Ontwerp van decreet</strong></h3><p>De huidige regelgeving voor de internaten in het onderwijs dateert van begin jaren 80 van de vorige eeuw of zelfs ouder. Ze is complex, weinig samenhangend en heeft heel wat hiaten. Met het ontwerp van decreet over de onderwijsinternaten wil de Vlaamse Regering de onderwijsinternaten een eigen hedendaags regelgevend kader geven. &nbsp;Het nieuwe decreet bevat één erkenningsvorm en één uniforme regelgeving en budget. Internaatsmedewerkers krijgen een statuut binnen onderwijs, wat zorgt voor gelijke loons- en arbeidsvoorwaarden over alle internaten heen. Het nieuwe decreet zet in op schaalvergroting via fusies door de norm te verhogen naar minimum 65 internen. Na een hoorzitting en commissiebespreking met tweede lezing bespreekt de plenaire vergadering het ontwerp van decreet en houdt de eindstemming.</p><h3><span style=\"color:black;\"><strong>Betere mobiliteit voor mensen met verminderde mobiliteit - Voorstel van resolutie</strong></span></h3><p><span style=\"color:black;\">In de huidige samenleving zijn heel wat mensen in hun mobiliteit beperkt, hetzij tijdelijk door een ongeval of ziekte, hetzij permanent door een handicap, door hun leeftijd enzovoort. In een voorstel van resolutie richten de indieners van de meerderheidsfracties zich op mensen met een verminderde mobiliteit, met name mensen die fysiek of mentaal niet of moeilijk in staat zijn zelf een vervoermiddel te besturen. Het voorstel roept de Vlaamse Regering op om een aantal concrete maatregelen te nemen voor deze mensen en de bewustwording rond en de aandacht voor mensen met een verminderde mobiliteit in het mobiliteitsbeleid aan te scherpen.</span></p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Aanpassing ontslagregeling statutaire ambtenaren van lokale en provinciale besturen - Ontwerp van decreet</strong>",
+          "<strong>Onderwijsinternaten – Ontwerp van decreet</strong>",
+          "<span><strong>Betere mobiliteit voor mensen met verminderde mobiliteit - Voorstel van resolutie</strong></span>"
+        ],
+        "opname-start": "2023-06-14T13:51:02+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1966967"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "38",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "E8-ioIQbocI",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-06-07T14:00:00+0200",
+        "datumbegin": "2023-06-07T14:00:53+0200",
+        "datumeinde": "2023-06-07T20:24:10+0200",
+        "id": 1742204,
+        "laatste-wijziging": "2023-06-05T14:11:40+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1742204/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1742204?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1742204/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het voorstel om Engels als voertaal toe te laten achter de loketten in Brussel;</li><li>volle dierenasielen en -pensions en opvangproblemen voor dieren tijdens de zomer;</li><li>het gebruik van Google for Education in het onderwijs;</li><li>de aanvraag tot uitzonderingen op het verplichte gebruik van herbruikbare bekers tijdens zomerevenementen;</li><li>het intra-Belgisch overleg over de Europese Natuurherstelwet;</li><li>de vergunningen voor het containerdorp van het asielcentrum in Koksijde;</li><li>het juridisch kader voor het uitbaten van ‘slow cabins’ in het kader van agrotoerisme;</li><li>het verplaatsingsgedrag van de Vlamingen en het aandeel van het openbaar vervoer daarin;</li><li>de vorderingen inzake de realisatie van de Luchthaventram van Brussel naar Zaventem;</li><li>de plannen van minister Dalle met de regionale omroepen, naar aanleiding van het reddingsplan voor AVS;</li><li>het beleid inzake informatiebeveiliging, naar aanleiding van de gelekte paswoorden van o.m. medewerkers van universiteiten en de VRT;</li><li>de eisen van de non-profitsector voor bijkomende investeringen in de zorgsector, naar aanleiding van de betoging op 13 juni.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230607.pdf\">actuele vragen van 7 juni </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Vlaamse Parken en algemene landschapszorg - Ontwerp van decreet</strong></h3><p>Het Vlaams Regeerakkoord 2019-2024 bevat de ambitie om verschillende nationale parken en landschapsparken op te richten in Vlaanderen. Via een nieuw beleidskader wil de Vlaamse Regering de internationaal gekende labels ‘nationaal park’ en ‘landschapspark’ op een eenduidige en kwaliteitsvolle manier invullen; de term ‘Vlaamse Parken’ wordt hierbij als verzamelnaam gebruikt. Het doel is een ambitieuze geïntegreerde gebiedswerking die investeert in natuur, landschap en de daaraan gekoppelde maatschappelijke diensten. Gebieden van een zekere schaal die aan een bepaalde kwaliteitsgarantie voldoen, kunnen als Vlaams Park erkend worden. &nbsp;De Vlaamse Regering diende een ontwerp van kaderdecreet in dat hiervoor een beheersstructuur wil opzetten en dat de basis moet leggen voor erkenning en subsidiëring van deze structuren. Na een commissiebespreking met tweede lezing beraadslaagt de plenaire vergadering over het ontwerp van decreet Vlaamse Parken en houdt de eindstemming.</p><h3><strong>Overgangsmaatregelen vergunningen in kader van Programmatische Aanpak Stikstof – Voorstel van decreet</strong></h3><p>De milieu- en omgevingsvergunningen van sommige bestaande veehouderijen en mestverwerkingsbedrijven liepen of lopen af in de loop van 2021, 2022 of 2023 en, gelet op de stikstofproblematiek in speciale beschermingszones, kan er nog geen nieuwe vergunningsaanvraag worden ingediend conform de nieuwe regels van de definitieve PAS-regeling.&nbsp;</p><p>De plenaire vergadering behandelt via de spoedprocedure een voorstel van decreet van de meerderheidsfracties dat ertoe wil strekken om de geldigheidsduur van deze vergunningen te verlengen tot 31 december 2023.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Vlaamse Parken en algemene landschapszorg - Ontwerp van decreet</strong>",
+          "<strong>Overgangsmaatregelen vergunningen in kader van Programmatische Aanpak Stikstof – Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-06-07T13:50:59+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1963486"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "37",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "-kQSnwTgSSc",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-05-31T14:00:00+0200",
+        "datumbegin": "2023-05-31T14:00:35+0200",
+        "datumeinde": "2023-05-31T17:41:27+0200",
+        "id": 1739826,
+        "laatste-wijziging": "2023-05-30T14:10:02+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1739826/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1739826?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1739826/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de rellen op het recreatiedomein de Blaarmeersen in Gent;</li><li>het dalend aantal openbare zwembaden in Vlaanderen;</li><li>de ongelijkheid in het Vlaams onderwijs;</li><li>de beleidsconclusies ten aanzien van sommige studentenclubs na de zaak-Reuzegom;</li><li>uitvallende omvormers van zonnepanelen wegens capaciteitstekort;</li><li>de boetes bij foutieve aangiften van de erfbelasting;</li><li>de aanpak van het tekort aan parkeerplaatsen voor vrachtwagens;</li><li>het aantal afgeschafte ritten en het dalende reizigersaantal bij De Lijn in 2022;</li><li>de aanhoudende gebrekkige tweetaligheid in Brusselse ziekenhuizen;</li><li>drugpreventie op festivals;</li><li>de nieuwe contactstrategie van VDAB;</li><li>het chronisch tekort aan arbeidskrachten in de bouwsector.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230531.pdf\">actuele vragen van 31 mei </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Pensioenregeling Vlaamse volksvertegenwoordigers - Voorstel tot reglementswijziging</strong></h3><p>De plenaire vergadering bespreekt een voorstel tot wijziging van het Reglement van de vzw Pensioenen van de Vlaamse volksvertegenwoordiger en stemt over dit voorstel.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Pensioenregeling Vlaamse volksvertegenwoordigers - Voorstel tot reglementswijziging</strong>"
+        ],
+        "opname-start": "2023-05-31T13:51:08+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1960266"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "36",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "_wsdAaZjagk",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-05-24T14:00:00+0200",
+        "datumbegin": "2023-05-24T14:02:24+0200",
+        "datumeinde": "2023-05-24T21:07:38+0200",
+        "id": 1737383,
+        "laatste-wijziging": "2023-05-22T14:40:51+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1737383/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1737383?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1737383/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de diverse pleidooien om een pauze in acht te nemen voor de Europese klimaatambities en de Europese Natuurherstelwet;</li><li>de uitgaven van de Vlaamse Regering aan consultancyopdrachten;</li><li>de resultaten van de HSBC-studie bij jongeren naar grensoverschrijdend gedrag en seksualiteit;</li><li>het fenomeen van de ‘subway shirts’ die vrouwen dragen om aan ongewenst gedrag te ontsnappen;</li><li>het alternatief leerplan wiskunde van een aantal leerkrachten;</li><li>de aanpak van domiciliefraude bij sociale huurders;</li><li>de onderbenutting van de middelen voor sociale woningbouw en de cijfers voor sociaal wonen voor 2022;</li><li>het nieuwe begeleidingstraject dat asielzoekers aan werk moet helpen;</li><li>het activeren van de Vlaamse inactieven.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230524.pdf\">actuele vragen van 24 mei </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Subsidiëring in kader van lokale energie- en klimaatpacten (LEKP) - Ontwerp van decreet</strong></h3><p>Vlaanderen streeft naar een vermindering van minstens 80 procent van de uitstoot van broeikasgassen tegen 2050, met de ambitie om te evolueren naar volledige klimaatneutraliteit. &nbsp;In het kader van het Vlaams Energie- en Klimaatplan 2021-2030 riep minister Zuhal Demir alle leden van de Vlaamse Regering op om bijkomende klimaatmaatregelen te nemen. Minister van Binnenlands Bestuur Bart Somers kwam met tot nu toe drie versies van het lokaal energie- en klimaatpact (LEKP). Deze pacten bevatten (financiële) engagementen die worden opgenomen door de steden en gemeenten en de Vlaamse overheid. De Vlaamse Regering diende een ontwerp van decreet in betreffende de uitwerking van de concrete subsidiëring binnen de pacten. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Instrumentendecreet – Ontwerp van decreet</strong></h3><p>Het Vlaams regeerakkoord bevat de ambitie om het bijkomend ruimtebeslag in het dichtbebouwde Vlaanderen terug te dringen (de ‘bouwshift’). &nbsp;Door het Krokusakkoord van 22 februari 2022 bereikte de Vlaamse Regering een overeenkomst over hoe die bouwshift gerealiseerd moet worden. Het ontwerp van decreet betreffende het realisatiegerichte instrumentarium (‘Instrumentendecreet’) moet de overheid de geschikte instrumenten aanreiken om de bouwshift te realiseren.&nbsp;Het Instrumenten­decreet bevat onder meer de regeling van de vergoeding die eigenaars ontvangen als een grond aan waarde verliest door een planningsinitiatief van de overheid. &nbsp;De oppositie diende tot besluit van de commissiebespreking een reflectienota in.&nbsp;</p><p>Door de goedkeuring van een motie tot raadpleging van de Raad van State over de ingediende amendementen werd de behandeling van dit ontwerp van decreet geschorst tijdens de plenaire vergadering van 30/11/22. De plenaire vergadering hervat de beraadslaging over het ontwerp van decreet.</p><h3><strong>Ontwikkelingsmogelijkheden woonreservegebieden – Voorstel van decreet</strong></h3><p>Ook het voorstel van decreet betreffende de woonreservegebieden kadert in de uitvoering van de bouwshift. De term ‘woonreservegebieden’ is een verzamelterm, gebruikt voor meerdere soorten gebieden waar woningen gebouwd kunnen worden naast het ‘gewone’ woongebied. Het gaat om de woonuitbreidings­gebieden en specifieke reservegebieden aangeduid met bijzondere (aanvullende) gewestplanvoorschriften. In de Vlaamse Codex Ruimtelijke Ordening (VCRO) wordt bepaald op welke manier deze gebieden ontwikkeld kunnen worden.</p><p>De meerderheidsfracties in het Vlaams Parlement dienden een voorstel van decreet in&nbsp;dat de ontwikkelings­mogelijkheden voor woonreservegebieden in de VCRO wil wijzigen. Het voorstel beoogt een duurzame oplossing te creëren voor de resterende woonreserve­gebieden door de huidige regeling inzake de aansnijding van deze gebieden grondig te hervormen.&nbsp;De regie over het ontwikkelen van woonreservegebieden zal bij de lokale besturen liggen.</p><p>De behandeling van dit voorstel van decreet werd eveneens geschorst tijdens de plenaire vergadering van 30/11/22. &nbsp;De plenaire vergadering hervat de beraadslaging over het voorstel van decreet.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Subsidiëring in kader van lokale energie- en klimaatpacten (LEKP) - Ontwerp van decreet</strong>",
+          "<strong>Instrumentendecreet – Ontwerp van decreet</strong>",
+          "<strong>Ontwikkelingsmogelijkheden woonreservegebieden – Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-05-24T13:51:00+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1957986"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "35",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "5NOuc1qi-Q4",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-05-17T14:00:00+0200",
+        "datumbegin": "2023-05-17T14:02:44+0200",
+        "datumeinde": "2023-05-17T18:53:37+0200",
+        "id": 1735600,
+        "laatste-wijziging": "2023-05-16T17:34:33+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1735600/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1735600?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1735600/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actualiteitsdebat over actualisering Vlaams Energie- en Klimaatplan</strong></h3><p>De Vlaamse Regering bereikte op vrijdag 12 mei een akkoord over de actualisering van het Vlaams Energie- en Klimaatplan 2021-2030. Volstaat deze aanscherping om de Europese doelstellingen te bereiken? &nbsp;Doet Vlaanderen voldoende klimaatinspanningen? &nbsp;In de plenaire vergadering gaan de fracties in debat met de ministers Zuhal Demir, Matthias Diependaele, Lydia Peeters en Jo Brouns.</p><h3><strong>Actualiteitsdebat over resultaten PIRLS 2021-studie naar leesvaardigheid Vlaamse leerlingen</strong></h3><p>Op dinsdag 16 mei werden de resultaten van het internationale PIRLS-onderzoek (Progress in International Reading Literacy Study) voor 2021 voorgesteld. Hieruit blijkt dat de leesvaardigheid bij Vlaamse tienjarigen opnieuw fors gedaald is. &nbsp;Meer dan 40 % van de leerlingen zegt ook met honger op school te komen. &nbsp;De fracties debatteren in de plenaire vergadering met minister Ben Weyts over de beleidsconclusies uit de nieuwe PIRLS-studie.</p><p><i>Wegens de toevoeging van het tweede actualiteitsdebat aan de agenda zijn de actuele vragen geschrapt.</i></p><h3><strong>Nieuwe beleidsimpulsen voor assistentiehonden - Voorstel van resolutie</strong></h3><p>Een assisentiehond is een hond die getraind werd of wordt om een persoon met een handicap of ziekte te begeleiden en die de zelfredzaamheid van die persoon verruimt. Er zijn verschillende types assistentiehonden, maar alleen de hoorhond, de hulphond en de geleidehond voor blinden en slechtzienden zijn opgenomen in de refertelijst van het Vlaams Agentschap voor Personen met een Handicap (VAPH). De andere assistentiehonden (o.a. epilepsiehonden, autismehonden, diabeteshonden) niet: voor die honden kan dus geen tegemoetkoming worden verkregen. Een aanvraag voor die honden verloopt via de Bijzondere Bijstandscommissie (BBC). Leden van diverse fracties uit meerderheid en oppositie dienden een voorstel van resolutie in waarbij ze de Vlaamse Regering vragen om een oplossing te bieden voor de huidige tekortkomingen en voor de drempels die personen ervaren als ze een assistentiehond willen inzetten. De plenaire vergadering bespreekt het voorstel van resolutie en houdt de eindstemming.</p><h3><strong>Aanpassing erkenningsvoorwaarden voorzieningen voor personen met handicap - Voorstel van resolutie</strong></h3><p>Uit een <a href=\"https://www.vlaamsparlement.be/nl/parlementaire-documenten/parlementaire-initiatieven/1691803\">verzoekschrift</a> van een burger bleek dat er een &nbsp;hiaat bestaat in de regelgeving (besluit van de Vlaamse Regering) rond erkenning en kwaliteit van voorzieningen voor mensen met een handicap. &nbsp;In dat besluit zijn ter bescherming van de gebruiker voorwaarden voor een eenzijdig ontslag opgenomen. Als een voorziening zich niet aan die voorwaarden houdt, is er evenwel geen instantie die dat ongedaan kan maken. Zowel de bevoegde minister als Zorginspectie hebben dat bevestigd. In een voorstel van resolutie vragen de indieners het besluit van de Vlaamse Regering te wijzigen zodat dergelijke situaties in de toekomst niet meer kunnen voorvallen.</p>",
+        "omschrijving-kort": [
+          "<strong>Actualiteitsdebat over actualisering Vlaams Energie- en Klimaatplan</strong>",
+          "<strong>Actualiteitsdebat over resultaten PIRLS 2021-studie naar leesvaardigheid Vlaamse leerlingen</strong>",
+          "<strong>Nieuwe beleidsimpulsen voor assistentiehonden - Voorstel van resolutie</strong>",
+          "<strong>Aanpassing erkenningsvoorwaarden voorzieningen voor personen met handicap - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-05-17T13:51:03+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1955769"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "34",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "04lvOlrk-4E",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-05-10T14:00:00+0200",
+        "datumbegin": "2023-05-10T14:00:34+0200",
+        "datumeinde": "2023-05-10T16:53:06+0200",
+        "id": 1733338,
+        "laatste-wijziging": "2023-05-09T14:48:11+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1733338/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1733338?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1733338/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de aanpak van grensoverschrijdend gedrag op de werkvloer;</li><li>het mentaal welzijn van jongeren;</li><li>het groeipakket (de vroegere kinderbijslag);</li><li>de Canon van Vlaanderen;</li><li>de impact van het dodelijke jongerengeweld in Zaventem op het onderwijs in de ZAVO-school;</li><li>de artsenquota;</li><li>de toepassing van het nieuwe Inschrijvingsdecreet in het onderwijs;</li><li>de eisen van de Brusselse Regering m.b.t. de vernieuwing van de omgevingsvergunning voor de luchthaven van Zaventem.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230510.pdf\">actuele vragen van 10 mei </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Geldigverklaring verkiezingen en onderzoek geloofsbrieven - Voorstel tot wijziging van het Reglement van het Vlaams Parlement</strong></h3><p>Volgens de Bijzondere Wet van 8 augustus 1980 tot hervorming van de instellingen spreekt elk deelstaatparlement in België zich uit over de geldigheid van zijn verkiezingen en beslist het over geschillen betreffende het onderzoek van de geloofsbrieven van zijn verkozenen en opvolgers. &nbsp;De concrete regelgeving hierover is vastgelegd in het Reglement van het Vlaams Parlement, artikel 3. Wegens een aantal arresten van het Europees Hof voor de Rechten van de Mens (arrest-'Mugemangango tegen België' n.a.v. bezwaar tegen verkiezingen Waals Parlement van 2014 en arrest ‘G.K. tegen België’ n.a.v. geschil rond het ontslag van een senator) moet de bestaande regeling aangepast worden. De plenaire vergadering bespreekt een voorstel tot aanpassing van het Reglement van het Vlaams Parlement ter zake en stemt over dit voorstel.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Geldigverklaring verkiezingen en onderzoek geloofsbrieven - Voorstel tot wijziging van het Reglement van het Vlaams Parlement</strong>"
+        ],
+        "opname-start": "2023-05-10T13:51:01+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1952961"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "33",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "saQzOidfhAw",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-05-03T14:00:00+0200",
+        "datumbegin": "2023-05-03T14:00:19+0200",
+        "datumeinde": "2023-05-03T20:09:56+0200",
+        "id": 1730801,
+        "laatste-wijziging": "2023-05-03T11:03:32+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1730801/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1730801?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1730801/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actualiteitsdebat over onbetaalde schoolfacturen</strong></h3><p>De pers meldde deze week een sterke toename van het aantal onbetaalde schoolfacturen, wat als een belangrijke armoede-indicator wordt beschouwd. In de plenaire vergadering debatteren de volksvertegenwoordigers met de minister Weyts (Onderwijs) en Dalle (Armoedebeleid) over de aanpak van deze problematiek.</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit. Wegens de toevoeging van het actualiteitsdebat aan de agenda wordt het aantal vragen beperkt.</p><p>Deze week vragen over:&nbsp;</p><ul><li>de plannen van De Lijn om tweedehands dieselbussen aan te kopen;</li><li>de toename van het aantal arbeidsmigranten uit niet-EU-landen;</li><li>de mogelijke beïnvloeding van de verkiezingen van 2024 in België door buitenlandse mogendheden;</li><li>de grootschalige organisatie van Turkse verkiezingen in Vlaanderen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230503.pdf\">actuele vragen van 3 mei </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Nieuw zorgkwaliteitsdecreet - Ontwerp van decreet</strong></h3><p>Het garanderen van kwaliteit van de zorg in het beleidsdomein Welzijn, Volksgezondheid en Gezin is een voortdurende bekommernis voor de zorggebruikers, de zorgvoorzieningen en de overheid. Het bestaande Kwaliteitsdecreet van 17 oktober 2003 is aan een actualisering toe, zoals aangekondigd in het Vlaams regeerakkoord. De Vlaamse Regering diende een ontwerp van kaderdecreet in dat een nieuw raamwerk moet creëren voor de manier waarop aan zorgkwaliteit wordt gewerkt in het hele beleidsdomein WVG. De belangrijkste principes worden erin vastgelegd, naast de verantwoordelijkheden van voorzieningen en overheid. Een centraal instrument vormt het belanghebbendenoverleg, waar administratie, voorzieningen, zorggebruikers en andere stakeholders vorm geven aan kwaliteitsindicatoren, kwaliteitsinstrumenten en kwaliteitskaders. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Leersteun voor leerlingen met speciale zorgnoden - Ontwerp van decreet</strong></h3><p>Het bestaande M-decreet (voluit: decreet van 21 maart 2014 betreffende maatregelen voor leerlingen met specifieke onderwijsbehoeften) regelt het onderwijs voor kinderen met een beperking, stoornis of handicap. Het M-decreet had tot doel om ook leerlingen met speciale zorgnoden toegang te geven tot het gewoon onderwijs, maar in de praktijk ging dit vaak moeizaam. Het Vlaams regeerakkoord 2019-2024 bevatte de ambitie om het M-decreet af te schaffen en te vervangen door een Leersteundecreet met als leidraad “gewoon onderwijs indien mogelijk, buitengewoon onderwijs indien nodig”. &nbsp;De Vlaamse Regering diende een ontwerp van Leersteundecreet in om kwaliteitsvol onderwijs voor alle leerlingen te blijven garanderen maar dat ook werkbaar moet blijven voor de leraar. &nbsp;Er komen onder meer er leersteuncentra, die leersteun voor alle types moeten aanleveren. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Maatregelen tegen agressie in het voetbal - Voorstel van resolutie</strong></h3><p>In Vlaanderen neemt het aantal incidenten van (fysieke) agressie in en rondom voetbalvelden en -stadions toe, zowel in het professionele als het amateurvoetbal. De verschillende overheden en instanties namen al acties en initiatieven op hun terrein, maar kunnen het probleem niet uitroeien. Leden van vijf fracties dienden een voorstel van resolutie in, waarbij ze de Vlaamse Regering onder andere vragen om in overleg met andere actoren actie te ondernemen tegen wangedrag in de professionele voetbalwereld via strengere straffen, in te zetten op een betere informatiedoorstroming, en om ook meer soortgelijke acties te ondernemen in het amateurvoetbal. De plenaire vergadering bespreekt het voorstel van resolutie en houdt de eindstemming.</p>",
+        "omschrijving-kort": [
+          "<strong>Actualiteitsdebat over onbetaalde schoolfacturen</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<strong>Nieuw zorgkwaliteitsdecreet - Ontwerp van decreet</strong>",
+          "<strong>Leersteun voor leerlingen met speciale zorgnoden - Ontwerp van decreet</strong>",
+          "<strong>Maatregelen tegen agressie in het voetbal - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-05-03T13:51:02+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1950243"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "32",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "W2CbwWlQrzA",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-04-26T14:00:00+0200",
+        "datumbegin": "2023-04-26T14:01:13+0200",
+        "datumeinde": "2023-04-26T19:46:34+0200",
+        "id": 1727967,
+        "laatste-wijziging": "2023-04-26T16:11:39+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1727967/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1727967?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1727967/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de gemeentelijke krotbelasting wegens te laat uitgevoerde renovatiewerken;</li><li>een kilometerheffing op personenwagens en andere mogelijke klimaatmaatregelen in de mobiliteitsector;</li><li>de afschaffing van de graadevaluatie en de invoering van een volwaardige evaluatie na het eerste jaar secundair onderwijs;</li><li>de impact van de demografie op de ouderenzorg en de noodkreet over een verwacht zorginfarct;</li><li>de impact van de invoering van de titel van basisverpleegkundige in de wet van 10 mei 2015;</li><li>de resultaten van het bloedonderzoek naar PFAS bij jongeren in de buurt van 3M in Zwijndrecht;</li><li>de handhaving van het Logiesdecreet ten aanzien Airbnb-verblijven;</li><li>het standpunt van de Vlaamse Regering over de Europese natuurherstelverordening</li><li>de extra zuivering van fosfor in zuiveringsinstallaties van Aquafin.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230426.pdf\">actuele vragen van 26 april </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Vlaamse centrale onderwijstoetsen - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in tot invoering van gestandaardiseerde, genormeerde en gevalideerde proeven (GGG-proeven) in het leerplichtonderwijs. Deze zogenaamde Vlaamse toetsen hebben tot doel de interne kwaliteitszorg van scholen te ondersteunen en de onderwijskwaliteit te versterken. Ze worden centraal opgesteld, digitaal afgenomen, verwerkt en geanalyseerd. De resultaten van deze toetsen moeten relevante informatie bieden over de mate waarin leerlingen de eindtermen Nederlands en wiskunde bereiken. Vanaf het schooljaar 2023-2024 moeten de toetsen geleidelijk worden ingevoerd in het lager en secundair onderwijs. De plenaire vergadering bespreekt het ontwerp van decreet over de Vlaamse toetsen in het onderwijs en houdt de eindstemming.</p><h3><strong>Meer medicatieveiligheid in woonzorgcentra - Voorstel van resolutie</strong></h3><p>Naar aanleiding van incidenten met het toedienen van medicatie in rusthuizen in Oostrozebeke en Hasselt dienden leden van de meerderheidsfracties een voorstel van resolutie in waarin de Vlaamse Regering wordt opgeroepen om voor meer medicatieveiligheid te zorgen in Vlaamse woonzorgcentra, onder meer door projecten met een coördinerend en adviserend apotheker en door meer informatie-uitwisseling &nbsp;tussen de verschillende instanties. De plenaire vergadering bespreekt het voorstel van resolutie en houdt de eindstemming.</p><h3><strong>Stopzetting verplichte isolatie in kader van COVID-19 - Voorstel van decreet</strong></h3><p>De plenaire vergadering behandelt via de spoedprocedure een voorstel van decreet van de meerderheidsfracties tot stopzetting van de verplichte isolatie in het kader van COVID-19.</p><p><span style=\"color:black;\">Gezien de huidige epidemiologische situatie en de huidige variant, gezien het belang van consistentie in de maatregelen voor alle respiratoire virussen en gezien de strategieën die ook in de buurlanden worden ontwikkeld, adviseerde de Risk Assessment Group (RAG) om de verplichte isolatieperiode voor COVID-19 stop te zetten.</span></p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Vlaamse centrale onderwijstoetsen - Ontwerp van decreet</strong>",
+          "<strong>Meer medicatieveiligheid in woonzorgcentra - Voorstel van resolutie</strong>",
+          "<strong>Stopzetting verplichte isolatie in kader van COVID-19 - Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-04-26T13:51:18+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1947625"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "31",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "n-biDUNmJdA",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-04-19T14:00:00+0200",
+        "datumbegin": "2023-04-19T14:03:40+0200",
+        "datumeinde": "2023-04-19T21:08:59+0200",
+        "id": 1724353,
+        "laatste-wijziging": "2023-04-17T13:58:46+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1724353/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1724353?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1724353/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de plenaire vragenronde kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de houding van de Vlaamse Regering t.a.v. het Europese klimaatbeleid;</li><li>de resultaten van de controle op buitenlandse eigendommen bij huurders van een sociale woning;</li><li>de reactie van de Brusselse Regering op de goedkeuring van de plannen voor de herinrichting van de Brusselse ring;</li><li>de vernietiging van het uitvoeringsbesluit bij het Taxidecreet;</li><li>de nieuwe communicatierichtlijnen bij de VRT;</li><li>de alarmerende achteruitgang van de bijenpopulatie in Vlaanderen;</li><li>de impact van de federale geplande fiscale hervorming op &nbsp;durfkapitaal;</li><li>de nood aan een drugspreventiecampagne na de berichtgeving over het gestegen cocaïnegebruik in Antwerpen;</li><li>geweld tegen kinderen, de opvolging van problematische thuissituaties en een outreachend beleid t.a.v. moeilijk bereikbare en kwetsbare groepen, naar aanleiding van de dood en verdwijning van een negenjarige jongen in Gent;</li><li>het stilliggen van de Interministeriële Conferentie Migratie en Integratie sinds meer dan een jaar;</li><li>de verdeling van de artsenquota tussen de Vlaamse en de Franse Gemeenschap;</li><li>verkiezingen tijdens de examenperiode in juni 2024.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230419.pdf\">actuele vragen van 19 april </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Wijziging diverse decreten m.b.t. wonen - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om een aantal bestaande woondecreten te wijzigen. Zo wordt onder andere de decretale basis voor het stelsel van geconventioneerde verhuur gelegd, het recht van voorkoop hervormd, de huidige vermogenstoets voor sociale huurders uitgebreid en het stelsel van de woningkwaliteitsbewaking aangepast. Er wijzigen ook een aantal bepalingen rond de verwerking van persoonsgegevens. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Wijziging diverse decreten n.a.v. fusie Departement Zorg - Ontwerp van decreet</strong></h3><p>Op 4 februari 2022 kondigde de Vlaamse Regering de integratie van het Departement Welzijn, Volksgezondheid en Gezin en het intern verzelfstandigd agentschap Zorg en Gezondheid aan omdat de zorg- en welzijnsuitdagingen van de toekomst een efficiënte overheid vereisen. &nbsp;De plenaire vergadering bespreekt het ontwerp van decreet dat de regelgeving moet aanpassen aan deze fusieoperatie en houdt de eindstemming over het ontwerp.</p><h3><strong>Evolutie naar proefdiervrije toekomst - Voorstel van resolutie</strong></h3><p>België staat op plaats zes van de Europese lidstaten met het hoogste aantal dieren dat wordt gebruikt voor wetenschappelijk onderzoek, wat gepaard gaat met dierenleed. Er bestaan ondertussen alternatieven voor dierproeven. Zowel de Groenfractie als de meerderheidsfracties dienden &nbsp;een voorstel van resolutie in waarbij ze de Vlaamse Regering vragen om een stappenplan op te stellen voor een evolutie naar een toekomst zonder dierproeven. &nbsp;Na een hoorzitting &nbsp;en bespreking werd het voorstel van resolutie van de meerderheid goedgekeurd in commissie; het voorstel van Groen werd impliciet verworpen. &nbsp;De plenaire vergadering bespreekt het voorstel van resolutie en houdt de eindstemming.</p><h3><strong>Wijziging pensioenregeling Vlaamse volksvertegenwoordigers</strong></h3><p>De plenaire vergadering bespreekt via de spoedprocedure een voorstel van het Uitgebreid Bureau en een voorstel van resolutie van PVDA tot aanpassing van de pensioenregeling van de parlementsleden.</p><h3><strong>Verplichte inschrijving bij VDAB van Oekraïense oorlogsvluchtelingen - Voorstel van decreet</strong></h3><p>De plenaire vergadering bespreekt via spoed een voorstel van decreet van de meerderheidsfracties tot toeleiding van tijdelijk ontheemden uit Oekraïne naar (beroeps)opleidingen en naar de arbeidsmarkt via de verplichte inschrijving bij de VDAB en stemt over dit voorstel.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Wijziging diverse decreten m.b.t. wonen - Ontwerp van decreet</strong>",
+          "<strong>Wijziging diverse decreten n.a.v. fusie Departement Zorg - Ontwerp van decreet</strong>",
+          "<strong>Evolutie naar proefdiervrije toekomst - Voorstel van resolutie</strong>",
+          "<strong>Wijziging pensioenregeling Vlaamse volksvertegenwoordigers</strong>",
+          "<strong>Verplichte inschrijving bij VDAB van Oekraïense oorlogsvluchtelingen - Voorstel van decreet</strong>"
+        ],
+        "opname-start": "2023-04-19T13:51:02+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1944824"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "30",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "aliPaCWakeM",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-29T14:00:00+0200",
+        "datumbegin": "2023-03-29T14:01:22+0200",
+        "datumeinde": "2023-03-29T19:11:51+0200",
+        "id": 1721711,
+        "laatste-wijziging": "2023-03-29T17:57:14+0200",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1721711/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1721711?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1721711/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>wachtrijen van ouders voor de inschrijving van hun kinderen in het buitengewoon onderwijs;</li><li>de ondersteuning van excellerende studenten in het hoger onderwijs;</li><li>de nieuwe minimumdoelen (eindtermen) voor de tweede en derde graad secundair onderwijs;</li><li>de nood aan een bouwshift om de woonbehoefte in te vullen, naar aanleiding van een nieuwe studie van VITO en KU Leuven;</li><li>de lange wachttijden aan de autokeuringscentra;</li><li>de aanpak van agressie tegen personeel van De Lijn;</li><li>fietsongevallen en fietsveiligheid;</li><li>het niet opnemen van de thuiszorg in het wetsontwerp over de ‘bekwame helper';</li><li>de wachttijden in de jeugdcrisishulp;</li><li>de afschaffing van de vaste benoeming voor Vlaamse ambtenaren en de modernisering van het hr-beleid bij de Vlaamse overheid.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230329.pdf\">actuele vragen van 29 maart </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Verzameldecreet Mobiliteit en Openbare Werken III - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een derde ontwerp van verzameldecreet MOW (Mobiliteit en Openbare Werken) tijdens de huidige zittingsperiode in. De voorgestelde wijzigingen aan de regelgeving betreffen diverse bepalingen inzake het gemeenschappelijk vervoer, de weginfrastructuur en het wegenbeleid, de waterinfrastructuur en het waterbeleid. De verschillende bepalingen zijn veelal van technische aard en brengen correcties aan in bestaande regelgeving. De plenaire vergadering houdt de eindstemming over het ontwerp van decreet.</p><h3><strong>Samenwerkingsakkoord screeningsmechanisme buitenlandse investeringen - Ontwerp van instemmingsdecreet</strong></h3><p>Tegen een achtergrond van wijzigende internationale machtsverhoudingen en de opkomst van ‘geo-economie’ en ‘geo-technologie’ in de geopolitieke relaties wil Vlaanderen zijn strategische belangen bewaken. Vlaanderen, de federale staat en de andere Belgische deelstaten sloten een samenwerkingsakkoord af over het invoeren van een mechanisme voor de screening van buitenlandse directe investeringen. Het samenwerkingsakkoord beoogt de invoering van een screeningsmechanisme dat de overheden die partij zijn bij het akkoord, in staat moet stellen om enerzijds de nationale veiligheid en openbare orde en hun strategische belangen te vrijwaren, en anderzijds de mogelijkheid moet bieden om tot een beter overzicht van de inkomende buitenlandse investeringsstromen te komen.&nbsp; De plenaire vergadering stemt over het ontwerp van decreet tot instemming met dit samenwerkingsakkoord.</p><h3><strong>Veiligheid, zorgkwaliteit,subsidiëring en betaalbaarheid ouderenzorg - Motie tot oprichting van een onderzoekscommissie</strong></h3><p>De afgelopen jaren kwamen een aantal mistoestanden in sommige Vlaamse woonzorgcentra aan het licht: problemen van onder meer verwaarlozing van bewoners, medicatietoediening, gestegen dagprijzen, financiële malversaties. &nbsp;Een aantal voorzieningen werd onder verhoogd toezicht van de Zorginspectie geplaatst en een aantal woonzorgcentra sloot de deuren. In een motie tot uitoefening van het recht op onderzoek vragen leden van de Vooruit-fractie de oprichting van een parlementaire onderzoekscommissie naar de veiligheid, de zorgkwaliteit, de subsidies en het correct aanrekenen van de dagprijs in de Vlaamse ouderenzorg. De plenaire vergadering bespreekt de motie en stemt erover.</p><h3><strong>Toekenning en controle gecombineerde werkvergunningen - Onderzoek door Rekenhof</strong></h3><p>Onlangs bleek dat er mogelijk fraude gebeurt met gecombineerde werk- en verblijfsvergunningen voor arbeidsmigratie vanuit Turkije en Marokko. &nbsp;Leden van de meerderheidsfracties, Groen en Vooruit dienden een motie in waarin het Rekenhof wordt gevraagd een onderzoek uit te voeren naar de toekenning van en controle op gecombineerde vergunningen en vragen om deze motie aan de agenda toe te voegen.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Verzameldecreet Mobiliteit en Openbare Werken III - Ontwerp van decreet</strong>",
+          "<strong>Samenwerkingsakkoord screeningsmechanisme buitenlandse investeringen - Ontwerp van instemmingsdecreet</strong>",
+          "<strong>Veiligheid, zorgkwaliteit,subsidiëring en betaalbaarheid ouderenzorg - Motie tot oprichting van een onderzoekscommissie</strong>",
+          "<strong>Toekenning en controle gecombineerde werkvergunningen - Onderzoek door Rekenhof</strong>"
+        ],
+        "opname-start": "2023-03-29T13:50:58+0200",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1940423"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "29",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "heK9293WxlY",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "De heer",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482452",
+          "id": 1803,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/1803?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Dewinter",
+          "voornaam": "Filip"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "3",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-22T14:00:00+0100",
+        "datumbegin": "2023-03-22T14:00:12+0100",
+        "datumeinde": "2023-03-22T18:08:32+0100",
+        "id": 1718967,
+        "laatste-wijziging": "2023-03-22T14:39:40+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1718967/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1718967?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1718967/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:&nbsp;</p><ul><li>de afgelasting van de ‘queer iftar’ in Borgerhout omwille van veiligheidsredenen;</li><li>de hoge ongekwalificeerde uitstroom in het secundair onderwijs;</li><li>de nieuwe maatregelen van minister Weyts tegen het lerarentekort;</li><li>de structurele financiering van het hoger onderwijs, naar aanleiding van de besparingen bij de UGent;</li><li>de werkgelegenheidsgraad en het asymmetrisch arbeidsmarktbeleid;</li><li>de doorstroom bij maatwerkbedrijven;</li><li>de mogelijke gevolgen van de overname van Telenet;</li><li>het sociaal overleg bij Delhaize;</li><li>de nieuwe campagne rond zindelijkheidstraining bij peuters van het Agentschap Opgroeien.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230322.pdf\">actuele vragen van 22 maart </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Hybride onderwijs in secundair - Ontwerp van decreet</strong></h3><p>Tijdens de coronacrisis zijn secundaire scholen noodgedwongen overgeschakeld op afstandsonderwijs. Hoewel er een consensus bestaat dat contactonderwijs de kern moet blijven van het Vlaamse onderwijs, hebben scholen gemerkt dat een hybride vorm van onderwijs, waarbij lessen op school en online leeractiviteiten elkaar afwisselen, een meerwaarde kan zijn voor het leerproces.&nbsp;</p><p>De Vlaamse Regering diende daarom een ontwerp van decreet in over het hybride onderwijs in het secundair. Het ontwerp wil de minimale bepalingen regelen voor de organisatie van het hybride onderwijs in het gewoon secundair onderwijs. Het decretale kader moet ruimte laten aan school- en centrumbesturen om het interactief afstandsonderwijs vorm te geven op maat van hun pedagogisch-didactische visie en rekening houdend met de context van de school of het centrum. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Samenwerkingsakkoord gegevensbank Sciensano voor contactopsporing - Ontwerp van instemmingsdecreet</strong></h3><p>In augustus 2020 hebben de federale overheid en de regio's een samenwerkingsakkoord gesloten rond het systeem van de contactopsporing. Dat systeem moest helpen in de strijd tegen de verspreiding van het coronavirus. Om het systeem te doen draaien werden verschillende gegevensbanken opgericht en werden er afspraken gemaakt over de manier waarop met die gegevens zou omgesprongen worden. &nbsp;Het Grondwettelijk Hof vernietigde in september 2022 een aantal bepalingen uit het samenwerkingsakkoord en liet de overheden tot 31 maart 2023 de tijd om met een aangepast samenwerkingsakkoord te komen. Dat aangepast samenwerkingsakkoord werd op 10 maart gesloten tussen de federale staat en de deelstaten. De plenaire vergadering bespreekt het ontwerp van decreet tot instemming met het aangepaste samenwerkingsakkoord en stemt erover.</p><h3><strong>Veroordeling Oegandese antihomowet - Voorstel van resolutie</strong></h3><p>Via de spoedprocedure behandelt de plenaire vergadering een voorstel van resolutie waarin de strenge antihomowet die het Oegandese parlement onlangs goedkeurde, wordt aangeklaagd en veroordeeld.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Hybride onderwijs in secundair - Ontwerp van decreet</strong>",
+          "<strong>Samenwerkingsakkoord gegevensbank Sciensano voor contactopsporing - Ontwerp van instemmingsdecreet</strong>",
+          "<strong>Veroordeling Oegandese antihomowet - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-03-22T13:51:08+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1937568"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "28",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "QiVXmIopu4U",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "4",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-15T14:00:00+0100",
+        "datumbegin": "2023-03-15T14:02:53+0100",
+        "datumeinde": "2023-03-15T17:39:55+0100",
+        "id": 1716758,
+        "laatste-wijziging": "2023-03-13T15:24:43+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1716758/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1716758?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1716758/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:&nbsp;</p><ul><li>het afnemend aantal afgestudeerden dat start in de zorgsector;</li><li>de vraag van de universiteiten naar Engelstalige masteropleidingen burgerlijk ingenieur en de verengelsing van het hoger onderwijs;</li><li>de vergunning voor een containerdorp voor asielzoekers in het Hellebos in Kampenhout;</li><li>de definitieve keuze van het Ventilustracé;</li><li>de negatieve ratingvooruitzichten van de Belgische overheidsfinanciën en de impact hiervan op Vlaanderen;</li><li>de invoering van een uniform Vlaams kotlabel;</li><li>het tegengaan van discriminatie op de woningmarkt;</li><li>het stikstofakkoord dat de Vlaamse Regering bereikte op 10 maart 2023.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230315.pdf\">actuele vragen van 15 maart </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Integratie &nbsp;Raad voor Betwistingen inzake Studievoortgangsbeslissingen in de Vlaamse bestuursrechtscolleges - Ontwerp van decreet</strong></h3><p>De Raad voor betwistingen inzake studievoortgangsbeslissingen is een administratief rechtscollege voor het hoger onderwijs. Iedere ingeschreven student kan - na uitputting van het intern beroep bij de onderwijsinstelling - een verzoekschrift tot beroep indienen bij de Raad wanneer hij of zij een studievoortgangsbeslissing wil betwisten.</p><p>De inkanteling van de Raad voor Betwistingen inzake Studievoortgangsbeslissingen in de Dienst van de Vlaamse Bestuursrechtscolleges (DBRC) werd aangekondigd in het Vlaams regeerakkoord 2019-2024 en werd opnieuw opgenomen in de beleidsnota’s Onderwijs en Justitie. De Vlaamse Regering diende een ontwerp van decreet in om deze integratie, die meer rechtszekerheid en efficiëntie moet garanderen, te realiseren. Tegelijkertijd wordt het statuut van de bestuursrechters van de Raad in overeenstemming gebracht met het DBRC-decreet.</p><h3><strong>Wijziging decreet justitiehuizen en juridische eerstelijnsbijstand - Ontwerp van decreet</strong></h3><p>In 2022 werden binnen de justitiehuizen tien psychologen aangeworven. Zij doen binnen de opdrachten van de justitiehuizen aan risicotaxatie en psychodiagnostiek. Natuurlijk moeten de psychologen en justitieassistenten dan wel informatie kunnen uitwisselen. Daar wringt het schoentje. De psychologen hebben van nature een beroepsgeheim, terwijl justitieassistenten enkel een discretieplicht (het ambtsgeheim) hebben. Als de psychologen informatie zouden delen met de justitieassistenten, zouden zij strafbaar gesteld kunnen worden wegens schending van hun beroepsgeheim (op basis van artikel 458 van het Strafwetboek). Opdat die informatiedeling wel mogelijk is, zonder dat de psychologen strafbaar gedrag zouden stellen, wordt het decreet Justitiehuizen van 2019 gewijzigd met dit ontwerp van decreet. &nbsp;Daarnaast wordt ook de definitie van indicatiestelling aangepast.</p><h3><strong>Samenwerkingsakkoord Europese Faciliteit voor Herstel en Veerkracht - Instemmingsdecreet</strong></h3><p>De Europese Faciliteit voor Herstel en Veerkracht is het instrument dat centraal staat in NextGenerationEU, het plan van de EU om sterker uit de coronapandemie te komen. In het kader van de Europese Faciliteit voor Herstel en Veerkracht, zal België mits het behalen van mijlpalen en streefdoelen in verschillende betalingsschijven de som van 4,524 miljard euro aan subsidies ontvangen vanuit Europa. Via een samenwerkingsakkoord moeten een aantal zaken geregeld worden zoals de wijze van betaling van de Europese subsidies, de verdeling ervan tussen de verschillende entiteiten, controle en audit van de projecten. De plenaire vergadering stemt over het ontwerp van decreet tot instemming met dit samenwerkingsakkoord tussen Vlaanderen, de federale staat en de overige deelstaten.&nbsp;</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Integratie &nbsp;Raad voor Betwistingen inzake Studievoortgangsbeslissingen in de Vlaamse bestuursrechtscolleges - Ontwerp van decreet</strong>",
+          "<strong>Wijziging decreet justitiehuizen en juridische eerstelijnsbijstand - Ontwerp van decreet</strong>",
+          "<strong>Samenwerkingsakkoord Europese Faciliteit voor Herstel en Veerkracht - Instemmingsdecreet</strong>"
+        ],
+        "opname-start": "2023-03-15T13:51:05+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1934099"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "27",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "laNi064wnu4",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "De heer",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482452",
+          "id": 1803,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/1803?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Dewinter",
+          "voornaam": "Filip"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "4",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-08T14:00:00+0100",
+        "datumbegin": "2023-03-08T14:00:24+0100",
+        "datumeinde": "2023-03-08T20:17:20+0100",
+        "id": 1713343,
+        "laatste-wijziging": "2023-03-09T10:32:30+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1713343/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1713343?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1713343/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het ethisch gebruik van artificiële intelligentie (AI) bij de Vlaamse overheid;</li><li>de subsidiëring voor de kinderopvang en de omschakeling van trappen;</li><li>de toename van het aantal oproepen bij de hulplijn 1712;</li><li>de wachtlijsten voor mensen met een beperking;</li><li>de nood aan een plan rond endometriose;</li><li>het princiepsakkoord tussen de landbouw- en natuurorganisaties over het MAP 7;</li><li>de tijdelijke verhuur van sociale woningen buiten het socialehuurstelsel, naar aanleiding van overlast door krakers;</li><li>het Duitse verzet tegen het voorstel van de Europese Commissie om een verbod op wagens met verbrandingsmotoren in te voeren en het Vlaamse standpunt ter zake;</li><li>de uitrol van de gemeenschapsdienst en de feedback van de gemeenten;</li><li>de aangekondigde verzelfstandiging van Delhaize-warenhuizen en de impact ervan op de werkgelegenheid.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230308.pdf\">actuele vragen van 8 maart </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Kunst en cultuurgoederen als erfbelasting - Ontwerp van decreet</strong></h3><p>In de Vlaamse Codex Fiscaliteit is de mogelijkheid opgenomen dat mensen erfbelasting kunnen betalen met kunstwerken. De overheid wil al geruime tijd vermijden dat belangrijk erfgoed naar het buitenland verdwijnt wanneer erfgenamen van een kunstwerk erfbelasting moeten betalen op de opengevallen nalatenschap. Van deze mogelijkheid wordt echter weinig gebruik gemaakt. De Vlaamse Regering diende daarom een ontwerp van decreet in om deze regeling aantrekkelijker te maken. Zo wordt onder andere de definitie van cultuurgoederen uitgebreid, de marktwaarde van de cultuurgoederen wordt verhoogd met 20 procent, en er komt een vereenvoudiging van de procedure.</p><h3><strong>Nieuw decreet sociaal-cultureel volwassenenwerk – Ontwerp van decreet</strong></h3><p>‘Sociaal-cultureel volwassenenwerk’ is de term voor organisaties die de sociaal-culturele participatie van iedereen bevorderen, door vooral in de vrijetijdsfeer mensen bijeen te brengen voor gemeenschapsvormende en maatschappelijk geëngageerde activiteiten. Onder de voorwaarden bepaald in het decreet sociaal-cultureel volwassenenwerk kunnen deze organisaties subsidies ontvangen van de Vlaamse overheid. De Vlaamse Regering diende een ontwerp van decreet in om het bestaande decreet te vervangen, in uitvoering van het Vlaams regeerakkoord. Dat wil onder meer segregatie voorkomen door geen subsidies mogelijk te maken voor organisaties die zich louter terugplooien op een etnisch-culturele afkomst. De Vlaamse Regering krijgt in het ontwerp van decreet ook meer autonome beslissingsbevoegdheid over de subsidiebedragen.&nbsp; Na de commissiebespreking met hoorzitting en een tweede lezing bespreekt de plenaire vergadering nu het ontwerp van decreet en houdt de eindstemming.</p><h3>&nbsp;</h3>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Kunst en cultuurgoederen als erfbelasting - Ontwerp van decreet</strong>",
+          "<strong>Nieuw decreet sociaal-cultureel volwassenenwerk – Ontwerp van decreet</strong>",
+          "&nbsp;"
+        ],
+        "opname-start": "2023-03-08T13:50:50+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1931283"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "26",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "NcMzmkKbQJY",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-07T14:00:00+0100",
+        "datumbegin": "2023-03-07T14:02:39+0100",
+        "datumeinde": "2023-03-07T17:58:51+0100",
+        "id": 1714563,
+        "laatste-wijziging": "2023-03-06T14:26:17+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1714563/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1714563?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1714563/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actualiteitsdebat over crisis Vlaamse Regering</strong></h3><p>Ook tijdens het voorbije weekend bleek een vergelijk over een stikstofakkoord niet mogelijk binnen de Vlaamse Regering. &nbsp;Hoe moet het nu verder?&nbsp;</p><p>Tijdens een extra plenaire vergadering gaan de fracties in debat met alle regeringsleden over de crisis binnen de Vlaamse Regering.</p>",
+        "omschrijving-kort": [
+          "<strong>Actualiteitsdebat over crisis Vlaamse Regering</strong>"
+        ],
+        "opname-start": "2023-03-07T13:56:27+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1930083"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "25",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "zM8LAjFOR0I",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-03-01T14:00:00+0100",
+        "datumbegin": "2023-03-01T14:01:19+0100",
+        "datumeinde": "2023-03-01T19:34:33+0100",
+        "id": 1710931,
+        "laatste-wijziging": "2023-02-27T14:25:35+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1710931/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1710931?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1710931/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actualiteitsdebat over ontwikkelingen in het stikstofdossier</strong></h3><p>Reeds enkele weken zoekt de Vlaamse Regering naar een akkoord over de stikstofproblematiek. &nbsp;Wat is de stand van zaken? De fracties debatteren in de plenaire vergadering met de ministers Jambon, Crevits, Somers, Weyts, Demir en Brouns over de recente ontwikkelingen in het stikstofdossier.</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit. Door de toevoeging van het actualiteitsdebat aan de agenda is het aantal vragen beperkt.</p><p>Deze week vragen over:</p><ul><li>de doorlichting van dienstenchequebedrijven wat werkbaar werk betreft;</li><li>kwetsbare kinderen in welzijns- en onderwijsinternaten;</li><li>de sluitingen van private woonzorgcentra;</li><li>het nieuwe Inschrijvingsdecreet en de sociale mix in de scholen;</li><li>de bekendmaking van de eerste volledige jaarresultaten van het Vlaams subsidieregister en de beleidsconclusies ter zake;</li><li>de stijgende huurprijzen op de private huurmarkt.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230301.pdf\">actuele vragen van 1 maart </a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\">2023 </a>(pdf).</p><h3><strong>Doelgroepvermindering voor personen zonder recente, duurzame werkervaring - Ontwerp van decreet&nbsp;</strong></h3><p>De Vlaamse overheid wil tot een werkzaamheidsgraad van 80 procent komen tegen 2030. Hiertoe voorziet ze voor werkgevers in een financiële incentive zodat ze bepaalde doelgroepen van werknemers met een grotere afstand tot de arbeidsmarkt aanwerven. De Vlaamse Regering diende een ontwerp van decreet in om in een vermindering van de werkgeversbijdragen te voorzien voor een nieuwe doelgroep: personen die op het moment van aanwerven gedurende een periode van 2 jaar geen duurzame werkervaring hebben gehad. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Afschaffing leur- en kermiskaart – Ontwerp van decreet</strong></h3><p>In het kader van het plan Vlaamse Veerkracht, dat de Vlaamse economie na corona structureel moet versterken, wil de Vlaamse Regering ook de administratieve regeldruk verminderen.&nbsp;<span style=\"color:black;\">Een van de vlaggenschepen van dit onderdeel van de relancestrategie is de afschaffing van de leurkaart en de hervorming van de wetgeving over ambulante handel. De kern van de hervorming betreft de afschaffing van de leurkaart en de ker­miskaart. De correcte inschrijving in de &nbsp;Kruispuntbank voor Ondernemingen wordt het identi­ficatiemiddel van de marktkramers en de foorreizigers.&nbsp; De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</span></p><h3><strong>Positie SWT-ers - Voorstel van resolutie</strong></h3><p>Naar aanleiding van het aangekondigde brugpensioen van ACV-voorzitter Marc Leemans bespreekt de plenaire vergadering via de spoedprocedure een voorstel van resolutie van de meerderheidsfracties over een sterkere arbeidsmarkt en positie voor mensen in een stelsel van werkloosheid met bedrijfstoeslag (SWT) en andere 55-plussers.</p>",
+        "omschrijving-kort": [
+          "<strong>Actualiteitsdebat over ontwikkelingen in het stikstofdossier</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<strong>Doelgroepvermindering voor personen zonder recente, duurzame werkervaring - Ontwerp van decreet&nbsp;</strong>",
+          "<strong>Afschaffing leur- en kermiskaart – Ontwerp van decreet</strong>",
+          "<strong>Positie SWT-ers - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-03-01T14:06:33+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1927884"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "24",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "Lb1PShC2xq4",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-02-15T14:00:00+0100",
+        "datumbegin": "2023-02-15T14:00:37+0100",
+        "datumeinde": "2023-02-15T20:07:01+0100",
+        "id": 1706989,
+        "laatste-wijziging": "2023-02-09T14:10:27+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1706989/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1706989?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1706989/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het Vlaams beleid ter ondersteuning van renovaties en de mate waarin daarvan gebruik wordt gemaakt;</li><li>de aangekondigde wijziging van het VRT-taalcharter en het gebruik van Standaardnederlands en tussentaal op de openbare omroep;</li><li>een mogelijke benefietshow voor de slachtoffers van de aardbevingen in Turkije en Syrië;</li><li>de controle en sanctionering door VDAB;</li><li>het uitblijven van een akkoord binnen &nbsp;de Vlaamse Regering over het stikstofdossier en de landbouwcrisis;</li><li>een nieuw geval van mishandeling in een crèche en de rol ter zake van de Zorginspectie;</li><li>de aanstelling van een rector tot nieuwe voorzitter voor het Hannah Arendt Instituut;</li><li>groen licht voor de Vlaamse centrale onderwijstoetsen;</li><li>de financiering van het hoger onderwijs en het voorstel van de rectoren om het inschrijvingsgeld te verhogen;</li><li>het stijgend aantal leerlingen dat geschorst of uitgesloten wordt.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230215.pdf\">actuele vragen van 15 februari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><strong>Wijzigingen decreet Lokaal Bestuur - ontwerp van decreet</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om het decreet over het lokaal bestuur (DLB) van 22 december 2017 op diverse punten te wijzigen. De voorgestelde wijzigingen met betrekking tot verzelfstandiging en samenwerking moeten, samen met andere inhoudelijke en technische verbeteringen van de organieke regelgeving, de strategische en operationele doelstellingen van het regeerakkoord en de beleidsnota Binnenlands Bestuur uitwerken in het DLB. &nbsp;Het ontwerp beoogt volgens de memorie van toelichting een professionalisering en harmonisering van de verzelfstandigings- en samen­werkings­vormen; inhoudelijke verbeteringen op vlak van organisatie en werking; inhoudelijke verbeteringen voor mandatarissen en personeel; inhoudelijke verbeteringen voor de lokale financiën; een verduidelijking van de toezichtregeling voor politiezones; het faciliteren van vrijwillige fusies van gemeenten via districtsvorming; een verbetering van het proces van de volksraadpleging door digitalisering van de initiatieffase; conformering van de regelgeving aan de algemene verordening gegevensbescherming (AVG-GDPR), en een aantal technische verbeteringen aan het bestaande decreet.</p><p>De plenaire vergadering bespreekt het ontwerp van wijzigingsdecreet en houdt de eindstemming.</p><h3><strong>Sectorconvenants en intersectorale convenants in kader van werkgelegenheidsbeleid – ontwerp van decreet</strong></h3><p>Een sectorconvenant is een overeenkomst tussen de Vlaamse overheid en de sectoren (sectorale sociale partners), op initiatief van die laatste. Daarin engageren de sectorale sociale partners zich om in hun sector engagementen op te nemen met betrekking tot de aansluiting onderwijs–arbeidsmarkt.&nbsp; De Vlaamse Regering wil via de sectoren duurzame loopbanen van individuen en ondernemingen ondersteunen, met het oog op veerkracht bij transities en het verhogen van de werkzaamheidsgraad. Ze diende een ontwerp van decreet in om continuering en zekerheid te bieden aan de volgende generaties sectorconvenants en om intersectorale convenants te introduceren. Er wordt ingezet op thema’s als instroom, zijinstroom, doorstroom en retentie en werkbaar werk.&nbsp;</p><p>De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Erkenning van Holodomor (hongersnood in Oekraïne 1932-1933) als genocide - voorstel van resolutie</strong></h3><p>De Holodomor was de grote hongersnood in de Oekraïense Socialistische Sovjetrepubliek die veroorzaakt werd door de gedwongen collectivisering van de landbouw onder het communistische Stalinregime en die miljoenen mensen het leven kostte. De hongersnood maakte deel uit van een bredere hongersnood in de Sovjetunie tussen 1931 en 1934. De situatie in Oekraïne werd echter nog verergerd door een reeks politieke decreten en besluiten die hoofdzakelijk of uitsluitend op Oekraïne waren gericht. Leden van de meerderheidsfracties dienden een voorstel van resolutie in om de Holodomor als genocide te erkennen. Ook de Vlaams Belangfractie diende een voorstel van resolutie in over de Holodomor dat verworpen werd in de commissie. De indieners vragen om het alsnog te behandelen in de plenaire vergadering.</p><h3><strong>Toetredingsgesprekken Europese Unie met Westelijke Balkanlanden – voorstel van resolutie</strong></h3><p><span style=\"color:black;\">De Europese Unie is gesprekken opgestart met zes landen van de Westelijke Balkan (Montenegro, Noord-Macedonië, Servië, Bosnië en Herzegovina, Albanië en Kosovo) met het oog op een eventuele toetreding tot de EU. Een geloofwaardig perspectief op lidmaatschap is noodzakelijk zodat de landen van de Westelijke Balkan worden gestimuleerd om de noodzakelijke hervormingen ook effectief door te voeren.&nbsp;</span></p><p><span style=\"color:black;\">Op het geopolitieke toneel is er ook een groeiende interesse in de Westelijke Balkan. Landen zoals China, Rusland en Turkije proberen hun invloedssfeer te verruimen en zien economische en strategische kansen op het Europese vasteland. Daarnaast heeft de inval van Rusland in Oekraïne de Europese Unie de afgelopen maanden alerter gemaakt voor het verdedigen van haar geopolitieke en strategische belan­gen.</span></p><p><span style=\"color:black;\">In een voorstel van resolutie roepen leden van de meerderheidsfracties de Europese Commissie op om bij de toetredingsonderhandelingen met de landen van de Westelijke Balkan de vastgelegde toetredingscriteria te respecteren en om de toetredingsonderhande­lingen en Europese steunmaatregelen voor de landen van de Westelijke Balkan steeds te verbinden aan een versterkte hervormingsagenda.</span></p><h3><strong>Motie onderzoek Rekenhof naar financiering woonzorgcentra</strong></h3><p>Via de spoedprocedure werd een motie goedgekeurd waarbij het Rekenhof wordt gevraagd een onderzoek in te stellen naar de financiering van en de financiële stromen binnen alle Vlaamse woonzorgcentra en groepen van Vlaamse woonzorgcentra.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Wijzigingen decreet Lokaal Bestuur - ontwerp van decreet</strong>",
+          "<strong>Sectorconvenants en intersectorale convenants in kader van werkgelegenheidsbeleid – ontwerp van decreet</strong>",
+          "<strong>Erkenning van Holodomor (hongersnood in Oekraïne 1932-1933) als genocide - voorstel van resolutie</strong>",
+          "<strong>Toetredingsgesprekken Europese Unie met Westelijke Balkanlanden – voorstel van resolutie</strong>",
+          "<strong>Motie onderzoek Rekenhof naar financiering woonzorgcentra</strong>"
+        ],
+        "opname-start": "2023-02-15T13:51:00+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1923266"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "23",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "dk3GBUDy-Ig",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-02-08T14:00:00+0100",
+        "datumbegin": "2023-02-08T14:04:35+0100",
+        "datumeinde": "2023-02-08T18:34:57+0100",
+        "id": 1704037,
+        "laatste-wijziging": "2023-02-06T14:32:38+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1704037/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1704037?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1704037/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>het onderzoek naar online seksueel geweld (dickpics, delen naaktfoto's etc) en de aanpak ter zake;</li><li>de blokkering van de Europese landbouwsubsidies binnen de Vlaamse Regering;</li><li>de industrie 4.0-proeftuin ‘Technologie voor Werkbaar Werk’;</li><li>de hulp aan Turkije en Syrië na de zware aardbeving van 6 februari;</li><li>de slechte financiële situatie van commerciële woonzorgcentra;</li><li>de nieuwe leerboeken islamitisch godsdienstonderwijs;</li><li>de plannen van de Franse Gemeenschap om levensbeschouwelijk onderwijs optioneel te maken in het officiële onderwijs;</li><li>de studie over de defederalisering van justitie;</li><li>de vernietiging van de omgevingsvergunning voor het nieuwe voetbalstadion van Club Brugge;</li><li>de renteverhoging voor de Mijn VerbouwLening;</li><li>het pleidooi van minister Diependaele om ambtenaren van de Vlaamse Belastingsdienst te bewapenen met luchtdrukgeweren.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230208.pdf\">actuele vragen van 8 februari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><span style=\"color:black;\"><strong>Normenkader voor tijdelijke huisvesting van arbeidskrachten – Voorstel van decreet</strong></span></h3><p><span style=\"color:black;\">Steeds vaker komen grote groepen arbeiders naar Vlaanderen om te werken op grote werven voor enkele weken, maanden of zelfs jaren. Tijdens hun verblijf hebben ze ze vanzelfsprekend ook onderdak nodig. De Oosterweelwerken zullen bijvoorbeeld de komende jaren zorgen voor een toestroom van duizenden arbeidskrachten die allen gehuisvest moeten worden. Dit veroorzaakt een druk op de woningmarkt en creëert ook allerhande bijkomende problemen, niet alleen in de bouwsector, maar bijvoorbeeld ook in de trans­portsector. Bij gebrek aan voldoende huisvestingsmogelijkheden worden deze arbeidskrachten door hun werkgever soms ondergebracht in woningen die daarvoor niet geschikt zijn, wat aanleiding kan geven tot overbewoning, overlast en druk op de leefbaarheid van sommige wijken. De steden en gemeenten die hiermee geconfronteerd worden, vragen een juridisch kader met instru­menten om ter zake een beleid te kunnen voeren.&nbsp;</span></p><p><span style=\"color:black;\">Leden van de meerderheidsfracties dienden een voorstel van decreet in met de krijtlijnen voor een aangepast huisvestingskader voor arbeidskrachten, waarbij het lokale bestuur de ruimte wordt gelaten om ermee aan de slag te gaan en de Vlaamse Regering de opdracht krijgt om dit verder vorm te geven. De plenaire vergadering bespreekt het voorstel van decreet en houdt de eindstemming.</span></p><h3><strong>Ontbrekende ratificaties van handels- en investeringsverdragen Europese Unie - Voorstel van resolutie</strong></h3><p>Om handels- en investeringsverdragen van de Europese Unie in werking te doen treden in Vlaanderen, moeten alle parlementen in België deze verdragen ratificeren. Momenteel kunnen negen verdragen niet in werking treden omdat de ratificatie ontbreekt van een ander parlement dan het Vlaams Parlement. Leden van de meerderheidsfracties dienden daarom een voorstel van resolutie in waarbij ze de Vlaamse Regering onder andere vragen om op intra-Belgisch niveau zo snel mogelijk en met klem aan te dringen op een snelle ratificatie van deze verdragen door de andere parlementen.</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<span><strong>Normenkader voor tijdelijke huisvesting van arbeidskrachten – Voorstel van decreet</strong></span>",
+          "<strong>Ontbrekende ratificaties van handels- en investeringsverdragen Europese Unie - Voorstel van resolutie</strong>"
+        ],
+        "opname-start": "2023-02-08T13:51:01+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1920124"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "22",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "2GzZAhu2YBA",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-02-01T14:00:00+0100",
+        "datumbegin": "2023-02-01T14:01:07+0100",
+        "datumeinde": "2023-02-01T20:18:03+0100",
+        "id": 1701603,
+        "laatste-wijziging": "2023-01-31T14:40:41+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1701603/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1701603?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1701603/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de plannen van het Gentse stadsbestuur om van het historisch gebouw Groot Vleeshuis een fietsenstalling te maken;</li><li>de modal shift, de files en het vrachtvervoer via de binnenvaart;</li><li>de aanpak van dodehoekongevallen;</li><li>de fiscale vrijstelling van de jobbonus plus;</li><li>de werkomstandigheden in de dienstenchequesector;</li><li>het gebruik van dienstwagens door de ministers van de Vlaamse Regering;</li><li>het uitblijven van beslissingen van de Vlaamse Regering inzake het Gemeenschappelijk Landbouwbeleid (GLB) en het aangepaste stikstofakkoord;</li><li>de reactie van de Vlaamse Regering op de betoging van de zorgsector op 31 januari;</li><li>euthanasie en levenseinde in woonzorgcentra;</li><li>de ondersteuning en het stimuleren van lokale vrijwilligerskorpsen;</li><li>investeringszekerheid voor grote zonnepaneleninstallaties;</li><li>de hernieuwing van de omgevingsvergunning voor de luchthaven van Zaventem.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230201.pdf\">actuele vragen van 1 februari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><strong>Regiovorming - Ontwerp van decreet</strong></h3><p>De Vlaamse Regering nam in haar regeerakkoord het voornemen op om in te zetten op regiovorming voor een meer slagkrachtige bestuurlijke structuur. Hiermee wil ze eenheid brengen in de veelheid van lokale intermediaire structuren en zodoende komen tot grotere lokale bestuurskracht: minder structuren en minder bestuursmandaten, meer transparantie en meer daadkracht. Via een participatief proces werden 15 referentieregio’s afgebakend. De Vlaamse Regering diende een ontwerp van decreet in om de referentieregio’s decretaal te verankeren en het concept, het toepassingsgebied, de principes en de gevolgen van regiovorming te definiëren. De bijlage bij het ontwerp van decreet deelt elke Vlaamse gemeente in bij één van de 15 referentieregio’s. De provincies blijven als bestuursniveau bestaan. De referentieregio’s beogen vooral een meer gestructureerde intergemeentelijke samenwerking: samenwerkingsverbanden zullen in beginsel slechts kunnen tussen gemeenten die binnen eenzelfde referentieregio vallen. Dit is het principe van ‘regioconform samenwerken’.</p><p><i>Door de goedkeuring van de aanvraag tot advies van de Raad van State over de ingediende amendementen werd &nbsp;de behandeling van dit ontwerp van decreet geschorst tijdens de plenaire vergadering van 7 december 2022. &nbsp;Na &nbsp;ontvangst van het advies Raad van State hervat de plenaire vergadering de bespreking.</i></p><h3><strong>Wijziging decreet basisonderwijs - Rol centra voor leerlingenbegeleiding (CLB's)</strong></h3><p>De Vlaamse Regering diende een ontwerp van decreet in om diverse taken van de CLB’s te verduidelijken en te schrappen en de regelgeving in het decreet basisonderwijs aan te passen. Het gaat dan over het schrappen van een aantal verplichte adviezen van en overlegmomenten met het CLB bij beslissingen over de toelatingsvoorwaarden en het zittenblijven van leerlingen in het basisonderwijs. Dat moet het mogelijk maken dat de CLB’s zich kunnen concentreren op hun kerntaken. De plenaire vergadering bespreekt het ontwerp van decreet en houdt de eindstemming.</p><h3><strong>Wijziging decreet Lokaal Bestuur - Verplichte deontologische commissie</strong></h3><p>Het decreet Lokaal Bestuur uit 2017 verplichtte de lokale besturen om een deontologische code aan te nemen en te hanteren bij hun werking. In sommige gemeenten is ook een deontologische commissie opgericht die toeziet op de naleving van deze code. Na een reeks vragen om uitleg over incidenten rond integriteit bij lokale mandatarissen dienden leden van de meerderheidsfracties een voorstel van decreet in dat zo’n deontologische commissie in elke gemeente in Vlaanderen wil verplichten. De plenaire vergadering bespreekt &nbsp;het voorstel van decreet en houdt de eindstemming.</p><h3><strong>Benoeming leden raad van bestuur Vlaams Mensenrechteninstituut (VMRI)</strong></h3><p>De plenaire vergadering benoemt de 11 leden van de raad van bestuur van het Vlaams Mensenrechteninstituut en selecteert 4 opvolgers, conform het oprichtingsdecreet dat op 26 oktober 2022 werd goedgekeurd</p>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Regiovorming - Ontwerp van decreet</strong>",
+          "<strong>Wijziging decreet basisonderwijs - Rol centra voor leerlingenbegeleiding (CLB's)</strong>",
+          "<strong>Wijziging decreet Lokaal Bestuur - Verplichte deontologische commissie</strong>",
+          "<strong>Benoeming leden raad van bestuur Vlaams Mensenrechteninstituut (VMRI)</strong>"
+        ],
+        "opname-start": "2023-02-01T13:51:06+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1917087"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "21",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "mKadB8aibDY",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "N",
+        "agenda-versie": "1",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-01-25T14:00:00+0100",
+        "datumbegin": "2023-01-25T14:01:39+0100",
+        "datumeinde": "2023-01-25T18:13:45+0100",
+        "id": 1699119,
+        "laatste-wijziging": "2023-01-19T10:35:50+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1699119/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1699119?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1699119/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de actie van milieuverenigingen tegen de vergunning voor de werken aan de nieuwe Scheldetunnel (Oosterweel);</li><li>de dagvaarding van de Vlaamse Regering wegens het gevoerde pesticidenbeleid;</li><li>de communicatie van OVAM over een klassiek statiegeldsysteem in de publieke oproep naar bedrijven;</li><li>het SERV-rapport over de overdrachten naar gemeenschappen en gewesten via de Bijzondere Financieringswet tijdens de komende decennia;</li><li>de fors gedaalde verkoop van wagens aan particulieren;</li><li>het gebruik van ANPR-camera's (met nummerplaatherkenning) om zwaar vervoer uit dorpskernen te weren;</li><li>de toepassing van artificiële intelligentie (AI) in Vlaamse bedrijven;</li><li>de Vlaamse aanwezigheid op het World Economic Forum in Davos;</li><li>het bezoek van de minister-president aan Oekraïne en de geleverde steun vanuit Vlaanderen;</li><li>de impact van de dreigende handelsoorlog met de VS op de Vlaamse industrie;</li><li>het stijgend aantal kinderen onder 12 jaar bij de Zorgcentra na Seksueel Geweld en de bereikbaarheid van de vertrouwenscentra kindermishandeling;</li><li>de eventuele invoering van een meldingsplicht voor scholen over de kennis Nederlands van ouders.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230125.pdf\">actuele vragen van 25 januari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><strong>Moties tot besluit van interpellaties over toekennen deelbudgetten aan mensen met een handicap</strong></h3><h3>&nbsp;</h3>",
+        "omschrijving-kort": [
+          "<strong>Actuele vragen</strong>",
+          "<strong>Moties tot besluit van interpellaties over toekennen deelbudgetten aan mensen met een handicap</strong>",
+          "&nbsp;"
+        ],
+        "opname-start": "2023-01-25T13:50:48+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1913823"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "20",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "H5ekYVay1bs",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-01-18T14:00:00+0100",
+        "datumbegin": "2023-01-18T14:00:59+0100",
+        "datumeinde": "2023-01-18T19:44:08+0100",
+        "id": 1696559,
+        "laatste-wijziging": "2023-01-16T14:29:08+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1696559/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1696559?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1696559/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Actualiteitsdebat over nieuwe studie KU Leuven betreffende dalende onderwijskwaliteit</strong></h3><p>Uit een nieuwe studie van de KU Leuven in samenwerking met Katholiek Onderwijs Vlaanderen blijkt dat de leerprestaties van alle leerlingen - ook de sterksten - in het zesde leerjaar dalen en dat het lerarentekort daarbij een belangrijke factor is. In de plenaire vergadering debatteren de verschillende fracties met minister van Onderwijs Ben Weyts over de oorzaken en verdere aanpak van de dalende onderwijskwaliteit en het lerarentekort.</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit. Wegens de toevoeging van het actualiteitsdebat aan de agenda is het aantal vragen beperkt.</p><p>Deze week vragen over:</p><ul><li>de onderbenutting van de energiesteun voor bedrijven en het voorstel van ABVV voor een alternatieve aanwending van die middelen;</li><li>de uitrol van het statiegeldsysteem en de rol van het bedrijf Unbox &nbsp;daarin;</li><li>de vraag om het paal-volgt-wagenprincipe voor de realisatie van laadinfrastructuur voor elektrische wagens los te laten;</li><li>de aanpak van pestgedrag bij de jeugd, naar aanleiding van de dood van een 14-jarige jongen;</li><li>de werking van vzw Het Huis die mishandelde en verwaarloosde kinderen begeleidt;</li><li>de toename van freelancecontracten, project staffing en interrimmedewerkers in de zorgsector;</li><li>het doorschuiven van taken naar de gemeenten en de conclusies van de Commissie Decentralisatie.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230118.pdf\">actuele vragen van 18 januari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><span style=\"color:black;\"><strong>Anomalie bij toekenning uitzonderlijke schooltoeslag in kader van groeipakket – Voorstel van resolutie</strong></span></h3><p><span style=\"color:black;\">Sinds het schooljaar 2019-2020 maakt de schooltoeslag voor het kleuter-, lager en secundair onderwijs deel uit van het groeipakket, de Vlaamse hervormde kinderbijslag. De schooltoeslag vervangt de vroegere schooltoelage. Als het gezinsinkomen erg laag is, kan het kind een uitzonderlijke schooltoeslag ontvangen. Sommige mensen krijgen evenwel niet die toeslag wegens een interpretatieverschil tussen het Vlaamse en federale niveau over wat een ‘vervangingsinkomen’ precies is. Leden van de Groen-fractie dienden een voorstel van resolutie in om deze anomalie aan te klagen bij de Vlaamse Regering.</span></p><p><span style=\"color:black;\">In het voorstel van resolutie vragen de indieners aan de Vlaamse Regering om het verschil in interpretatie van een vervangingsinkomen tussen het Vlaamse en het federale niveau uit te klaren. Daarnaast moet in de regelgeving van het groeipakket duidelijk worden opgenomen wat als een vervangingsinkomen wordt beschouwd.</span></p><p><span style=\"color:black;\">In de commissie werd een amendement van de meerderheidsfracties goedgekeurd. De plenaire vergadering bespreekt het geamendeerde voorstel van resolutie en houdt de eindstemming.</span></p>",
+        "omschrijving-kort": [
+          "<strong>Actualiteitsdebat over nieuwe studie KU Leuven betreffende dalende onderwijskwaliteit</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<span><strong>Anomalie bij toekenning uitzonderlijke schooltoeslag in kader van groeipakket – Voorstel van resolutie</strong></span>"
+        ],
+        "opname-start": "2023-01-18T13:51:00+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1911034"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "19",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "JN3KVZS2Ygg",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "Mevrouw",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482514",
+          "id": 3411,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/3411?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Homans",
+          "voornaam": "Liesbeth"
+        }
+      }
+    },
+    {
+      "vergadering": {
+        "agenda-gewijzigd": "J",
+        "agenda-versie": "2",
+        "besloten-vergadering": false,
+        "commissie": [],
+        "datumagendering": "2023-01-11T14:00:00+0100",
+        "datumbegin": "2023-01-11T14:01:00+0100",
+        "datumeinde": "2023-01-11T18:08:20+0100",
+        "id": 1693550,
+        "laatste-wijziging": "2023-01-09T14:38:05+0100",
+        "link": [
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1693550/agd?aanpassingen=nee",
+            "rel": "agenda"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1693550?aanpassingen=nee&idPrsHighlight=0",
+            "rel": "self"
+          },
+          {
+            "href": "https://ws.vlpar.be/e/opendata/verg/1693550/hand?idPrsHighlight=0",
+            "rel": "handelingen"
+          }
+        ],
+        "omschrijving": "<h3><strong>Onderzoek geloofsbrieven en eedaflegging nieuw parlementslid</strong></h3><p>Na de goedkeuring van zijn geloofsbrieven legt Onno Vandewalle de eed af als Vlaams volksvertegenwoordiger. Hij volgt Tom De Meester op, die ontslag nam.</p><h3><strong>Actuele vragen</strong></h3><p>Tijdens de wekelijkse plenaire vragenmiddag kunnen de Vlaamse volksvertegenwoordigers de ministers van de Vlaamse Regering ondervragen over onderwerpen uit de actualiteit.</p><p>Deze week vragen over:</p><ul><li>de uitrol van de vierde pijler van het inburgeringstraject;</li><li>het beleid inzake aanvals- en verdedigingshonden, naar aanleiding van de recente aanval op een peuter;</li><li>de noodkreet van de onderwijsinternaten als reactie op het voorliggende voorontwerp van decreet;</li><li>de verhoging van de quota voor artsen en tandartsen;</li><li>de bezwaarschriften en aangekondigde juridische procedure tegen het stikstofakkoord;</li><li>het overleg over het voorontwerp van Verzameldecreet Omgeving;</li><li>de invoering van het capaciteitstarief voor elektriciteit;</li><li>de stand van zaken inzake de modernisering van de milieueffectrapportage;</li><li>de nieuwe campagne om de reddingsstrook bekender te maken en de effectiviteit van sensibiliseringscampagnes;</li><li>de nieuwe richtlijnen voor fietspaden in het Fietsvademecum;</li><li>de online veiligheid van kinderen, naar aanleiding van de moord op een via internet meegelokt meisje in Ougrée;</li><li>de verklaringen van de minister-president over het budget voor de verlaging van de kindratio in de kinderopvang;</li><li>de beveiliging van de gemeenschapsinstelling in Everberg, naar aanleiding van verschillende recente ontsnappingen.</li></ul><p>Download hier de lijst met de <a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20230111.pdf\">actuele vragen van 11 januari</a><a href=\"https://docs.vlaamsparlement.be/docs/varia/actuelevragen/actuelevragen20221005.pdf\"> 2023 </a>(pdf).</p><h3><strong>Verzoekschriften - verslagen</strong></h3><p>Elke burger kan bij het Vlaams Parlement een verzoekschrift indienen om een bepaalde problematiek aan te kaarten of een voorstel te doen om het beleid te wijzigen. &nbsp;Na de bespreking van de verzoekschriften in de beleidscommissies wordt verslag uitgebracht aan de plenaire vergadering die zich uitspreekt over de conclusies van de commissie.</p>",
+        "omschrijving-kort": [
+          "<strong>Onderzoek geloofsbrieven en eedaflegging nieuw parlementslid</strong>",
+          "<strong>Actuele vragen</strong>",
+          "<strong>Verzoekschriften - verslagen</strong>"
+        ],
+        "opname-start": "2023-01-11T13:51:00+0100",
+        "plenairehandelingen": {
+          "isvoorlopigeversie": false,
+          "pdffilewebpath": "https://docs.vlaamsparlement.be/pfile?id=1908155"
+        },
+        "status": "afgelopen",
+        "subtype": "Plenaire vergadering",
+        "type": "Plenair",
+        "uses-beknopt-verslag": false,
+        "uses-webhandelingen": true,
+        "vergadering-met-verslag": true,
+        "vergaderingnummer": "18",
+        "vergaderzaal": {
+          "naam": "Koepel",
+          "verdieping": "0"
+        },
+        "video-youtube-id": "zT8znYwzCnY",
+        "voorlopig-verslag": false,
+        "voorzitter": {
+          "aanspreking": "De heer",
+          "fotowebpath": "https://docs.vlaamsparlement.be/pfile?id=1482452",
+          "id": 1803,
+          "is-huidige-vv": "N",
+          "link": [
+            {
+              "href": "https://ws.vlpar.be/e/opendata/vv/1803?lang=nl",
+              "rel": "self"
+            }
+          ],
+          "naam": "Dewinter",
+          "voornaam": "Filip"
+        }
+      }
+    }
+  ]
+}
