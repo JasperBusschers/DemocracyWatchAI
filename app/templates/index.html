@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex-grow container mx-auto px-4 py-12">
+    <style>
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Base animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        /* Mission Section Styles */
+        .mission-title {
+            color: #6366F1;
+            position: relative;
+            display: inline-block;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+        }
+
+        .mission-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #6366F1;
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+
+        /* Process Card Styles */
+        .process-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+        }
+
+        .process-number {
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Region Card Styles */
+        .region-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .region-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                       0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .flag-bg {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #6366F1;
+            background-color: rgba(99, 102, 241, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .status-tag.in-progress {
+            color: #9CA3AF;
+            background-color: rgba(156, 163, 175, 0.1);
+        }
+    </style>
+
+    <!-- Mission Section -->
+    <section class="mb-20 text-center fade-in">
+        <h2 class="text-5xl font-bold mb-8 mission-title">{{ texts.mission_title }}</h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            {{ texts.mission_text }}
+        </p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="mb-20 fade-in" style="animation-delay: 0.3s;">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">{{ texts.how_it_works_title }}</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {% for step in texts.how_it_works %}
+            <div class="process-card">
+                <div class="process-number">{{ step.number }}</div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">{{ step.title }}</h3>
+                <p class="text-gray-600">{{ step.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Regions Section -->
+    <section class="fade-in" style="animation-delay: 0.5s;">
+        <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">{{ texts.regions_title }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for region in texts.regions %}
+            <div class="block relative">
+                {% if region.status != 'In progress' %}
+                <div class="cursor-pointer" onclick="navigateToChatbot('{{ region.EN_name.lower() }}')" data-protected="true">
+                {% else %}
+                <div>
+                {% endif %}
+                    <div class="region-card {% if region.status == 'In progress' %}in-progress{% endif %}">
+                        <div class="flag-bg" style="background-image: url('{{ region.flag }}');"></div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">{{ region.name }}</h3>
+                            <span class="status-tag {% if region.status == 'In progress' %}in-progress{% endif %}">
+                                {{ region.status }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<script>
+    // Add intersection observer for animations
+    document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

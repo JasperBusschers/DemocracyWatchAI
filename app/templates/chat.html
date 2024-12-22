@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="chatbot-container">
+    <div class="chat-wrapper">
+        {% include 'partials/chatbot_window.html' %}
+    </div>
+</div>
+
+<style>
+    .chatbot-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .chat-wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+</style>
+{% endblock %}

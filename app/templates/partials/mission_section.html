@@ -1,0 +1,55 @@
+<style>
+    .mission-section {
+        padding: 4rem 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(249,250,251,0.5) 100%);
+    }
+
+    .mission-title {
+        background: linear-gradient(120deg, #4F46E5 0%, #7C3AED 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        letter-spacing: -0.02em;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    .mission-text {
+        font-size: clamp(1.125rem, 2vw, 1.25rem);
+        line-height: 1.8;
+        max-width: 70ch;
+        margin: 0 auto;
+        color: #374151;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+</style>
+
+<section class="mission-section">
+    <div class="container mx-auto px-4">
+        <div class="text-center fade-in-up">
+            <h2 class="mission-title">{{ texts.mission_title }}</h2>
+            <p class="mission-text fade-in-up delay-200">
+                {{ texts.mission_text }}
+            </p>
+        </div>
+    </div>
+</section>

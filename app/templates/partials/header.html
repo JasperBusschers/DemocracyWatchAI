@@ -1,0 +1,298 @@
+{# templates/partials/header.html #}
+
+{# Server-side initial data - place at the top to ensure it's available #}
+<script>
+    window.initialUserData = {{ user | tojson | safe if user else 'null' }};
+</script>
+
+<script>
+// Utility functions
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}
+
+function deleteCookie(name) {
+    document.cookie = `${name}=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT; Secure; SameSite=Strict`;
+}
+
+function isLoggedIn() {
+    // Check for server-provided user data first
+    if (window.initialUserData) {
+        return true;
+    }
+    // Fallback to cookie and localStorage check
+    const accessToken = getCookie('access_token_cookie');
+    const userInfo = localStorage.getItem('user_info');
+    return !!(accessToken && userInfo);
+}
+
+function getUserInfo() {
+    // Prioritize server-provided data
+    if (window.initialUserData) {
+        return window.initialUserData;
+    }
+    try {
+        const userInfo = localStorage.getItem('user_info');
+        return userInfo ? JSON.parse(userInfo) : null;
+    } catch (e) {
+        console.error('Error parsing user info:', e);
+        return null;
+    }
+}
+
+async function logout(e) {
+    e?.preventDefault();
+    try {
+        const response = await fetch('/logout', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Logout failed');
+        }
+
+        // Clear all auth data
+        deleteCookie('access_token_cookie');
+        deleteCookie('refresh_token_cookie');
+        localStorage.removeItem('user_info');
+        window.initialUserData = null;
+
+        // Force page reload to ensure clean state
+        window.location.href = '/';
+    } catch (error) {
+        console.error('Logout error:', error);
+        alert('Failed to logout. Please try again.');
+    }
+}
+
+function loginWith(provider, e) {
+    e?.preventDefault();
+    const currentUrl = encodeURIComponent(window.location.href);
+    window.location.href = `/login/${provider}?next=${currentUrl}`;
+}
+
+function navigateToChatbot(region) {
+    if (isLoggedIn()) {
+        const langSelector = document.getElementById('languageSelector');
+        const currentLang = langSelector ? langSelector.value : 'en';
+        window.location.href = `/chatbot/${region}?lang=${currentLang}`;
+    } else {
+        alert('Please log in to access the chatbot.');
+        openLoginModal();
+    }
+}
+
+function updateUIState() {
+    const loginButton = document.getElementById('loginButton');
+    const userMenu = document.getElementById('userMenu');
+    const userEmailSpan = document.querySelector('.user-email');
+
+    if (!loginButton || !userMenu) {
+        console.error('Required DOM elements not found');
+        return;
+    }
+
+    if (isLoggedIn()) {
+        const userInfo = getUserInfo();
+        loginButton.classList.add('hidden');
+        userMenu.classList.remove('hidden');
+        if (userEmailSpan && userInfo) {
+            userEmailSpan.textContent = userInfo.email || 'User';
+        }
+    } else {
+        loginButton.classList.remove('hidden');
+        userMenu.classList.add('hidden');
+    }
+}
+
+function openLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    }
+}
+
+function closeLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+// Initialize event listeners
+function initializeEventListeners() {
+    // Language selector
+    const languageSelector = document.getElementById('languageSelector');
+    if (languageSelector) {
+        languageSelector.addEventListener('change', function() {
+            window.location.href = '/?lang=' + this.value;
+        });
+    }
+
+    // User menu dropdown
+    const userMenuButton = document.getElementById('userMenuButton');
+    const userMenuContent = document.getElementById('userMenuContent');
+    if (userMenuButton && userMenuContent) {
+        userMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userMenuContent.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!userMenuContent.contains(event.target) && event.target !== userMenuButton) {
+                userMenuContent.classList.add('hidden');
+            }
+        });
+    }
+
+    // Login modal
+    const loginButton = document.getElementById('loginButton');
+    const closeModal = document.getElementById('closeModal');
+    const loginModal = document.getElementById('loginModal');
+
+    if (loginButton) {
+        loginButton.addEventListener('click', openLoginModal);
+    }
+
+    if (closeModal) {
+        closeModal.addEventListener('click', closeLoginModal);
+    }
+
+    if (loginModal) {
+        loginModal.addEventListener('click', (event) => {
+            if (event.target === loginModal) {
+                closeLoginModal();
+            }
+        });
+    }
+
+    // Logout
+    const logoutButton = document.getElementById('logoutButton');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', logout);
+    }
+
+    // Protected links
+    const protectedLinks = document.querySelectorAll('[data-protected="true"]');
+    protectedLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            if (!isLoggedIn()) {
+                event.preventDefault();
+                openLoginModal();
+            }
+        });
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial user data from server
+    {% if user %}
+        console.log('Setting initial user data:', {{ user | tojson | safe }});
+        localStorage.setItem('user_info', JSON.stringify({{ user | tojson | safe }}));
+    {% else %}
+        console.log('No initial user data');
+    {% endif %}
+
+    // Initialize UI and events
+    updateUIState();
+    initializeEventListeners();
+});
+</script>
+
+<header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <a href="/" class="inline-block">
+                {% include 'partials/header_logo.html' %}
+            </a>
+
+            <nav class="flex items-center space-x-6">
+                <a href="https://github.com/JasperBusschers/DemocracyWatchAI"
+                   target="_blank"
+                   class="text-white hover:text-gray-200 transition-colors duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+
+                <select id="languageSelector"
+        class="bg-white text-gray-800 border border-gray-300 rounded px-2 py-1">
+    {% for lang_code, lang_name in languages.items() %}
+        <option value="{{ lang_code }}"
+                {% if lang_code == current_lang %}selected{% endif %}>
+            {{ lang_name }}
+        </option>
+    {% endfor %}
+</select>
+
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded transition-colors duration-300">
+                    {{ texts.donate_button }}
+                </button>
+
+                <button id="loginButton"
+                        class="bg-transparent hover:bg-white hover:text-blue-500 text-white font-semibold py-2 px-4 border border-white hover:border-transparent rounded transition-colors duration-300 {% if user %}hidden{% endif %}">
+                    {{ texts.login_button }}
+                </button>
+
+                <div id="userMenu" class="relative {% if not user %}hidden{% endif %}">
+                    <button id="userMenuButton"
+                            class="flex items-center space-x-2 bg-transparent hover:bg-white hover:text-blue-500 text-white font-semibold py-2 px-4 border border-white hover:border-transparent rounded transition-colors duration-300">
+                        <span class="user-email">{{ user.email if user else '' }}</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div id="userMenuContent"
+                         class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                        <a href="/settings"
+                           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200">
+                            {{ texts.settings }}
+                        </a>
+                        <button id="logoutButton"
+                                class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200">
+                            {{ texts.logout }}
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Login/Register</h3>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">Only google supported currently, more coming soon</p>
+            </div>
+            <div class="flex flex-col space-y-4 mt-4">
+                {% for provider in ['google'] %}
+                    <button onclick="loginWith('{{ provider }}')"
+                            class="{% if provider == 'facebook' %}bg-blue-600 hover:bg-blue-700
+                                   {% elif provider == 'google' %}bg-red-600 hover:bg-red-700
+                                   {% else %}bg-gray-800 hover:bg-gray-900{% endif %}
+                                   text-white font-bold py-2 px-4 rounded flex items-center justify-center">
+                        <i class="fab fa-{{ provider }}{% if provider == 'facebook' %}-f{% endif %} mr-2"></i>
+                        Login with google
+                    </button>
+                {% endfor %}
+            </div>
+            <div class="items-center px-4 py-3">
+                <button id="closeModal"
+                        class="px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                    {{ texts.close }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
