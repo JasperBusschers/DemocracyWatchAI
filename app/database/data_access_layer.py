@@ -1,5 +1,6 @@
 import uuid
 from datetime import datetime
+from typing import Dict, Any
 
 from neo4j import GraphDatabase
 
@@ -39,90 +40,386 @@ class DataAccessLayer:
         self.neo4j_handler = neo4j_handler
 
     # Get statements based on optional filters
-    def get_statements(self, filters: dict[str, any] = {}):
+    def get_statements(
+        self,
+        filters: dict[str, any] = {},
+        similarity_weight: float = 1.0,  # Adjusted default weight
+        preference_weight: float = 0.2,  # New parameter for preferences
+        recency_weight: float = 0.2,  # Adjusted to maintain total weight <=1
+        limit: int = 10,
+        skip: int = 0,
+        include_prev_next: bool = False
+    ) -> list[dict]:
+        """
+        Fetch statements based on optional filters, including the ability to filter by meeting names, meeting IDs,
+        section IDs, and statement IDs. Optionally sorted by a weighted combination of similarity, preferences similarity, and recency.
+        Can also include previous and next statements relative to each statement.
+
+        :param filters: Dictionary of filters which can include:
+                        - 'meetings': List of meeting names to filter.
+                        - 'meeting_ids': List of meeting IDs to filter.
+                        - 'statement_ids': List of statement IDs to filter.
+                        - 'parties': List of political parties to filter.
+                        - 'startdate': Start date (inclusive) for meeting dates.
+                        - 'enddate': End date (inclusive) for meeting dates.
+                        - 'sections': List of section IDs to filter.
+                        - 'vector': Vector for similarity comparison.
+                        - 'preferences': Vector for preferences similarity comparison.
+        :param similarity_weight: Weight for the primary similarity score (default=1.0).
+        :param preference_weight: Weight for the preferences similarity score (default=0.2).
+        :param recency_weight: Weight for the recency score (default=0.2).
+        :param limit: Maximum number of results to return (default=10).
+        :param skip: Number of results to skip for pagination (default=0).
+        :param include_prev_next: If True, include previous and next statements for each statement.
+        :return: List of dictionaries containing statement details, with optional previous and next statements.
+        """
+
         query_parts = [
             "MATCH (sec:Section)<-[:HAS_SECTION]-(m:Meeting) ",
-            "WHERE 1=1"
+            "MATCH (s:Statement)-[:MADE_DURING]->(m) ",
+            "WHERE 1=1 "
         ]
 
-        # Collect dynamic conditions based on provided filters
-        if meetings := filters.get('meetings'):
-            query_parts.append(" AND m.name IN $meetings")
-        if parties := filters.get('parties'):  # New filter for parties
-            query_parts.append(" AND p.party IN $parties")
+        main_filters = {}
 
-        query_parts.append(" MATCH (s:Statement)-[:MADE_DURING]->(m) ")
+        # Apply filters based on the provided dictionary
+        if 'meetings' in filters and filters['meetings']:
+            query_parts.append(" AND m.name IN $meetings ")
+            main_filters['meetings'] = filters['meetings']
+
+        if 'meeting_ids' in filters and filters['meeting_ids']:
+            query_parts.append(" AND m.id IN $meeting_ids ")
+            main_filters['meeting_ids'] = filters['meeting_ids']
+
+        if 'statement_ids' in filters and filters['statement_ids']:
+            query_parts.append(" AND s.id IN $statement_ids ")
+            main_filters['statement_ids'] = filters['statement_ids']
+
+        if 'parties' in filters and filters['parties']:
+            query_parts.append(" AND s.party IN $parties ")
+            main_filters['parties'] = filters['parties']
+
+        if 'startdate' in filters and filters['startdate']:
+            query_parts.append(" AND m.date >= $startdate ")
+            main_filters['startdate'] = filters['startdate']
+
+        if 'enddate' in filters and filters['enddate']:
+            query_parts.append(" AND m.date <= $enddate ")
+            main_filters['enddate'] = filters['enddate']
+
+        if 'sections' in filters and filters['sections']:
+            query_parts.append(" AND sec.id IN $sections ")
+            main_filters['sections'] = filters['sections']
+
+        # OPTIONAL MATCH for Person
         query_parts.append("OPTIONAL MATCH (p:Person)-[:MADE]->(s) ")
+        query_parts.append("MATCH (s)-[:IS_ABOUT]->(sec) ")
 
-        # Additional filters
-        if persons := filters.get('persons'):
-            query_parts.append(" AND p.name IN $persons")
-        if sections := filters.get('sections'):
-            query_parts.append(" AND sec.id IN $sections")
-        if startdate := filters.get('startdate'):
-            query_parts.append(" AND s.date >= $startdate")
-        if enddate := filters.get('enddate'):
-            query_parts.append(" AND s.date <= $enddate")
+        # Handle vector and preferences for similarity calculations
+        if 'vector' in filters or 'preferences' in filters:
+            query_parts.append("""
+                WITH s, p, m, sec,
+                     CASE WHEN $vector IS NOT NULL THEN gds.similarity.cosine(s.vector, $vector) ELSE 0 END AS similarity,
+                     CASE WHEN $preferences IS NOT NULL THEN gds.similarity.cosine(s.vector, $preferences) ELSE 0 END AS preference_similarity,
+                     duration.inDays(m.date, date()).days AS daysSinceMeeting
 
-        # If a vector is provided, add similarity search
-        if vector := filters.get('vector'):
-            query_parts.append(" WITH s, p, m, sec, gds.similarity.cosine(s.vector, $vector) AS similarity ")
-            query_parts.append(" ORDER BY similarity DESC LIMIT 10 ")
+                // Convert days-since-meeting into a "recency" score
+                WITH s, p, m, sec, similarity, preference_similarity,
+                     CASE WHEN daysSinceMeeting < 0
+                          THEN 1.0
+                          ELSE 1.0 / (1 + toFloat(daysSinceMeeting))
+                     END AS recency
 
-        # Ensure the final query has a space before RETURN
+                // Calculate weighted combination using parameters
+                WITH s, p, m, sec, similarity, preference_similarity, recency,
+                     ($similarity_weight * similarity +
+                      $preference_weight * preference_similarity +
+                      $recency_weight * recency) AS combinedScore
+
+                ORDER BY combinedScore DESC
+                LIMIT $limit
+            """)
+        else:
+            # If no vectors are provided, order by meeting date DESC as a fallback
+            query_parts.append(" ORDER BY m.date DESC   LIMIT $limit ")
+
+        # If include_prev_next is True, add OPTIONAL MATCH clauses to find previous and next statements
+        if include_prev_next:
+            query_parts.append("""
+                WITH s, p, m, sec
+                OPTIONAL MATCH (prev:Statement)-[:HAS_NEXT]->(s)
+                OPTIONAL MATCH (s)-[:HAS_NEXT]->(next:Statement)
+            """)
+
+        # Build final query
         query = ''.join(query_parts) + """
-                    RETURN s.statement AS statement,  p.name AS person, m.name AS meeting, m.date AS meetingDate, COLLECT(DISTINCT s.id) AS statement_id
-               """
+            RETURN s.statement AS statement,
+                   s.person      AS person,
+                   m.name        AS meeting,
+                   m.id          AS meeting_id,
+                   m.date        AS meetingDate,
+                   s.party       AS political_party,
+                   sec.topic     AS section_topic,
+                   COLLECT(DISTINCT s.id) AS statement_id
+        """
 
+        if include_prev_next:
+            # Append previous and next statement information to RETURN
+            query += """,
+                   prev.statement AS previous_statement,
+                   next.statement AS next_statement
+            """
+
+        # Prepare parameters
         parameters = {
-            'persons': filters.get('persons'),
             'meetings': filters.get('meetings'),
-            'sections': filters.get('sections'),
+            'meeting_ids': filters.get('meeting_ids'),
+            'statement_ids': filters.get('statement_ids'),
+            'parties': filters.get('parties'),
             'startdate': filters.get('startdate'),
             'enddate': filters.get('enddate'),
+            'sections': filters.get('sections'),
             'vector': filters.get('vector'),
-            'parties': filters.get('parties')  # Pass the parties parameter
+            'preferences': filters.get('preferences'),  # New parameter for preferences
+            # Weighted combination parameters
+            'similarity_weight': similarity_weight,
+            'preference_weight': preference_weight,  # New parameter
+            'recency_weight': recency_weight,  # Adjusted parameter
+            'limit': limit,  # Added limit to parameters
+            'skip': skip  # Added skip to parameters
         }
 
+        # Remove keys with None or empty values to prevent Neo4j errors
+        parameters = {k: v for k, v in parameters.items() if v}
+
+        # **Optional Debugging: Log the Query and Parameters**
+        # Uncomment the following lines to print the query and parameters for debugging purposes.
+        # print("Generated Query:")
+        # print(query)
+        # print("Parameters:")
+        # print(parameters)
+
+        # Execute query with parameters
         result = self.neo4j_handler.execute_query(query, parameters)
+        for row in result:
+            if 'meetingDate' in row and row['meetingDate']:
+                row['meetingDate'] = str(row['meetingDate'])
         return result
 
-    # Get sections based on optional filters
-    def get_sections(self, filters: dict[str, any] = {}):
-        query_parts = [
-            "MATCH (sec:Section) ",
-            "WHERE 1=1"
-        ]
+    def get_relevant_sections(
+            self,
+            meeting_ids: list[str],
+            vector: list[float],
+            preferences: list[float],
+            similarity_weight: float = 1.0,  # Weight for similarity
+            preference_weight: float = 0.2,  # Weight for preferences similarity
+            limit: int = 10,
+            skip: int = 0
+    ) -> list[dict]:
+        """
+        Retrieve the most relevant sections for the given meeting IDs based on similarity and preferences vectors.
 
-        # Collect dynamic conditions based on provided filters
-        if sections := filters.get('sections'):
-            query_parts.append(" AND sec.id IN $sections")
-        if topics := filters.get('topics'):
-            query_parts.append(" AND sec.topic IN $topics")
-        if startdate := filters.get('startdate'):
-            query_parts.append(" AND sec.startDate >= $startdate")
-        if enddate := filters.get('enddate'):
-            query_parts.append(" AND sec.endDate <= $enddate")
+        :param meeting_ids: A single meeting ID or a list of meeting IDs to filter sections.
+        :param vector: Vector for primary similarity comparison.
+        :param preferences: Vector for preferences similarity comparison.
+        :param similarity_weight: Weight for the primary similarity score (default=1.0).
+        :param preference_weight: Weight for the preferences similarity score (default=0.2).
+        :param limit: Maximum number of sections to return (default=10).
+        :param skip: Number of results to skip for pagination (default=0).
+        :return: List of dictionaries containing section details ordered by relevance.
+        """
 
-        # If a vector is provided, add similarity search
-        if vector := filters.get('vector'):
-            query_parts.append(" WITH sec, gds.similarity.cosine(sec.vector, $vector) AS similarity ")
-            query_parts.append(" ORDER BY similarity DESC LIMIT 5 ")
+        # Ensure meeting_ids is a list
+        if isinstance(meeting_ids, str):
+            meeting_ids = [meeting_ids]
 
-        # Ensure the final query has a space before RETURN
-        query = ''.join(query_parts) + """
-               RETURN sec.id AS section_id, sec.topic AS topic
-           """
+        query = """
+            MATCH (sec:Section)-[:BELONGS_TO]->(m:Meeting)
+            WHERE m.id IN $meeting_ids
+            WITH sec, m
+            // Calculate similarity scores
+            WITH sec,
+                 CASE WHEN $vector IS NOT NULL THEN gds.similarity.cosine(sec.vector, $vector) ELSE 0 END AS similarity,
+                 CASE WHEN $preferences IS NOT NULL THEN gds.similarity.cosine(sec.vector, $preferences) ELSE 0 END AS preference_similarity
+            // Calculate combined relevance score
+            WITH sec, similarity, preference_similarity,
+                 ($similarity_weight * similarity +
+                  $preference_weight * preference_similarity) AS combinedScore
+            // Order by combined score descending
+            ORDER BY combinedScore DESC
+            SKIP $skip
+            LIMIT $limit
+            RETURN sec.id AS section_id,
+                   sec.topic AS section_topic,
+                   combinedScore
+        """
 
         parameters = {
-            'sections': filters.get('sections'),
-            'topics': filters.get('topics'),
-            'startdate': filters.get('startdate'),
-            'enddate': filters.get('enddate'),
-            'vector': filters.get('vector')
+            'meeting_ids': meeting_ids,
+            'vector': vector,
+            'preferences': preferences,
+            'similarity_weight': similarity_weight,
+            'preference_weight': preference_weight,
+            'limit': limit,
+            'skip': skip
         }
 
+        # Remove keys with None values to prevent Neo4j errors
+        parameters = {k: v for k, v in parameters.items() if v is not None}
+
+        # **Optional Debugging: Log the Query and Parameters**
+        # Uncomment the following lines to print the query and parameters for debugging purposes.
+        # print("Generated Query:")
+        # print(query)
+        # print("Parameters:")
+        # print(parameters)
+
+        # Execute query with parameters
         result = self.neo4j_handler.execute_query(query, parameters)
+
+        # Process and return the result
+        sections = []
+        for record in result:
+            section = {
+                'section_id': record.get('section_id'),
+                'section_topic': record.get('section_topic'),
+                'combined_score': record.get('combinedScore')
+            }
+            sections.append(section)
+
+        return sections
+
+    def get_unique_meeting_ids(
+            self,
+            filters: dict[str, any] = {},
+            similarity_weight: float = 1.0,  # Default weight for similarity
+            preference_weight: float = 0.2,  # Weight for preferences similarity
+            recency_weight: float = 0.8,  # Weight for recency
+            limit: int = 50,
+            skip: int = 0
+    ) -> list[str]:
+        """
+        Retrieve unique meeting IDs for statements that are relevant and recent based on the provided filters and weights.
+
+        :param filters: Dictionary of filters (meetings, statement_ids, parties, startdate, enddate, sections, vector, preferences, etc.)
+        :param similarity_weight: Weight for the primary similarity score (default=1.0).
+        :param preference_weight: Weight for the preferences similarity score (default=0.2).
+        :param recency_weight: Weight for the recency score (default=0.2).
+        :param limit: Maximum number of unique meeting IDs to return (default=10).
+        :param skip: Number of results to skip for pagination (default=0).
+        :return: List of unique meeting IDs.
+        """
+
+        query_parts = [
+            "MATCH (sec:Section)<-[:HAS_SECTION]-(m:Meeting) ",
+            "MATCH (s:Statement)-[:MADE_DURING]->(m) ",
+            "WHERE 1=1 "
+        ]
+
+        main_filters = {}
+
+        # Apply filters based on the provided dictionary
+        if filters.get('meetings'):
+            query_parts.append(" AND m.name IN $meetings ")
+            main_filters['meetings'] = filters.get('meetings')
+
+        if filters.get('statement_ids'):
+            query_parts.append(" AND s.id IN $statement_ids ")
+            main_filters['statement_ids'] = filters.get('statement_ids')
+
+        if filters.get('parties'):
+            query_parts.append(" AND s.party IN $parties ")
+            main_filters['parties'] = filters.get('parties')
+
+        if filters.get('startdate'):
+            query_parts.append(" AND m.date >= $startdate ")
+            main_filters['startdate'] = filters.get('startdate')
+
+        if filters.get('enddate'):
+            query_parts.append(" AND m.date <= $enddate ")
+            main_filters['enddate'] = filters.get('enddate')
+
+        if filters.get('sections'):
+            query_parts.append(" AND sec.id IN $sections ")
+            main_filters['sections'] = filters.get('sections')
+
+        # OPTIONAL MATCH for Person (if needed for additional filters)
+        query_parts.append("OPTIONAL MATCH (p:Person)-[:MADE]->(s) ")
+        query_parts.append("MATCH (s)-[:IS_ABOUT]->(sec) ")
+
+        # Handle vector and preferences for similarity calculations
+        if filters.get('vector') or filters.get('preferences'):
+            primary_vector = filters.get('vector')
+            preferences_vector = filters.get('preferences')
+
+            query_parts.append("""
+                WITH s, p, m, sec,
+                     CASE WHEN $vector IS NOT NULL THEN gds.similarity.cosine(s.vector, $vector) ELSE 0 END AS similarity,
+                     CASE WHEN $preferences IS NOT NULL THEN gds.similarity.cosine(s.vector, $preferences) ELSE 0 END AS preference_similarity,
+                     duration.inDays(m.date, date()).days AS daysSinceMeeting
+
+                // Convert days-since-meeting into a "recency" score
+                WITH s, p, m, sec, similarity, preference_similarity,
+                     CASE WHEN daysSinceMeeting < 0
+                          THEN 1.0
+                          ELSE 1.0 / (1 + toFloat(daysSinceMeeting))
+                     END AS recency
+
+                // Calculate weighted combination using parameters
+                WITH s, p, m, sec, similarity, preference_similarity, recency,
+                     ($similarity_weight * similarity +
+                      $preference_weight * preference_similarity +
+                      $recency_weight * recency) AS combinedScore
+
+                ORDER BY combinedScore DESC
+                LIMIT $limit
+            """)
+        else:
+            # If no vectors are provided, order by meeting date DESC as a fallback
+            query_parts.append(" ORDER BY m.date DESC LIMIT $limit ")
+
+        # Build final query to return unique meeting IDs
+        query = ''.join(query_parts) + """
+            RETURN DISTINCT m.id AS meeting_id
+        """
+
+        # Prepare parameters
+        parameters = {
+            'meetings': filters.get('meetings'),
+            'statement_ids': filters.get('statement_ids'),
+            'parties': filters.get('parties'),
+            'startdate': filters.get('startdate'),
+            'enddate': filters.get('enddate'),
+            'sections': filters.get('sections'),
+            'vector': filters.get('vector'),
+            'preferences': filters.get('preferences'),  # Preferences vector
+            'similarity_weight': similarity_weight,
+            'preference_weight': preference_weight,
+            'recency_weight': recency_weight,
+            'limit': limit,
+            'skip': skip
+        }
+
+        # Remove keys with None values to prevent Neo4j errors
+        parameters = {k: v for k, v in parameters.items() if v is not None}
+
+        # **Optional Debugging: Log the Query and Parameters**
+        # Uncomment the following lines to print the query and parameters for debugging purposes.
+        # print("Generated Query:")
+        # print(query)
+        # print("Parameters:")
+        # print(parameters)
+
+        # Execute query with parameters
+        result = self.neo4j_handler.execute_query(query, parameters)
+
+        # Extract meeting IDs from the result
+        meeting_ids = [record['meeting_id'] for record in result if 'meeting_id' in record and record['meeting_id']]
+
+        return meeting_ids
+
+    def run_query(self,query):
+        result = self.neo4j_handler.execute_query(query, {})
         return result
 
     # Get next statement based on current statement ID
@@ -184,9 +481,9 @@ class DataAccessLayer:
           OPTIONAL MATCH (p:Person)-[:MADE]->(next)
           OPTIONAL MATCH (p)-[:PART_OF]->(party:PoliticalParty)
           RETURN next.statement AS statement,
-                 p.name AS person,
+                 next.person AS person,
                  next.id AS statement_id,
-                 party.name AS party, 
+                 next.party AS party, 
                  COUNT(likes) AS likes,
                  COUNT(dislikes) AS dislikes
           """
@@ -202,9 +499,9 @@ class DataAccessLayer:
           OPTIONAL MATCH (p:Person)-[:MADE]->(s)
           OPTIONAL MATCH (p)-[:PART_OF]->(party:PoliticalParty)
           RETURN s.statement AS statement,
-                 p.name AS person,
+                 s.person AS person,
                  s.id AS statement_id,
-                 party.name AS party, 
+                 s.party AS party, 
                  COUNT(likes) AS likes,
                  COUNT(dislikes) AS dislikes
           """
@@ -219,10 +516,10 @@ class DataAccessLayer:
           OPTIONAL MATCH (s)<-[dislikes:DISLIKES]-()
           OPTIONAL MATCH (p:Person)-[:MADE]->(s)
           OPTIONAL MATCH (p)-[:PART_OF]->(party:PoliticalParty)
-          RETURN s.statement AS statement,
-                 p.name AS person,
-                 party.name AS party, 
+          RETURN prev.statement AS statement,
+                 prev.person AS person,
                  s.id AS statement_id,
+                 prev.party AS party, 
                  COUNT(likes) AS likes,
                  COUNT(dislikes) AS dislikes
           """
@@ -257,6 +554,9 @@ class DataAccessLayer:
         }
 
         result = self.neo4j_handler.execute_query(query, parameters)
+        for row in result:
+            if 'meeting_date' in row and row['meeting_date']:
+                row['meeting_date'] = str(row['meeting_date'])
         return result
 
     # Get votes based on optional filters
@@ -289,6 +589,9 @@ class DataAccessLayer:
         }
 
         result = self.neo4j_handler.execute_query(query, parameters)
+        for row in result:
+            if 'meeting_date' in row and row['meeting_date']:
+                row['meeting_date'] = str(row['meeting_date'])
         return result
 
     def get_all_parties(self):
@@ -470,6 +773,66 @@ class DataAccessLayer:
             convo["messages"] = messages
             output.append(convo)
         return output
+
+    def get_chat_messages_with_citations(self, conversation_id: str):
+        query = """
+        MATCH (c:Conversation {id: $conversation_id})-[:HAS_MESSAGE]->(cm:ChatMessage)
+        OPTIONAL MATCH (cm)-[:CITES]->(s:Statement)
+        RETURN cm.id AS message_id,
+               cm.question AS question,
+               cm.answer AS answer,
+               cm.created_at AS created_at,
+               COLLECT(s.id) AS statements
+        ORDER BY cm.created_at ASC
+        """
+        params = {"conversation_id": conversation_id}
+        result = self.neo4j_handler.execute_query(query, params)
+        for row in result:
+            if 'created_at' in row and row['created_at']:
+                row['created_at'] = str(row['created_at'])
+        return result
+
+    def get_statement(self, statement_id: str):
+        """
+        Retrieve a single statement by its ID, including related information such as
+        the person who made the statement, the meeting during which it was made,
+        the associated political party, and counts of likes and dislikes.
+
+        :param statement_id: The unique identifier of the statement.
+        :return: A dictionary with statement details or None if not found.
+        """
+        query = """
+        MATCH (s:Statement {id: $statement_id})
+        OPTIONAL MATCH (s)<-[:MADE_DURING]-(m:Meeting)
+        OPTIONAL MATCH (s)<-[:MADE]-(p:Person)
+        OPTIONAL MATCH (p)-[:PART_OF]->(party:PoliticalParty)
+        OPTIONAL MATCH (s)<-[likes:LIKES]-()
+        OPTIONAL MATCH (s)<-[dislikes:DISLIKES]-()
+        RETURN 
+            s.statement AS statement,
+            p.name AS person,
+            m.name AS meeting,
+            m.date AS meetingDate,
+            party.name AS party,
+            COUNT(likes) AS likes,
+            COUNT(dislikes) AS dislikes
+        """
+
+        parameters = {'statement_id': statement_id}
+
+        result = self.neo4j_handler.execute_query(query, parameters)
+
+        if not result:
+            return None
+
+        statement = result[0]
+
+        # Convert meetingDate to string if it exists
+        if 'meetingDate' in statement and statement['meetingDate']:
+            statement['meetingDate'] = str(statement['meetingDate'])
+
+        return statement
+
     def get_chat_messages_by_conversation(self, conversation_id: str):
         """
         Return chat messages (question/answer) for this conversation,
@@ -486,6 +849,18 @@ class DataAccessLayer:
             if 'created_at' in row and row['created_at']:
                 row['created_at'] = str(row['created_at'])
         return  result
+
+    def link_message_to_citations(self, message_id: str, statement_ids: list[str]):
+        query = """
+        MATCH (m:ChatMessage {id: $message_id})
+        UNWIND $statement_ids AS statement_id
+        MATCH (s:Statement {id: statement_id})
+        MERGE (m)-[:CITES]->(s)
+        """
+        parameters = {"message_id": message_id, "statement_ids": statement_ids}
+        result = self.neo4j_handler.execute_query(query, parameters)
+        print(f"Created CITES relationships for message {message_id}: {statement_ids}")  # Debugging log
+        return result
     def save_chat_message(self, conversation_id: str, question: str, answer: str):
         """
         Create a ChatMessage node in Neo4j, linking it via
@@ -571,6 +946,56 @@ class DataAccessLayer:
         result = self.neo4j_handler.execute_query(query, params)
         return result[0] if result else None
 
+    def get_user_preferences(self, user_id: str) -> Dict[str, Any]:
+        """
+        Retrieves the user's interests and personalization weight.
+        """
+        query = """
+        MATCH (u:User {id: $user_id})
+        RETURN u.interests AS interests, u.personalization_weight AS personalization_weight
+        """
+        parameters = {"user_id": user_id}
+        result = self.neo4j_handler.execute_query(query, parameters)
+        if result and 'interests' in result[0] and 'personalization_weight' in result[0]:
+            return {
+                "interests": result[0]['interests'] or [],
+                "personalization_weight": result[0]['personalization_weight'] or 50  # Default value
+            }
+        else:
+            # Return default settings if properties don't exist
+            return {
+                "interests": [],
+                "personalization_weight": 50
+            }
+
+    def update_user_preferences(self, user_id: str, preferences: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Updates the user's interests and personalization weight.
+        """
+        query = """
+        MATCH (u:User {id: $user_id})
+        SET 
+            u.interests = $preferences.interests,
+            u.personalization_weight = $preferences.personalization_weight,
+            u.updated_at = datetime()
+        RETURN u.interests AS interests, u.personalization_weight AS personalization_weight
+        """
+        parameters = {
+            "user_id": user_id,
+            "preferences": preferences
+        }
+        result = self.neo4j_handler.execute_query(query, parameters)
+        if result and 'interests' in result[0] and 'personalization_weight' in result[0]:
+            return {
+                "interests": result[0]['interests'] or [],
+                "personalization_weight": result[0]['personalization_weight'] or 50
+            }
+        else:
+            # Return default settings if update fails
+            return {
+                "interests": [],
+                "personalization_weight": 50
+            }
     def get_user_daily_message_count(self, user_id: str) -> int:
         """
         Returns the count of messages the user has sent today.

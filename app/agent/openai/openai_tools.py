@@ -21,7 +21,7 @@ def get_embedding(text):
     else:
         raise Exception(f"Error {response.status_code}: {response.text}")
 
-def generate_response(prompt, model='gpt-3.5-turbo',max_tokens=1000):
+def generate_response(system, user, model='gpt-3.5-turbo',max_tokens=1000):
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
@@ -30,8 +30,8 @@ def generate_response(prompt, model='gpt-3.5-turbo',max_tokens=1000):
     data = {
         "model": model,
         "messages": [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": system},
+            {"role": "user", "content": user}
         ],
         "max_tokens": max_tokens,  # Adjust as needed
         "temperature": 0  # Adjust as needed for more creative responses

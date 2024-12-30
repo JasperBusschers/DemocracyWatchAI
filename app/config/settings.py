@@ -46,4 +46,4 @@ class Config:
     }
 
     OPEN_AI_KEY = os.getenv('OPENAI_KEY')
-    MAX_DAILY_MESSAGES = os.getenv('MAX_DAILY_MESSAGES',20)
+    MAX_DAILY_MESSAGES = os.getenv('MAX_DAILY_MESSAGES',1000)

@@ -1,3 +1,7 @@
-neo4j
 python-dotenv
-sentence_transformers
+flask
+flask-jwt-extended
+neo4j
+openai
+google-auth
+requests

@@ -72,14 +72,16 @@ def chatbot(region: str):
     user = dal.get_user_by_id(current_user)
 
     logger.info(f"Loading chatbot for region: {region}, user: {user['email']}")
-
+    preferences = dal.get_user_preferences(current_user)
+    print(preferences)
     return render_template(
         'chat.html',
         texts=language_manager.get_translations(lang),
         languages=language_manager.get_available_languages(),
         current_lang=lang,
         user=user,
-        region=region
+        region=region,
+        preferences=preferences #{'interests': ['midden oosten', 'war'], 'personalization_weight': 50}
     )
 
 @core_bp.route('/settings')

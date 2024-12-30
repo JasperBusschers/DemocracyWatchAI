@@ -1,5 +1,6 @@
 import os
 import re
+import traceback
 import uuid
 import json
 import requests
@@ -148,7 +149,9 @@ def markdown_to_json_pipeline_step(markdown_files, pdf_links,youtubes, api_key, 
             is_topic = False
             if i > 1 and ':' in l and "**" in l:
                 statement = text.replace('**', '')
+                print(statement)
                 for t in topics:
+                    print("!!!!!!!!!!!!!!!",statement,t[1])
                     if jaccard_similarity_words(t[1], statement) and last_was_topic:
                         topic.append(t[0])
                         last_was_topic = True
@@ -275,10 +278,16 @@ def markdown_to_json_pipeline_step(markdown_files, pdf_links,youtubes, api_key, 
 
         sections = content.split('-----')
         text = "".join(sections[1:])
-        table_of_content = text.split('**OPENING VAN DE VERGADERING**')[0]
-        debate = text.split('**OPENING VAN DE VERGADERING**')[1]
-        debate, rest = debate.split('De vergadering is gesloten')
-        people = rest.split('Stemming nr.')[0]
+        try:
+            table_of_content = text.split('**OPENING VAN DE VERGADERING**')[0]
+            debate = text.split('**OPENING VAN DE VERGADERING**')[1]
+            debate, rest = debate.split('De vergadering is gesloten')
+            people = rest.split('Stemming nr.')[0]
+        except:
+            table_of_content = text.split('**')[0]
+            debate = '**'.join(text.split('**')[1:])
+            rest = ''
+            people=''
         if '**Aanwezigheden**' in people:
             people = people.split('**Aanwezigheden**')[1].replace(
                 '**Individuele stemmingen Vlaamse Volksvertegenwoordigers**', '')
@@ -307,14 +316,19 @@ def markdown_to_json_pipeline_step(markdown_files, pdf_links,youtubes, api_key, 
             processed_json_path = os.path.join(output_dir, json_filename)
 
             print(f"Processing {filename}...")
-            json_output = process_markdown(md_path, processed_json_path)
-            json_output['youtube_link']=yt
-            json_output['pdf_link']=pdf_link
-            with open(processed_json_path, 'w', encoding='utf-8') as json_file:
-                json.dump(json_output, json_file, indent=4)
+            try:
+                json_output = process_markdown(md_path, processed_json_path)
+                json_output['youtube_link']=yt
+                json_output['pdf_link']=pdf_link
+                with open(processed_json_path, 'w', encoding='utf-8') as json_file:
+                    json.dump(json_output, json_file, indent=4)
 
-            processed_files.append(processed_json_path)
-            print(f"Saved processed JSON for {filename}")
+                processed_files.append(processed_json_path)
+                print(f"Saved processed JSON for {filename}")
+            except Exception as e:
+                print(e)
+                traceback.print_exc()
+                print(f"failed on {filename}")
 
     print("All markdown files have been processed.")
     return processed_files

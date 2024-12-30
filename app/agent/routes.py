@@ -1,3 +1,4 @@
+import traceback
 from typing import Optional, Dict, Any
 
 from flask import Blueprint, render_template, request, jsonify
@@ -7,6 +8,9 @@ from neo4j import GraphDatabase
 from flask_jwt_extended import jwt_required, get_jwt_identity, verify_jwt_in_request, create_access_token
 
 from config.settings import Config
+from neo4j.exceptions import Neo4jError
+
+from agent.agent import reply
 
 # Initialize Blueprint and Database Connection
 agent_bp = Blueprint('agent', __name__)
@@ -86,17 +90,19 @@ def ask():
                     'conversation_id': "",
                     'conversation_title': ""  # Return the newly generated title if any
                 }), 200
-
         # --- GENERATE A CONVERSATION TITLE IF WE'RE STARTING FRESH ---
         new_conversation_title = None
+        past_interactions = []
         if user_id and not conversation_id:
             # Prompt the AI for a short descriptive conversation title
-            title_prompt = f"""
+            title_prompt_system = f"""
             Please propose a short conversation title (max 6 words) based on this question:
-            '{question}'
+            
             The title should hint at the topic or subject.
+            reply in language : {lang}
             """
-            new_conversation_title = generate_response(title_prompt,max_tokens=50).strip()
+            user_prompt= f"""{question}"""
+            new_conversation_title = generate_response(system=title_prompt_system,user=user_prompt,max_tokens=50).strip()
 
             # If it’s too long or empty, fallback to "New Conversation"
             if not new_conversation_title or len(new_conversation_title) > 60:
@@ -104,37 +110,62 @@ def ask():
 
             # Create the conversation
             conversation_id = dal.create_conversation(user_id, title=new_conversation_title)
+        elif conversation_id and user_id:
+            # Retrieve past messages
+            messages = dal.get_chat_messages_with_citations(conversation_id)
+            for msg in messages:
+                # Validate conversation ownership
+                conversation = dal.get_conversation(conversation_id, user_id)
+                if not conversation:
+                    return jsonify({"error": "Invalid conversation_id or not owned by user"}), 403
+                statements=  msg.get('statements', [])
+                if len(statements)>0:
+                    print(statements)
+                    statements= dal.get_statements({"statement_ids":statements})
+                # Retrieve related statements
 
+                # Retrieve related debates/meetings
+                past_debates = []
+                for statement in statements:
+                    meeting = statement['meeting']
+                    if meeting:
+                        past_debates.append(meeting)
+
+                past_interactions.append({
+                    'past_answer': msg.get('answer'),
+                    'past_question': msg.get('question'),
+                    'past_statements': [s['statement_id'] for s in statements],
+                    'past_debates': past_debates
+                })
+        preferences = dal.get_user_preferences(user_id)
+        preferences = {'subjects': preferences['interests'], 'personalization': preferences['personalization_weight']}
+        print(past_interactions)
+        print(preferences)
         # --- (Optional) validate conversation ownership if user_id + conversation_id ---
         if user_id and conversation_id:
             conversation = dal.get_conversation(conversation_id, user_id)
             if not conversation:
                 return jsonify({"error": "Invalid conversation_id or not owned by user"}), 403
+        response,statements= reply(past_interactions,question,preferences,lang)
 
         # Retrieve statements relevant to the question
-        statements = dal.get_statements({'vector': get_embedding(question)})
-        print(statements)
+        #statements = dal.get_statements({'vector': get_embedding(question),'preferences':get_embedding(str(preferences['subjects']))},include_prev_next=True,preference_weight=preferences['personalization']/100)
+        statement_ids = []
+        for row in statements:
+            if 'statement_id' in row and row['statement_id']:
+                # row['statement_id'] might be e.g. ['ac51f37c-979c-4f2e-aa4f-c0d0a5eabcb4', '06f987e0-d735-47c6-a14a-c0e018f41cc7']
+                statement_ids.extend(row['statement_id'])
+        print(statement_ids)
 
         # Build your main prompt
-        prompt = f"""
-                You are given a query and related statements made by politicians. Provide an answer using the statements or if no answer can be found, say you do not know. 
-                Structure your answer per debate and person to summarize what was said about the topic.
-                answer in markdown with bold person names text and unordered lists when applicable, don't take over complete statements but describe what each person said. 
-                Only use the statements that are relevant to the question.
-                At the end of each sentence put [i+1] (eg [1] for index 0) to state the sentence refers to statement i. When multiple apply use eg. [1] [2] [5]. 
-                [0] does not exist, it starts from 1.
-                Do not give the complete statements, instead summarize it to provide an answer.
-                statements : {statements}
-                question : {question}
-                reply in language : {lang}
-                """
 
-        response = generate_response(prompt)
 
         # Save chat message if user is logged in + conversation exists
         if user_id and conversation_id:
-            dal.save_chat_message(conversation_id, question, response)
-
+            chat_message_id=dal.save_chat_message(conversation_id, question, response)
+            print(chat_message_id,statement_ids)
+            if chat_message_id and statement_ids:
+                dal.link_message_to_citations(chat_message_id, statement_ids)
         return jsonify({
             'response': response,
             'statements': statements,
@@ -144,6 +175,7 @@ def ask():
 
     except Exception as e:
         print(f"Error answering question: {str(e)}")
+        traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
 
@@ -168,6 +200,9 @@ def get_meeting():
 
     try:
         result = neo4j_handler.execute_query(query, {'statement_id': statement_id})
+        for row in result:
+            if 'date' in row and row['date']:
+                row['date'] = str(row['date'])
         if result and result[0]:
             return jsonify(result[0]), 200
         return jsonify({"error": "Meeting not found"}), 404
@@ -225,16 +260,24 @@ def get_reaction():
 @agent_bp.route('/conversation/<conversation_id>', methods=['GET'])
 @jwt_required()
 def get_conversation_messages(conversation_id):
-    """Return all messages in a single conversation if user owns it."""
     user_id = get_jwt_identity()
-    # Validate that the user owns that conversation
     conversation = dal.get_conversation(conversation_id, user_id)
     if not conversation:
         return jsonify({"error": "No such conversation or unauthorized"}), 404
 
-    messages = dal.get_chat_messages_by_conversation(conversation_id)
+    messages = dal.get_chat_messages_with_citations(conversation_id)
+    print(messages)
+    for m in messages:
+        filters = {
+            "statement_ids": m['statements'],
+            # Add other filters if necessary, e.g., "persons": ["John Doe"]
+        }
+
+        # Retrieve statements by IDs
+        m['statements'] = dal.get_statements(filters)
     conversation["messages"] = messages
     return jsonify(conversation), 200
+
 
 # In data_access_layer.py (or whichever file your DAL is in)
 
@@ -255,3 +298,70 @@ def get_chat_history():
     except Exception as e:
         print(f"Error fetching chat history: {str(e)}")
         return jsonify({"error": str(e)}), 500
+
+@agent_bp.route('/search_preferences', methods=['GET'])
+@jwt_required()
+def get_search_preferences():
+    """
+    Retrieve the current user's personalization settings.
+    """
+    try:
+        user_id = get_jwt_identity()
+        if not user_id:
+            return jsonify({"error": "User not authenticated"}), 401
+
+        preferences = dal.get_user_preferences(user_id)
+
+        return jsonify({'subjects':preferences['interests'], 'personalization': preferences['personalization_weight']}), 200
+
+    except Neo4jError as ne:
+        print(f"Neo4j Error: {ne.message}")
+        return jsonify({"error": "Database error occurred"}), 500
+    except Exception as e:
+        print(f"Unexpected Error: {str(e)}")
+        return jsonify({"error": "An unexpected error occurred"}), 500
+
+
+@agent_bp.route('/save_search_preferences', methods=['POST'])
+@jwt_required()
+def save_search_preferences():
+    """
+    Save or update the current user's personalization settings.
+    """
+    try:
+        user_id = get_jwt_identity()
+
+        preferences = dal.get_user_preferences(user_id)
+
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "Invalid JSON payload"}), 400
+        interests = data.get('subjects')
+
+        personalization_weight = int(data.get('personalization'))
+
+        # Prepare the preferences dictionary
+        if interests is not None:
+            preferences['interests'] = interests
+        if personalization_weight is not None:
+            preferences['personalization_weight'] = personalization_weight
+        print(preferences)
+        if not preferences:
+            return jsonify({"error": "No valid settings provided"}), 400
+
+        # Update the user's preferences in the database
+        updated_preferences = dal.update_user_preferences(user_id, preferences)
+
+        return jsonify({
+            "message": "Search preferences updated successfully",
+            "settings": updated_preferences
+        }), 200
+
+    except Neo4jError as ne:
+        # Specific handling for Neo4j errors
+        print(f"Neo4j Error: {ne.message}")
+        return jsonify({"error": "Database error occurred"}), 500
+    except Exception as e:
+        # General exception handling
+        print(f"Unexpected Error: {str(e)}")
+        return jsonify({"error": "An unexpected error occurred"}), 500

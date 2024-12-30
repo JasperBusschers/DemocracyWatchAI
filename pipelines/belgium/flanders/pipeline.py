@@ -8,28 +8,34 @@ from step2_process_raw_data import pdf_to_markdown_pipeline_step
 from step3_process_to_json import markdown_to_json_pipeline_step
 
 # Load environment variables from .env file
-env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))),
-                        'env', '.env')
-load_dotenv(env_path)
-
+load_dotenv('././.env')
 
 def run_pipeline(output_dir, start_date, end_date):
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
     # Get API key from environment variable
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key = os.getenv('OPENAI_KEY')
     if not api_key:
-        raise ValueError("OPENAI_API_KEY not found in environment variables")
+        raise ValueError("OPENAI_KEY not found in environment variables")
 
     # Step 1: Download PDFs
     print("Step 1: Downloading PDFs")
     files, paths, youtubes = download_pdf_pipeline_step(
+        type='plen',
         output_dir=os.path.join(output_dir, 'raw'),
         datumvan=start_date,
         datumtot=end_date
     )
-
+    files2, paths2, youtubes2 = download_pdf_pipeline_step(
+        type='comm',
+        output_dir=os.path.join(output_dir, 'raw'),
+        datumvan=start_date,
+        datumtot=end_date
+    )
+    files.extend(files2)
+    paths.extend(paths2)
+    youtubes.extend(youtubes2)
     # Step 2: Convert PDFs to Markdown
     print("Step 2: Converting PDFs to Markdown")
     markdowns = []

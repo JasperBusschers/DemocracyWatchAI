@@ -1,6 +1,8 @@
 import os
 import json
 import logging
+from datetime import datetime
+
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 import uuid
@@ -31,23 +33,35 @@ class Neo4jHandler:
     def _run_query(tx, query: str, parameters: Dict[str, Any]):
         return tx.run(query, parameters or {})
 
-
 def create_meeting(neo4j_handler: Neo4jHandler, json_data: Dict[str, Any]) -> str:
     meeting_id = str(uuid.uuid4())
+
+    # 1) Convert the date string to ISO-8601
+    iso_date = parse_date_string(json_data['date'])
+
+    # 2) Use date($date) so that Neo4j creates a Date property
     query = """
-    CREATE (m:Meeting {id: $id, name: $name, date: $date, country: $country, region: $region, youtube_link: $youtube_link, pdf_link: $pdf_link})
+    CREATE (m:Meeting {
+        id: $id,
+        name: $name,
+        date: date($date),
+        country: $country,
+        region: $region,
+        youtube_link: $youtube_link,
+        pdf_link: $pdf_link
+    })
     """
+
     neo4j_handler.execute_query(query, {
         'id': meeting_id,
         'name': json_data['name'],
-        'date': json_data['date'],
+        'date': iso_date,   # pass the ISO string
         'country': json_data['country'],
         'region': json_data['region'],
         'youtube_link': 'https://www.youtube.com/watch?v=' + json_data['youtube_link'],
         'pdf_link': json_data['pdf_link']
     })
     return meeting_id
-
 
 def create_person(neo4j_handler: Neo4jHandler, person_name: str) -> str:
     person_id = str(uuid.uuid4())
@@ -72,14 +86,14 @@ def create_section(neo4j_handler: Neo4jHandler, section: Dict[str, Any], meeting
     CREATE (m)-[:HAS_SECTION]->(s)
     """
     neo4j_handler.execute_query(query, {
-        'id': section_id,
+        'id': section['id'],
         'type': section['type'],
         'voted': section['voted'],
         'vector': section.get('vector'),
         'meeting_id': meeting_id,
         'topic': section.get('topic'),
     })
-    return section_id
+    return section['id']
 
 
 def create_started_by_relationships(neo4j_handler: Neo4jHandler, section_id: str, people: List[str]):
@@ -134,7 +148,7 @@ def load_statements(neo4j_handler: Neo4jHandler, statements: List[Dict[str, Any]
     UNWIND $statements AS stmt
     MERGE (s:Statement {id: stmt.id})
     SET s.statement = stmt.statement,
-        s.vector = stmt.vector,  
+        s.vector = stmt.vector,
         s.party = stmt.Party,
         s.person = stmt.person
     """
@@ -159,6 +173,9 @@ def load_statements(neo4j_handler: Neo4jHandler, statements: List[Dict[str, Any]
         if 'topic' in stmt and isinstance(stmt['topic'], list)
     ]
 
+    # Configure logging
+    logging.basicConfig(level=logging.DEBUG)
+
     if statements_with_topics:
         create_is_about_query = """
         UNWIND $statements_with_topics AS stmt
@@ -168,7 +185,9 @@ def load_statements(neo4j_handler: Neo4jHandler, statements: List[Dict[str, Any]
         MERGE (s)-[:IS_ABOUT]->(sec)
         """
         try:
-            neo4j_handler.execute_query(create_is_about_query, {
+            logging.debug(f"Executing query with data: {statements_with_topics}")
+            print(statements_with_topics)
+            res = neo4j_handler.execute_query(create_is_about_query, {
                 'statements_with_topics': statements_with_topics
             })
             logger.info(f"Created IS_ABOUT relationships for {len(statements_with_topics)} statements")
@@ -259,7 +278,7 @@ def load_data(neo4j_handler: Neo4jHandler, json_data: Dict[str, Any]):
 
         if 'statements' in json_data:
             # Log some debug information about topics
-            for stmt in json_data['statements'][:5]:  # Look at first 5 statements
+            for stmt in json_data['statements']:  # Look at first 5 statements
                 if 'topic' in stmt:
                     logger.info(f"Statement {stmt['id']} has topics: {stmt['topic']}")
 
@@ -323,7 +342,21 @@ def link_person_to_party(neo4j_handler: Neo4jHandler, person_name: str, party_na
         'person_name': person_name,
         'party_name': party_name
     })
+DUTCH_MONTHS = {
+    'januari': '01', 'februari': '02', 'maart': '03', 'april': '04',
+    'mei': '05', 'juni': '06', 'juli': '07', 'augustus': '08',
+    'september': '09', 'oktober': '10', 'november': '11', 'december': '12'
+}
 
+def parse_date_string(date_str: str) -> str:
+    try:
+        day_str, month_str, year_str = date_str.split()  # e.g. ["23", "augustus", "2024"]
+        day = int(day_str)
+        month = DUTCH_MONTHS[month_str.lower()]
+        year = int(year_str)
+        return f"{year:04d}-{month}-{day:02d}"  # e.g. "2024-08-23"
+    except (ValueError, KeyError):
+        return date_str
 
 def load_data(neo4j_handler: Neo4jHandler, json_data: Dict[str, Any]):
     try:

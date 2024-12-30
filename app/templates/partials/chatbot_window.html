@@ -117,6 +117,7 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      position: relative;
     }
     .chat-input {
       flex: 1;
@@ -332,6 +333,12 @@
       .sidebar {
         width: 100%;
       }
+      .profile-sidebar {
+        width: 100%;
+      }
+      .personalization-container {
+        display: none; /* Hide slider on small screens */
+      }
     }
 
     /* LOADING SPINNER ON INPUT */
@@ -444,6 +451,181 @@
     .hidden {
       display: none;
     }
+
+    /* Personalization Settings Container */
+    .personalization-settings {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Personalization Label */
+    .personalization-label {
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 0.9rem;
+    }
+
+    /* Personalization Slider Container */
+    .personalization-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Slider Styling */
+    #personalization-slider {
+      width: 100px;
+    }
+
+    /* Slider Value Display */
+    #slider-value {
+      font-size: 0.9rem;
+      color: #4b5563;
+      min-width: 40px;
+      text-align: right;
+    }
+
+    /* Profile Button Styling */
+    .profile-button {
+      background-color: #6b7280;
+      color: #fff;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      align-self: flex-start; /* Align the button to the start */
+    }
+
+    .profile-button:hover {
+      background-color: #4b5563;
+    }
+
+    .profile-button svg {
+      display: block;
+    }
+
+    /* Profile Overlay */
+    .profile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+      z-index: 150; /* Above chat-history */
+    }
+    .profile-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Profile Sidebar */
+    .profile-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px; /* Hidden by default */
+      bottom: 0;
+      width: 400px;
+      background-color: #fff;
+      box-shadow: -2px 0 6px -1px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease-in-out;
+      z-index: 151;
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-sidebar.open {
+      right: 0;
+    }
+
+    /* Profile Header */
+    .profile-header {
+      padding: 1rem;
+      background-color: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    /* Profile Content */
+    .profile-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+    }
+    .profile-content label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #1f2937;
+    }
+    #subjects-input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #4b5563;
+    }
+    .subjects-visualization {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .subject-item {
+      background-color: #e5e7eb;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+    .subject-item span {
+      margin-right: 0.5rem;
+    }
+    .subject-item button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #6b7280;
+      font-weight: bold;
+    }
+    .subject-item button:hover {
+      color: #1f2937;
+    }
+
+    /* Save Profile Button */
+    .save-profile-button {
+      padding: 0.75rem 1.25rem;
+      background-color: #10b981;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .save-profile-button:hover {
+      background-color: #059669;
+    }
+    .save-profile-button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+
   </style>
 </head>
 <body>
@@ -492,6 +674,23 @@
         placeholder="{{ texts.input_placeholder }}"
         autocomplete="off"
       >
+
+      <!-- Personalization Settings -->
+      <div class="personalization-settings">
+        <label for="personalization-slider" class="personalization-label">Personalization strength</label>
+        <div class="personalization-container">
+          <input type="range" id="personalization-slider" min="0" max="100" value="{{ preferences.personalization_weight  }}">
+          <span id="slider-value">{{ preferences.personalization_weight  }}%</span>
+        </div>
+        <button class="profile-button" id="profile-button" title="Profile">
+          <!-- Profile Icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5.5 21h13a2 2 0 002-2V7a2 2 0 00-2-2h-13a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </button>
+      </div>
+
       <button class="send-button" id="send-button">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
@@ -529,6 +728,27 @@
       </button>
     </div>
   </div>
+
+  <!-- Profile Overlay -->
+  <div class="profile-overlay"></div>
+  <div class="profile-sidebar" id="profile-sidebar">
+    <div class="profile-header">
+      <h2>User Profile</h2>
+      <button class="close-button" id="close-profile-btn" title="Close">
+        <!-- Close Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="profile-content">
+      <label for="subjects-input">Subjects of Interest:</label>
+      <input type="text" id="subjects-input" placeholder="Enter subjects separated by commas">
+      <div id="subjects-visualization" class="subjects-visualization"></div>
+      <button class="save-profile-button" id="save-profile-button">Save</button>
+    </div>
+  </div>
 </div>
 
 <!-- Marked for Markdown rendering -->
@@ -563,7 +783,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Extra close button inside the panel
   closeHistoryBtn.addEventListener('click', closeHistory);
+
+  // **Slider Value Update**
+  const personalizationSlider = document.getElementById('personalization-slider');
+  const sliderValueDisplay = document.getElementById('slider-value');
+
+  personalizationSlider.addEventListener('input', () => {
+    sliderValueDisplay.textContent = `${personalizationSlider.value}%`;
+
+  });
 });
+// **Slider Value Update and Database Update on Release**
+  const personalizationSlider = document.getElementById('personalization-slider');
+  const sliderValueDisplay = document.getElementById('slider-value');
+
+  personalizationSlider.addEventListener('change', async () => {  // 'change' fires on slider release
+    const newValue = personalizationSlider.value;
+    sliderValueDisplay.textContent = `${newValue}%`;
+
+    try {
+      const response = await fetch('/save_search_preferences', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          personalization: parseInt(newValue, 10)  // Ensure it's an integer
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update personalization weight.');
+      }
+
+      const data = await response.json();
+      console.log('Personalization weight updated:', data.settings.personalization_weight);
+      // Optionally, update the UI or notify the user
+    } catch (error) {
+      console.error('Error updating personalization weight:', error);
+      alert(`Error: ${error.message}`);
+    }
+  });
 
 
 /** The main chat interface class **/
@@ -607,6 +868,7 @@ class ChatInterface {
   async sendMessage() {
     const input = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
+    const personalization = document.getElementById('personalization-slider').value; // Get slider value
     const message = input.value.trim();
 
     if (!message || this.isWaitingForResponse) return;
@@ -631,7 +893,8 @@ class ChatInterface {
         body: JSON.stringify({
           question: message,
           language: "{{current_lang}}",
-          conversation_id: conversationId
+          conversation_id: conversationId,
+          personalization: personalization // Include personalization
         })
       });
 
@@ -652,7 +915,7 @@ class ChatInterface {
     } finally {
       this.isWaitingForResponse = false;
       input.disabled = false;
-      sendButton.disabled = false;
+      sendButton.disabled = !input.value.trim();
       input.classList.remove('loading'); // remove spinner
       input.focus();
     }
@@ -747,7 +1010,7 @@ class ChatInterface {
           const type = m.answer ? 'bot' : 'user';
           const content = m.answer || m.question || '';
           this.addMessage(m.question, 'user');
-          this.addMessage(m.answer, 'bot');
+          this.addMessage(m.answer, 'bot', m.statements);
         });
       }
       // Set global conversation ID
@@ -1163,6 +1426,117 @@ async function loadConversation(conversationId) {
 }
 document.addEventListener('DOMContentLoaded', () => {
   loadChatHistory();
+});
+
+// **Profile Overlay Elements**
+const profileButton = document.getElementById('profile-button');
+const profileOverlay = document.querySelector('.profile-overlay');
+const profileSidebar = document.getElementById('profile-sidebar');
+const closeProfileBtn = document.getElementById('close-profile-btn');
+const subjectsInput = document.getElementById('subjects-input');
+const subjectsVisualization = document.getElementById('subjects-visualization');
+const saveProfileButton = document.getElementById('save-profile-button');
+
+// Function to open profile overlay
+function openProfile() {
+  profileOverlay.classList.add('active');
+  profileSidebar.classList.add('open');
+  loadSearchPreferences();
+}
+
+// Function to close profile overlay
+function closeProfile() {
+  profileOverlay.classList.remove('active');
+  profileSidebar.classList.remove('open');
+}
+
+// Event listeners for opening and closing profile
+profileButton.addEventListener('click', openProfile);
+closeProfileBtn.addEventListener('click', closeProfile);
+profileOverlay.addEventListener('click', closeProfile);
+
+// Load search preferences from /search_preferences
+async function loadSearchPreferences() {
+  try {
+    const response = await fetch('/search_preferences');
+    if (!response.ok) throw new Error('Failed to load search preferences.');
+
+    const data = await response.json();
+    const subjects = data.subjects || [];
+    const sliderValue = data.preferences.personalization_weight  || 50;
+
+    // Set slider value
+    document.getElementById('personalization-slider').value = sliderValue;
+    document.getElementById('slider-value').textContent = `${sliderValue}%`;
+
+    // Set subjects input
+    subjectsInput.value = subjects.join(', ');
+
+    // Visualize subjects
+    renderSubjects(subjects);
+  } catch (error) {
+    console.error('Error loading search preferences:', error);
+    alert('Failed to load your search preferences. Please try again.');
+  }
+}
+
+// Render subjects as visual items
+function renderSubjects(subjects) {
+  subjectsVisualization.innerHTML = '';
+  subjects.forEach((subject, index) => {
+    const subjectItem = document.createElement('div');
+    subjectItem.className = 'subject-item';
+    subjectItem.innerHTML = `
+      <span>${subject.trim()}</span>
+      <button data-index="${index}">&times;</button>
+    `;
+    subjectsVisualization.appendChild(subjectItem);
+  });
+}
+
+// Handle adding subjects from input
+subjectsInput.addEventListener('change', () => {
+  const subjects = subjectsInput.value.split(',').map(s => s.trim()).filter(s => s);
+  renderSubjects(subjects);
+});
+
+// Handle removing a subject
+subjectsVisualization.addEventListener('click', (e) => {
+  if (e.target.tagName.toLowerCase() === 'button') {
+    const index = e.target.getAttribute('data-index');
+    const subjects = subjectsInput.value.split(',').map(s => s.trim()).filter(s => s);
+    subjects.splice(index, 1);
+    subjectsInput.value = subjects.join(', ');
+    renderSubjects(subjects);
+  }
+});
+
+// Save search preferences
+saveProfileButton.addEventListener('click', async () => {
+  const subjects = subjectsInput.value.split(',').map(s => s.trim()).filter(s => s);
+  const personalization = document.getElementById('personalization-slider').value;
+
+  saveProfileButton.disabled = true;
+  saveProfileButton.textContent = 'Saving...';
+
+  try {
+    const response = await fetch('/save_search_preferences', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ subjects, personalization })
+    });
+
+    if (!response.ok) throw new Error('Failed to save search preferences.');
+
+    alert('Your search preferences have been saved successfully.');
+    closeProfile();
+  } catch (error) {
+    console.error('Error saving search preferences:', error);
+    alert('Failed to save your search preferences. Please try again.');
+  } finally {
+    saveProfileButton.disabled = false;
+    saveProfileButton.textContent = 'Save';
+  }
 });
 </script>
 
