@@ -427,7 +427,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id='Insert new entries in database',  # DAG B
+    dag_id='Insert_new_entries_in_database',  # DAG B
     default_args=default_args,
     schedule_interval=None,  # no schedule; it's triggered by DAG A
     catchup=False
