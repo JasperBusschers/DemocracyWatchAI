@@ -7,7 +7,7 @@ Follow these steps to set up the development environment using Docker Compose.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/JasperBusschers/DemocracyWatchAI.git
 cd your-repo
 ```
 
