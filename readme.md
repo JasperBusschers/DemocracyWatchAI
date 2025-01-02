@@ -11,7 +11,7 @@ git clone https://github.com/JasperBusschers/DemocracyWatchAI.git
 cd your-repo
 ```
 
-2. Create a .env File
+### 2. Create a .env File
 Create a .env file in the root directory of the project and add the following environment variables:
 
 ```env
@@ -37,27 +37,27 @@ AIRFLOW_EMAIL=""
 ```
 Replace the MY_NEO4J_PASSWORD and OPENAI_KEY values with your actual credentials.
 Do not commit the .env file to version control to protect sensitive information.
-# 3. Ensure Prerequisites Are Installed
+### 3. Ensure Prerequisites Are Installed
 Make sure you have the following installed on your machine:
 
-# 4. Start the Services
+### 4. Start the Services
 Run the following command to build and start all the services in detached mode:
 
 ```bash
 docker-compose up -d
 ```
-# 5. Access the Services
+### 5. Access the Services
 Once the containers are up and running, you can access the services via your web browser:
 - Airflow Webserver: http://localhost:8080
 - Neo4j Browser: http://localhost:7474
 - Python Application: http://localhost:5007
 
-# 6. run the data fetching pipelines
+### 6. run the data fetching pipelines
 Go to airflow webserver and run the following DAGs:
 - download_debates_flanders
 - Insert_new_entries_in_database
 
-# 7. Stopping the Services
+### 7. Stopping the Services
 To stop and remove the containers, networks, and volumes defined in the docker-compose.yml, run:
 
 ```bash
