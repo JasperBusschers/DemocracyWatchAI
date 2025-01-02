@@ -14,8 +14,7 @@ cd your-repo
 2. Create a .env File
 Create a .env file in the root directory of the project and add the following environment variables:
 
-env
-Copy code
+```env
 # Neo4j Configuration
 MY_NEO4J_URI="bolt://neo4j:7687"
 MY_NEO4J_USER=
@@ -27,16 +26,15 @@ OPENAI_KEY=""  # Replace with your actual OpenAI API key
 
 # Google OAuth Credentials
 GOOGLE_AUTH_ID=""
-GOOGLE_AUTH_SECRET=''
+GOOGLE_AUTH_SECRET=""
 
 # Airflow Configuration
-AIRFLOW_USER=admin
-AIRFLOW_PASSWORD=admin
-AIRFLOW_FIRSTNAME=Admin
-AIRFLOW_LASTNAME=User
-AIRFLOW_EMAIL=admin@example.com
-Important:
-
+AIRFLOW_USER=""
+AIRFLOW_PASSWORD=""
+AIRFLOW_FIRSTNAME=""
+AIRFLOW_LASTNAME=""
+AIRFLOW_EMAIL=""
+```
 Replace the MY_NEO4J_PASSWORD and OPENAI_KEY values with your actual credentials.
 Do not commit the .env file to version control to protect sensitive information.
 # 3. Ensure Prerequisites Are Installed
