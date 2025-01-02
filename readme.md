@@ -48,10 +48,9 @@ docker-compose up -d
 ```
 # 5. Access the Services
 Once the containers are up and running, you can access the services via your web browser:
-
-Airflow Webserver: http://localhost:8080
-Neo4j Browser: http://localhost:7474
-Python Application: http://localhost:5007
+- Airflow Webserver: http://localhost:8080
+- Neo4j Browser: http://localhost:7474
+- Python Application: http://localhost:5007
 
 # 6. run the data fetching pipelines
 Go to airflow webserver and run the following DAGs:
