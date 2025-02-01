@@ -24,7 +24,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 
-def process_document_xml(url):
+def process_document_xml(url,output_dir):
     """
     This function downloads the XML from the provided URL and extracts topic information.
     Instead of saving a file, it returns a list of dictionaries, each containing
@@ -45,18 +45,21 @@ def process_document_xml(url):
             link = doc.findtext('url', default='unknown_url')
             date = doc.findtext('datum', default='unknown_date')
 
-            # Retrieve the text content from the XML (change 'text' to the correct tag if necessary).
-            text_content = doc.findtext('text', default='')
-
-            # Split into tokens, take the first 1000, and rejoin.
-            tokens = text_content.split()
-            truncated_text = ' '.join(tokens[:1000])
+            output_filepath=output_dir+titel+'.pdf'
+            try:
+                pdf_response = requests.get(link)
+                if pdf_response.status_code == 200 and len(pdf_response.content) > 0:
+                    if 'application/pdf' in pdf_response.headers.get('Content-Type', ''):
+                        with open(output_filepath, 'wb') as f:
+                            f.write(pdf_response.content)
+            except Exception as e:
+                print(f"Failed to download PDF from {link}. Error: {e}")
 
             topics.append({
                 'title': titel.split(' ')[0],
                 'date': date,
                 'link': link,
-                'text': truncated_text
+                'filepath': output_filepath
             })
 
         return topics
@@ -114,7 +117,7 @@ def download_pdf_pipeline_step(
         link_for_xml = f"https://ws.vlpar.be/e/opendata/verg/{meeting_id}/hand?idPrsHighlight=0"
 
         # Extract XML topic text/info
-        topics_info = process_document_xml(url=link_for_xml)
+        topics_info = process_document_xml(url=link_for_xml, output_dir=output_dir)
         for topic in topics_info:
             topic['meeting_id'] = meeting_id
         topics_info_all.append(topics_info)
@@ -311,6 +314,12 @@ with DAG(
         ti = context['ti']
         data = ti.xcom_pull(task_ids='download_pdfs')
         pdf_files = data.get('pdf_files', [])
+        topics_info = data.get('topics_info', [])
+        topic_files = [topic['filepath'] for sublist in topics_info for topic in sublist]
+        markdowns_topics = pdf_to_markdown_pipeline_step(
+            pdf_files=set(topic_files),
+            output_dir='/usr/local/airflow/data/markdown/topics'
+        )
         markdowns = pdf_to_markdown_pipeline_step(
             pdf_files=pdf_files,
             output_dir='/usr/local/airflow/data/markdown'
