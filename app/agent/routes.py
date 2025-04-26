@@ -10,7 +10,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity, verify_jwt_in_req
 from config.settings import Config
 from neo4j.exceptions import Neo4jError
 
-from agent.agent import reply
+from agent.agent2 import reply
 
 # Initialize Blueprint and Database Connection
 agent_bp = Blueprint('agent', __name__)

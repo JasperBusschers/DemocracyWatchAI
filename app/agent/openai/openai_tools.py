@@ -21,7 +21,7 @@ def get_embedding(text):
     else:
         raise Exception(f"Error {response.status_code}: {response.text}")
 
-def generate_response(system, user, model='gpt-3.5-turbo',max_tokens=1000):
+def generate_response(system, user, model='gpt-4o',max_tokens=2000):
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",

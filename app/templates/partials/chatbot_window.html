@@ -17,6 +17,52 @@
     .chat-container.move-right {
       margin-left: 300px; /* matches the .chat-history width */
     }
+/* Style any tables generated inside a .message.bot .message-content */
+.message.bot .message-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  min-width: 300px;
+  background-color: #fff; /* Optional, if you want a white background */
+}
+
+/* Table heading styles */
+.message.bot .message-content thead {
+  background-color: #f9fafb; /* Slightly lighter background */
+  border-bottom: 2px solid #e5e7eb;
+}
+.message.bot .message-content thead th {
+  font-weight: 600;
+  color: #374151;            /* Tailwind Gray-700 */
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+/* Table body row styling */
+.message.bot .message-content tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+.message.bot .message-content tbody tr:nth-child(even) {
+  background-color: #f3f4f6; /* Subtle row striping */
+}
+.message.bot .message-content tbody tr:hover {
+  background-color: #e5e7eb; /* Hover highlight */
+}
+
+/* Table cell styling */
+.message.bot .message-content td {
+  padding: 0.75rem 1rem;
+  color: #4b5563;
+  vertical-align: middle; /* center text vertically */
+}
+
+/* (Optional) Center numeric columns (Yes, No, Abstained) */
+.message.bot .message-content td:nth-child(2),
+.message.bot .message-content td:nth-child(3),
+.message.bot .message-content td:nth-child(4) {
+  text-align: center;
+}
 
     /* CHAT MAIN AREA */
     .chat-main {

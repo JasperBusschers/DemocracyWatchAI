@@ -6,8 +6,10 @@ DAG A: Full Pipeline Example
 
 Make sure to set the OPENAI_KEY environment variable in your Airflow environment/container.
 """
-
+import json
 import os
+import re
+
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -16,7 +18,7 @@ from airflow.operators.python_operator import PythonOperator
 
 # Import your class from the external module
 from markdown_parsers.flanders_transcript import MarkdownToJsonPipelineStep
-
+from markdown_parsers.gpt_entity_extraction import markdown_to_json
 
 # ------------- STEP 1 FUNCTIONS (Download PDFs + Extract XML Topic Info) ------------- #
 
@@ -45,7 +47,7 @@ def process_document_xml(url,output_dir):
             link = doc.findtext('url', default='unknown_url')
             date = doc.findtext('datum', default='unknown_date')
 
-            output_filepath=output_dir+titel+'.pdf'
+            output_filepath=output_dir+'/'+titel+'.pdf'
             try:
                 pdf_response = requests.get(link)
                 if pdf_response.status_code == 200 and len(pdf_response.content) > 0:
@@ -54,9 +56,8 @@ def process_document_xml(url,output_dir):
                             f.write(pdf_response.content)
             except Exception as e:
                 print(f"Failed to download PDF from {link}. Error: {e}")
-
             topics.append({
-                'title': titel.split(' ')[0],
+                'title': re.sub("\D", "",titel.split(' ')[0].split('-')[0].strip()),
                 'date': date,
                 'link': link,
                 'filepath': output_filepath
@@ -143,27 +144,29 @@ def download_pdf_pipeline_step(
             base_filename = f"{date_formatted}_{descriptor}"
             pdf_filename = sanitize_filename(base_filename) + '.pdf'
             local_path = os.path.join(output_dir, pdf_filename)
-
             print(f"Downloading PDF: {pdf_path}")
             links.append(pdf_path)
-            try:
-                pdf_response = requests.get(pdf_path)
-                if pdf_response.status_code == 200 and len(pdf_response.content) > 0:
-                    if 'application/pdf' in pdf_response.headers.get('Content-Type', ''):
-                        with open(local_path, 'wb') as f:
-                            f.write(pdf_response.content)
-                        print(f"Saved PDF to {local_path}")
-                        created_files.append(local_path)
+            if not os.path.exists(local_path):
+                try:
+                    pdf_response = requests.get(pdf_path)
+                    if pdf_response.status_code == 200 and len(pdf_response.content) > 0:
+                        if 'application/pdf' in pdf_response.headers.get('Content-Type', ''):
+                            with open(local_path, 'wb') as f:
+                                f.write(pdf_response.content)
+                            print(f"Saved PDF to {local_path}")
+                            created_files.append(local_path)
+                        else:
+                            print(f"Failed to download {pdf_filename}. Not a PDF.")
                     else:
-                        print(f"Failed to download {pdf_filename}. Not a PDF.")
-                else:
-                    print(
-                        f"Failed to download {pdf_filename}. "
-                        f"Status code: {pdf_response.status_code}, "
-                        f"content length: {len(pdf_response.content)}"
-                    )
-            except Exception as e:
-                print(f"Failed to download PDF from {pdf_path}. Error: {e}")
+                        print(
+                            f"Failed to download {pdf_filename}. "
+                            f"Status code: {pdf_response.status_code}, "
+                            f"content length: {len(pdf_response.content)}"
+                        )
+                except Exception as e:
+                    print(f"Failed to download PDF from {pdf_path}. Error: {e}")
+            else:
+                created_files.append(local_path)
 
     return {
         'pdf_files': created_files,
@@ -174,7 +177,7 @@ def download_pdf_pipeline_step(
 
 
 # ------------- STEP 2 FUNCTION (PDF -> Markdown) ------------- #
-def pdf_to_markdown_pipeline_step(pdf_files, output_dir='/usr/local/airflow/data/markdown'):
+def pdf_to_markdown_pipeline_step(pdf_files, output_dir='/usr/local/airflow/data/markdown',return_text=False):
     import os
     import pathlib
     import pymupdf4llm
@@ -182,9 +185,10 @@ def pdf_to_markdown_pipeline_step(pdf_files, output_dir='/usr/local/airflow/data
 
     os.makedirs(output_dir, exist_ok=True)
 
-    def pdf_to_markdown(pdf_path, markdown_path):
+    def pdf_to_markdown(pdf_path, markdown_path,return_text=False):
         md_text = pymupdf4llm.to_markdown(pdf_path)
         pathlib.Path(markdown_path).write_bytes(md_text.encode())
+        return md_text
 
     def process_pdf(pdf_path):
         if pdf_path.endswith('.pdf'):
@@ -194,10 +198,14 @@ def pdf_to_markdown_pipeline_step(pdf_files, output_dir='/usr/local/airflow/data
 
             if os.path.exists(md_path):
                 print(f"Skipping {pdf_path}, Markdown file already exists.")
+                if return_text:
+                    return pathlib.Path(md_path).read_text()
                 return md_path
 
             print(f"Converting {pdf_path} to Markdown...")
-            pdf_to_markdown(pdf_path, md_path)
+            md_text=pdf_to_markdown(pdf_path, md_path)
+            if return_text:
+                return md_text
             return md_path
         else:
             print(f"Skipping non-PDF: {pdf_path}")
@@ -205,10 +213,9 @@ def pdf_to_markdown_pipeline_step(pdf_files, output_dir='/usr/local/airflow/data
 
     processed_files = []
 
-    with ThreadPoolExecutor() as executor:
-        results = executor.map(process_pdf, pdf_files)
+    for p in pdf_files:
+        processed_files.append(process_pdf(p))
 
-    processed_files = list(results)
 
     print(f"Converted {len(processed_files)} PDF files to Markdown.")
     return processed_files
@@ -315,11 +322,31 @@ with DAG(
         data = ti.xcom_pull(task_ids='download_pdfs')
         pdf_files = data.get('pdf_files', [])
         topics_info = data.get('topics_info', [])
-        topic_files = [topic['filepath'] for sublist in topics_info for topic in sublist]
-        markdowns_topics = pdf_to_markdown_pipeline_step(
-            pdf_files=set(topic_files),
-            output_dir='/usr/local/airflow/data/markdown/topics'
-        )
+        for i, sublist in enumerate(topics_info):
+            topics=[topic['filepath'] for topic in sublist]
+            if len(topics)>0:
+                out_dir = '/usr/local/airflow/data/markdown/topics'
+
+                markdowns_topics = pdf_to_markdown_pipeline_step(
+                        pdf_files=set(topics),
+                        output_dir=out_dir
+                    ,return_text=True
+                    )
+                for j, (t,m) in enumerate(zip(topics,markdowns_topics)):
+                    if m:
+                        out_file= out_dir+'/'+os.path.basename(t).replace('.pdf','.json')
+                        if os.path.exists(out_file):
+                            # load the file
+                            with open(out_file, 'r') as f:
+                                topics_info[i][j]['markdown_summarized']=f.read()
+                        else:
+                            try:
+                                topics_info[i][j]['markdown_summarized']=markdown_to_json(m[:100000])
+                                # save
+                                json.dump(topics_info[i][j]['markdown_summarized'], open(out_file, 'w'))
+                            except Exception as e:
+                                print(f"Error processing {topics_info[i][j]['title']}: {e}")
+
         markdowns = pdf_to_markdown_pipeline_step(
             pdf_files=pdf_files,
             output_dir='/usr/local/airflow/data/markdown'
@@ -328,7 +355,7 @@ with DAG(
             'markdown_files': markdowns,
             'pdf_links': data.get('pdf_links', []),
             'youtubes': data.get('youtubes', []),
-            'topics_info': data.get('topics_info', [])
+            'topics_info': topics_info
         }
 
     download_pdfs_task = PythonOperator(

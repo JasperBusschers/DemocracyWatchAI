@@ -36,22 +36,22 @@ class MarkdownToJsonPipelineStep:
                 filename = os.path.basename(md_path)
                 json_filename = filename.replace('.md', '.json')
                 processed_json_path = os.path.join(self.output_dir, json_filename)
+                if not os.path.exists(processed_json_path):
+                    print(f"Processing {filename}...")
+                    try:
+                        json_output = self.process_markdown(md_path)
+                        json_output['youtube_link'] = yt_link
+                        json_output['pdf_link'] = pdf_link
+                        json_output['topic_texts'] = topic
+                        with open(processed_json_path, 'w', encoding='utf-8') as json_file:
+                            json.dump(json_output, json_file, indent=4)
 
-                print(f"Processing {filename}...")
-                try:
-                    json_output = self.process_markdown(md_path)
-                    json_output['youtube_link'] = yt_link
-                    json_output['pdf_link'] = pdf_link
-                    json_output['topic_texts'] = topic
-                    with open(processed_json_path, 'w', encoding='utf-8') as json_file:
-                        json.dump(json_output, json_file, indent=4)
-
-                    processed_files.append(processed_json_path)
-                    print(f"Saved processed JSON for {filename}")
-                except Exception as e:
-                    print(e)
-                    traceback.print_exc()
-                    print(f"Failed on {filename}")
+                        processed_files.append(processed_json_path)
+                        print(f"Saved processed JSON for {filename}")
+                    except Exception as e:
+                        print(e)
+                        traceback.print_exc()
+                        print(f"Failed on {filename}")
 
         print("All markdown files have been processed.")
         return processed_files
@@ -90,7 +90,7 @@ class MarkdownToJsonPipelineStep:
         voted = False
 
         if vote_match:
-            vote_text = vote_match.group(1).strip()
+            vote_text = vote_match.group(1).strip().split(' ')[0]
             voted = True
             # Remove the vote info from section_text for a cleaner header/topic.
             section_text = re.sub(vote_pattern, ' ', section_text)
@@ -282,7 +282,7 @@ class MarkdownToJsonPipelineStep:
                     'Party': party,
                     'person': person.strip(),
                     'statement': statement_text,
-                    'vector': self.get_embedding(statement_text)
+                    #'vector': self.get_embedding(statement_text)
                 }
                 output.append(json_output)
 

@@ -44,7 +44,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS ONLY for quick checks. Otherwise, extend the Airflow image properly.
-    _PIP_ADDITIONAL_REQUIREMENTS: 'pymupdf4llm neo4j'
+    _PIP_ADDITIONAL_REQUIREMENTS: 'pymupdf4llm neo4j openai'
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs

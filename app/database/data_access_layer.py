@@ -1010,3 +1010,272 @@ class DataAccessLayer:
 
         # If there is a matching record, return that count, otherwise 0
         return result[0]["message_count"] if result else 0
+
+    def get_meeting_names(
+            self,
+            has_votes: bool,
+            order_by: str,
+            k: int,
+            filters: dict[str, any] = {}
+    ) -> list[str]:
+
+        query_parts = []
+        parameters = {}
+
+        # 1) Always match the Meeting
+        query_parts.append("MATCH (m:Meeting)")
+
+        # 2) If we need votes, do relevant matches
+        if has_votes:
+            query_parts.append("""
+                MATCH (m)-[:HAS_SECTION]->(sec:Section)
+                MATCH (m)<-[:MADE_DURING]-(v:Vote)
+            """)
+
+        # 3) If we might need statements for relevance,
+        #    get them and filter out any that have invalid vectors
+        query_parts.append("""
+            MATCH (m)<-[:MADE_DURING]-(st:Statement)
+            WHERE st.vector IS NOT NULL
+        """)
+
+        # If user provided a vector for relevance:
+        if "vector" in filters and filters["vector"] is not None:
+            # Ensure the vectors have the same dimension
+            query_parts.append("  AND size(st.vector) = size($vector)")
+            parameters["vector"] = filters["vector"]
+
+        # 4) Additional WHERE filters
+        query_parts.append("AND 1=1")
+
+        if "startdate" in filters:
+            query_parts.append("AND m.date >= $startdate")
+            parameters["startdate"] = filters["startdate"]
+
+        if "enddate" in filters:
+            query_parts.append("AND m.date <= $enddate")
+            parameters["enddate"] = filters["enddate"]
+
+        # 5) Carry both m & st forward
+        query_parts.append("WITH DISTINCT m, st")
+
+        # 6) Sorting logic
+        if order_by == "recency":
+            query_parts.append("""
+                RETURN m.name AS meeting_name
+                ORDER BY m.date DESC
+                LIMIT $limit
+            """)
+        elif order_by == "relevance" and "vector" in filters:
+            query_parts.append("""
+                WITH m, st, gds.similarity.cosine(st.vector, $vector) AS relevance_score
+                RETURN m.name AS meeting_name
+                ORDER BY relevance_score DESC
+                LIMIT $limit
+            """)
+            # parameters["vector"] already set above
+        elif (order_by == "combo"
+              and "vector" in filters and filters["vector"] is not None
+              and "preferences" in filters and filters["preferences"] is not None):
+            query_parts.append("""
+                WITH m,
+                     gds.similarity.cosine(m.vector, $vector) AS similarity_score,
+                     gds.similarity.cosine(m.vector, $preferences) AS preference_score,
+                     duration.inDays(m.date, date()).days AS days_since_meeting
+                WITH m, similarity_score, preference_score,
+                     CASE WHEN days_since_meeting < 0
+                          THEN 1.0
+                          ELSE 1.0 / (1 + toFloat(days_since_meeting))
+                     END AS recency_score,
+                     (1.0 * similarity_score + 0.5 * preference_score + 0.3 * recency_score) AS combo_score
+                RETURN m.name AS meeting_name
+                ORDER BY combo_score DESC
+                LIMIT $limit
+            """)
+            parameters["preferences"] = filters["preferences"]
+        else:
+            # Default to recency if no vector-based logic
+            query_parts.append("""
+                RETURN m.name AS meeting_name
+                ORDER BY m.date DESC
+                LIMIT $limit
+            """)
+
+        parameters["limit"] = k
+        query = "\n".join(query_parts)
+
+        # Execute query
+        result = self.neo4j_handler.execute_query(query, parameters)
+
+        # Extract distinct meeting_name
+        meeting_names = list({r["meeting_name"] for r in result if "meeting_name" in r})
+        return meeting_names
+
+    def get_meeting_details(self, meeting_name: str, i: int, k_statements: int = 5,
+                            aggregate_votes_enabled: bool = True) -> dict:
+        """
+        Retrieves meeting details including:
+        - Meeting Name, Date, Link, YouTube Link
+        - Sections (Only Titles)
+        - Aggregated Votes per Party (YES, NO, ABSTAINED) at the root level
+        - Top Statements (from the entire meeting, not per section)
+
+        :param meeting_name: The name of the meeting.
+        :param has_votes: Whether to fetch meetings that contain votes.
+        :param k_statements: The maximum number of relevant statements from the meeting.
+        :param aggregate_votes_enabled: Whether to aggregate votes per party.
+        :return: A dictionary containing meeting details.
+        """
+
+        # **Step 1: Fetch Meeting Info & Sections**
+        meeting_query = """
+        MATCH (m:Meeting {name: $meeting_name})
+        OPTIONAL MATCH (m)-[:HAS_SECTION]->(s:Section)
+        RETURN 
+            m.name AS meeting_name,
+            m.date AS meeting_date,
+            m.link AS link,
+            m.youtube_link AS youtube_link,
+            COLLECT(DISTINCT s.name) AS sections
+        """
+
+        meeting_result = self.neo4j_handler.execute_query(meeting_query, {"meeting_name": meeting_name})
+
+        if not meeting_result:
+            return {}
+
+        meeting_data = meeting_result[0]
+
+        # **Step 2: Fetch Votes Efficiently**
+        votes_query = """
+        MATCH (m:Meeting {name: $meeting_name})
+        OPTIONAL MATCH (v:Vote)-[:MADE_DURING]->(m)
+
+        OPTIONAL MATCH (yes_voter:Person)-[:YES]->(v)
+        OPTIONAL MATCH (yes_voter)-[:PART_OF]->(yes_party:PoliticalParty)
+
+        OPTIONAL MATCH (no_voter:Person)-[:NO]->(v)
+        OPTIONAL MATCH (no_voter)-[:PART_OF]->(no_party:PoliticalParty)
+
+        OPTIONAL MATCH (abstained_voter:Person)-[:ABSTAINED]->(v)
+        OPTIONAL MATCH (abstained_voter)-[:PART_OF]->(abstained_party:PoliticalParty)
+
+        RETURN 
+            COLLECT(DISTINCT {name: yes_voter.name, party: yes_party.name}) AS yes_votes,
+            COLLECT(DISTINCT {name: no_voter.name, party: no_party.name}) AS no_votes,
+            COLLECT(DISTINCT {name: abstained_voter.name, party: abstained_party.name}) AS abstained_votes
+        """
+
+        votes_result = self.neo4j_handler.execute_query(votes_query, {"meeting_name": meeting_name})
+
+        if votes_result:
+            votes_data = votes_result[0]
+        else:
+            votes_data = {"yes_votes": [], "no_votes": [], "abstained_votes": []}
+
+        # **Step 3: Fetch Topics Efficiently**
+        topics_query = """
+        MATCH (m:Meeting {name: $meeting_name})-[:HAS_SECTION]->(s:Section)
+        OPTIONAL MATCH (s)-[:HAS_TOPIC]->(t:Topic)
+        OPTIONAL MATCH (t)-[:HAS_ARTICLE]->(art:Article)
+
+        RETURN 
+            COLLECT(DISTINCT t.description) AS topic_descriptions,
+            COLLECT(DISTINCT t.filepath) AS topic_filepaths,
+            COLLECT(DISTINCT art.text) AS articles
+        """
+
+        topics_result = self.neo4j_handler.execute_query(topics_query, {"meeting_name": meeting_name})
+
+        if topics_result:
+            topics_data = topics_result[0]
+        else:
+            topics_data = {"topic_descriptions": [], "topic_filepaths": []}
+
+        # **Step 4: Fetch Top Statements Efficiently**
+        statements_query = """
+        MATCH (m:Meeting {name: $meeting_name})<-[:MADE_DURING]-(st:Statement)
+        OPTIONAL MATCH (p:Person)-[:MADE]->(st)
+        OPTIONAL MATCH (p)-[:PART_OF]->(party:PoliticalParty)
+        WITH st, p, party
+  // optional ORDER BY st.created_at DESC, for example
+LIMIT 5
+        RETURN 
+            COLLECT(DISTINCT {
+                person: st.party,
+                party: st.person,
+                statement: st.statement
+            }) AS top_statements
+        """
+
+        statements_result = self.neo4j_handler.execute_query(statements_query, {"meeting_name": meeting_name,
+                                                                                "k_statements": k_statements})
+
+        if statements_result:
+            statements_data = statements_result[0].get("top_statements", [])
+        else:
+            statements_data = []
+
+        # **Post-processing: Aggregate Votes Efficiently**
+        def aggregate_votes(votes):
+            """Aggregates votes per party."""
+            party_counts = {}
+            for v in votes:
+                if v and v.get("party"):  # Ensure party name exists
+                    party_counts[v["party"]] = party_counts.get(v["party"], 0) + 1
+            return party_counts
+
+        if aggregate_votes_enabled:
+            yes_counts = aggregate_votes(votes_data["yes_votes"])
+            no_counts = aggregate_votes(votes_data["no_votes"])
+            abstained_counts = aggregate_votes(votes_data["abstained_votes"])
+
+            # Collect all parties in a single set
+            all_parties = set(yes_counts.keys()) | set(no_counts.keys()) | set(abstained_counts.keys())
+
+            # Build the table header
+            markdown_table = (
+                "| Party | Yes | No  | Abstained |\n"
+                "| ----- | --- | --- | --------- |\n"
+            )
+
+            total_yes = 0
+            total_no = 0
+            total_abstained = 0
+
+            for party in sorted(all_parties):
+                y = yes_counts.get(party, 0)
+                n = no_counts.get(party, 0)
+                a = abstained_counts.get(party, 0)
+
+                total_yes += y
+                total_no += n
+                total_abstained += a
+
+                markdown_table += f"| {party} | {y} | {n} | {a} |\n"
+
+            # Add the Totals line at the bottom
+            markdown_table += (
+                f"\n"
+                f"yes/no/abstained : {total_yes} / {total_no} / {total_abstained}\n"
+            )
+        else:
+            # If not enabled, just return empty or some placeholder
+            markdown_table = ""
+
+        # **Add reference numbers to top statements**
+        for  i, statement in enumerate(statements_data):
+            statement["reference_number"] = i + 1
+
+        # **Return Optimized JSON**
+        return {
+            "meeting_name": meeting_data.get("meeting_name"),
+            "meeting_date": str(meeting_data.get("meeting_date")) if meeting_data.get("meeting_date") else None,
+            "link": meeting_data.get("link"),
+            "youtube_link": meeting_data.get("youtube_link"),
+            "sections": meeting_data.get("sections", []),  # Only section titles
+            "topic_descriptions": topics_data.get("topic_descriptions", []),  # Topics moved to root
+            "topic_filepaths": topics_data.get("topic_filepaths", []),
+            "votes": markdown_table,  # Aggregated votes at root
+            "top_statements": statements_data
+        }
